@@ -1,0 +1,55 @@
+# Private markdown and guides at repo root
+/*.md
+!/README.md
+!/LICENSE
+!/LICENSE.md
+!/CONTRIBUTING.md
+!/CODE_OF_CONDUCT.md
+!/SECURITY.md
+!/CHANGELOG.md
+
+# Common private docs directories anywhere
+**/private/**
+**/internal/**
+**/docs-private/**
+**/notes/**
+**/scratch/**
+**/drafts/**
+
+# File naming conventions for private content
+**/*_PRIVATE.*
+**/*.private.*
+**/*.secret.*
+**/*.draft.*
+
+# Environment and secrets
+.env
+.env.*
+.envrc
+.direnv/
+secrets.*
+**/*.key
+**/*.pem
+**/*.p12
+**/*.pfx
+**/*.crt
+**/*.cer
+**/*.der
+**/*.kdb
+**/*.jks
+
+# Backups and temp files
+*.bak
+*.tmp
+*.temp
+*~
+*.orig
+
+# OS/editor cruft
+.DS_Store
+*.log
+.idea/
+.vscode/
+*.swp
+*.swo
+

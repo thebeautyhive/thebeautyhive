@@ -1,0 +1,42 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: detect-private-key
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-added-large-files
+        args: ["--maxkb=1024"]
+
+  - repo: local
+    hooks:
+      - id: block-root-markdown
+        name: Block committing root-level Markdown (except standard public docs)
+        entry: bash -c 'echo "Blocked: Move private root-level Markdown to a private dir or docs-private/. Allowed: README.md, LICENSE, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, CHANGELOG."; exit 1'
+        language: system
+        pass_filenames: false
+        files: '^[^/]+\\.md$'
+        exclude: '^(README\\.md|LICENSE(\\.md)?|CONTRIBUTING\\.md|CODE_OF_CONDUCT\\.md|SECURITY\\.md|CHANGELOG\\.md)$'
+
+      - id: block-private-dirs
+        name: Block committing files from private/internal docs directories
+        entry: bash -c 'echo "Blocked: Files from private/internal docs directories cannot be committed."; exit 1'
+        language: system
+        pass_filenames: false
+        files: '^(private|internal|docs-private|notes|scratch|drafts)/'
+
+      - id: block-private-filenames
+        name: Block committing files marked as private/secret/draft
+        entry: bash -c 'echo "Blocked: filename indicates private/secret/draft content."; exit 1'
+        language: system
+        pass_filenames: false
+        files: '(^|/).*((_|\\.)PRIVATE|\\.private|\\.secret|\\.draft)(\\.|$)'
+
+      - id: block-env-files
+        name: Block committing .env files
+        entry: bash -c 'echo "Blocked: .env files must not be committed."; exit 1'
+        language: system
+        pass_filenames: false
+        files: '(^|/)\\.env(\\..*)?$'
+
