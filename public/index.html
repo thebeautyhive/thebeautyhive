@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Beauty Hive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #4A4A4A;
+        }
+        
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .accent-color {
+            color: #C0A99A;
+        }
+
+        .brown-bg {
+            background-color: #6C544E;
+        }
+
+        .light-brown-bg {
+            background-color: #C0A99A;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #4A4A4A;
+        }
+        
+        .social-link:hover {
+            background-color: #4A4A4A;
+        }
+        
+        .social-link svg {
+            color: #4A4A4A;
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover svg {
+            color: white;
+        }
+        .portfolio-btn {
+            background-color: white;
+            color: #4A4A4A;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .portfolio-btn.active, .portfolio-btn:hover {
+            background-color: #6C544E;
+            color: white;
+        }
+
+        /* Modal styles */
+        .modal {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content-container {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .modal-content {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .modal-close:hover,
+        .modal-close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        /* Play button overlay for videos */
+        .video-overlay-container {
+            position: relative;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: white;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        /* FLEX UTILITY TO ENSURE EQUAL HEIGHTS FOR COLUMNS */
+        @media (min-width: 768px) {
+            #nail-care-grid {
+                /* Centering the two columns on large screens to reduce their overall footprint */
+                max-width: 960px; 
+                margin-left: auto;
+                margin-right: auto;
+                
+                display: flex;
+                align-items: stretch;
+            }
+            #nail-care-grid > div {
+                flex: 1; 
+            }
+
+            /* Force the inner white content boxes to match height */
+            .nail-care-content {
+                height: 100%; 
+                display: flex;
+                flex-direction: column;
+            }
+            .nail-care-list-container {
+                flex-grow: 1;
+                /* Applying min-height to ensure balance across the narrow column design */
+                min-height: 380px; 
+            }
+            /* Adjust padding/margins for better wrapping/filling */
+            .nail-care-list-container {
+                padding: 1.5rem !important; /* Increase vertical padding */
+            }
+            .nail-care-list-container p {
+                margin-bottom: 1rem !important; /* Increase vertical spacing between points */
+            }
+            .nail-care-list-container p:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#F8F6F4]">
+
+    <!-- SQUARE APPOINTMENTS WIDGET (ABSOLUTE FIRST SECTION) -->
+    <section id="booking" class="bg-white py-8 md:py-12">
+        <div class="container mx-auto px-4 md:px-8 text-center">
+            <h4 class="text-4xl md:text-5xl text-center font-playfair accent-color mb-8">BOOK YOUR APPOINTMENT</h4>
+            <div class="max-w-xl mx-auto">
+                <!-- Embed Code for Square Appointments Widget -->
+                <script src='https://square.site/appointments/buyer/widget/gn9xb1o39f6xx8/LEARA9W2DYKBR.js'></script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Bar (FULL WIDTH) - CONVERTED TO NAVIGATION) -->
+    <section class="brown-bg text-white py-4 px-4 flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12 text-center shadow-xl">
+        <div class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.27a.997.997 0 01.372 1.348l-6 10a.997.997 0 01-1.636.002l-6-10a.997.997 0 01.372-1.348A9 9 0 1121 12a.997.997 0 01-.632.923" />
+            </svg>
+            <a href="#policies" class="hover:underline font-bold text-sm md:text-base">POLICIES</a>
+        </div>
+        <div class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L20 20M4 16l4.586-4.586a2 2 0 002.828 0L20 20M4 16l4.586-4.586a2 2 0 012.828 0L20 20" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12h.01M18 12h.01M12 12h.01M9 12h.01" />
+            </svg>
+            <a href="#my-work" class="hover:underline font-bold text-sm md:text-base">MY WORK</a>
+        </div>
+        <div class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9.247L10.5 11.25M15.772 9.247L13.5 11.25m-2.272 0V17.25m0-6V7.75" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <a href="#faq" class="hover:underline font-bold text-sm md:text-base">FAQ</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12 md:px-8">
+        
+        <!-- Meet The Nail Tech Section -->
+        <section class="mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <!-- Text Content -->
+                <div class="text-center lg:text-left order-2 lg:order-1">
+                    <h2 class="text-4xl md:text-5xl font-playfair font-bold accent-color">Meet your</h2>
+                    <h3 class="text-5xl md:text-6xl font-extrabold tracking-tight mt-2">NAIL TECH</h3>
+                    <div class="mt-6 text-sm md:text-base leading-relaxed space-y-4">
+                        <p class="text-2xl font-bold accent-color">✨ Welcome to Beauty Hive ✨</p>
+                        <p>Hi, I’m Brenda! I’ve been creating nail magic since 2019—starting out in my own little studio, then sharpening my skills at a busy nail shop, and now I’m back in a space that’s entirely mine (and filled with the plants I adore 🌿).</p>
+
+                        <p>For me, nails aren’t just about color—they’re about self-expression, care, and confidence. I love blending creativity with clean, lasting techniques to give you nails that feel just as good as they look.</p>
+
+                        <p>From Gel-X and Acrylics to Builder Gel and pedicures, I’m here to turn your nail goals into reality—whether that’s sleek and minimal or bold and artistic.</p>
+                        
+                        <p>Step into my little plant-filled haven, relax, and let’s create something beautiful together.</p>
+                    </div>
+                </div>
+
+                <!-- Nail Tech Photo -->
+                <div class="order-1 lg:order-2 flex justify-center">
+                    <div class="max-w-sm w-full rounded-lg overflow-hidden shadow-xl">
+                        <img src="https://imgur.com/9eS7xDe.jpeg" onerror="this.onerror=null;this.src='https://placehold.co/600x600/F8F6F4/C0A99A?text=Nail+Tech+Photo';" alt="Brenda, your nail tech" class="w-full h-auto object-cover rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visit Us Section -->
+        <section class="text-center mb-16">
+            <h4 class="text-3xl font-playfair accent-color">VISIT US</h4>
+            <div class="flex flex-col items-center justify-center space-y-2 mt-6 text-base font-semibold">
+                <!-- Combined Hours on one line -->
+                <p class="text-center mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    MON - FRIDAY: 8AM - 5PM | SATURDAY : 9AM - 5PM
+                </p>
+                <!-- Address -->
+                <p class="text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    6244 El Cajon Blvd 21, San Diego, CA 92115
+                </p>
+            </div>
+        </section>
+
+        <!-- Policies Section -->
+        <section id="policies" class="mb-16">
+            <h4 class="text-4xl md:text-5xl text-center font-playfair accent-color mb-8">Booking Policies</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Cancellation & Rescheduling -->
+                <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-lg">
+                    <div class="brown-bg rounded-full p-3 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11v6m-3-3h6" />
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4a3 3 0 10-6 0v2" />
+                          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4a3 3 0 10-6 0v2"/>
+                          <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h5 class="text-xl font-bold mb-2">CANCELLATION & RESCHEDULING</h5>
+                    <p class="text-sm">A 48-HOUR NOTICE IS REQUIRED FOR ALL CANCELLATIONS OR RESCHEDULING.</p>
+                </div>
+                <!-- Payments -->
+                <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-lg">
+                    <div class="brown-bg rounded-full p-3 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11a4 4 0 11-8 0 4 4 0 018 0z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10a2 2 0 10-4 0v1h4v-1z" />
+                          <path d="M12 18v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M12 18a2 2 0 10-4 0v1a2 2 0 004 0v-1z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M12 18a2 2 0 10-4 0v1a2 2 0 004 0v-1z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M12 18a2 2 0 10-4 0v1a2 2 0 004 0v-1z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M16 11a4 4 0 11-8 0 4 4 0 018 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h5 class="text-xl font-bold mb-2">PAYMENTS</h5>
+                    <p class="text-sm">We accept all major credit cards and debit cards. A $5 processing fee may apply. Venmo, Cash app and Apple Pay. Cash payments are preferred</p>
+                </div>
+                <!-- Appointments -->
+                <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-lg">
+                    <div class="brown-bg rounded-full p-3 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 16l2 2 4-4" />
+                        </svg>
+                    </div>
+                    <h5 class="text-xl font-bold mb-2">APPOINTMENTS</h5>
+                    <p class="text-sm">Please arrive promptly for your appointment so we can make the most of your time. If you’re bringing a guest, they’re welcome to relax in our cozy waiting area while you get pampered.</p>
+                </div>
+                <!-- Later Arrivals -->
+                <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-lg">
+                    <div class="brown-bg rounded-full p-3 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          <line x1="17" y1="7" x2="7" y2="17" stroke="currentColor" stroke-width="2"/>
+                          <line x1="7" y1="7" x2="17" y2="17" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h5 class="text-xl font-bold mb-2">LATE ARRIVALS & NO SHOWS</h5>
+                    <p class="text-sm">We have a 15-minute grace period. If you are more than 15 minutes late, your design might have to change depending on my day No-shows will also be charged the full service price.</p>
+                </div>
+            </div>
+            <!-- NOTE: The repetitive 'BOOK NOW' button here was removed as the Square section handles this -->
+        </section>
+
+        <!-- Information & FAQ Section -->
+        <section class="mb-16">
+            <h4 class="text-4xl md:text-5xl text-center font-playfair accent-color mb-8">NAIL CARE INFORMATION</h4>
+            
+            <div id="nail-care-grid" class="grid md:grid-cols-2 gap-4">
+                <!-- BEFORE APPOINTMENT COLUMN -->
+                <div class="nail-care-content">
+                    <div class="bg-light-brown-bg text-center py-4 rounded-t-md shadow-lg font-bold">BEFORE YOUR APPOINTMENT</div>
+                    <div class="bg-white p-4 rounded-b-md shadow-lg space-y-3 text-sm nail-care-list-container">
+                        <p class="text-left"><span class="font-bold text-lg mr-2">🚫</span> Avoid using cuticle oils, hand lotions, or sunscreen right before your appointment – these can affect product adhesion.</p>
+                        <p class="text-left"><span class="font-bold text-lg mr-2">✍️</span> Bring any nail-art inspo photos you love!</p>
+                        <p class="text-left"><span class="font-bold text-lg mr-2">⏳</span> Be on time to get the most out of your appointment.</p>
+                        <p class="text-left"><span class="font-bold text-lg mr-2">❌</span> Avoid peeling or picking at your nails in the days leading up to your appointment to prevent damage to your natural nails.</p>
+                    </div>
+                </div>
+
+                <!-- AFTER APPOINTMENT COLUMN -->
+                <div class="nail-care-content">
+                    <div class="bg-light-brown-bg text-center py-4 rounded-t-md shadow-lg font-bold">AFTER YOUR APPOINTMENT</div>
+                    <div class="bg-white p-4 rounded-b-md shadow-lg space-y-3 text-sm nail-care-list-container">
+                        <p class="text-left"><span class="font-bold text-lg mr-2">💧</span> Moisturize your cuticles daily with cuticle oil or hand cream to keep them nourished.</p>
+                        <p class="text-left"><span class="font-bold text-lg mr-2">🚫</span> Avoid using your nails as tools—use the pads of your fingers instead.</p>
+                        <p class="text-left"><span class="font-bold text-lg mr-2">🧤</span> Wear gloves for cleaning, gardening, or dishwashing to protect your nails from harsh chemicals and water exposure.</p>
+                        <p class="text-left"><span class="font-bold text-lg mr-2">🧽</span> Avoid harsh cleaning products and acetone-based removers—they can dull your finish or weaken enhancements.(or just use gloves)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Portfolio Section -->
+            <section id="my-work" class="mb-16 mt-16">
+                <h4 class="text-4xl md:text-5xl text-center font-playfair accent-color mb-8">MY WORK</h4>
+                <div id="portfolio-buttons" class="flex flex-wrap justify-center gap-4 mb-8">
+                    <!-- Buttons will be generated here by JavaScript -->
+                </div>
+                <div id="portfolio-gallery" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <!-- Images will be generated here by JavaScript -->
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq" class="space-y-6">
+                <h4 class="text-4xl md:text-5xl text-center font-playfair accent-color mb-8">FAQ</h4>
+                <div>
+                    <h5 class="text-lg font-bold">Q: WHAT IS THE POLICY ON FILLS AND REPAIRS?</h5>
+                    <p class="mt-2 text-sm">Fills are recommended every 2-3 weeks to maintain the health of your nails. After 4 weeks, your service will be considered a full set. Repairs for broken nails are complimentary for the first 3 days after your appointment.</p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-bold">Q: DO I NEED TO REMOVE MY OLD SET?</h5>
+                    <p class="mt-2 text-sm">Please arrive with your bare nails, free of any old polish or product. A removal fee will be added if a removal service is required. This ensures proper prep and application for your new set.</p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-bold">Q: HOW DO I CARE FOR MY NAIL ART?</h5>
+                    <p class="mt-2 text-sm">To maintain your nail art, apply cuticle oil daily and a clear top coat every few days. Avoid picking or filing your nails, as this can damage the design and the nail bed.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Tag Us Section (Instagram Embed) -->
+        <section class="text-center mb-16">
+            <h4 class="text-4xl md:text-5xl font-playfair accent-color">TAG US IN YOUR</h4>
+            <h5 class="text-5xl md:text-6xl font-extrabold tracking-tight mt-2">Nailfies</h5>
+            <div class="mt-8">
+                <!-- Elfsight Social Feed Integration -->
+                <script src="https://elfsightcdn.com/platform.js" async></script>
+                <div class="elfsight-app-d6a6f61d-36b9-4fcc-b0cb-2cdae99d23d3" data-elfsight-app-lazy></div>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-12">
+        <hr class="border-gray-300 w-1/2 mx-auto mb-8">
+        <h6 class="text-2xl font-bold mb-4">THANK YOU FOR TRUSTING OUR BRAND!</h6>
+        <p class="text-4xl font-playfair accent-color mb-4">XOXO</p>
+        <p class="text-lg font-bold">THE BEAUTY HIVE</p>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-content-container">
+            <!-- Content will be an img or iframe for video -->
+        </div>
+    </div>
+
+</body>
+<script>
+    // Data structure to hold portfolio information
+    const portfolioData = {
+        "Gel-X Sets": [
+            { type: 'image', url: "https://imgur.com/4iwRNPy.jpeg" },
+            { type: 'image', url: "https://imgur.com/sVWLAkG.jpeg" },
+            { type: 'image', url: "https://imgur.com/pHJKgQd.jpeg" },
+            { type: 'image', url: "https://imgur.com/HY5HtDd.jpeg" }
+        ],
+        "Acrylic Sets": [
+            { type: 'image', url: "https://i.imgur.com/vT2iKJO.jpeg" },
+            { type: 'image', url: "https://i.imgur.com/8BUHAuu.jpeg" },
+            { type: 'image', url: "https://i.imgur.com/Cno9uaU.jpeg" },
+            { type: 'image', url: "https://i.imgur.com/Yn8fK9l.jpeg" }
+        ],
+        "Builder Gel Sets": [
+            { type: 'image', url: "https://imgur.com/5TeFuun.jpeg" },
+            { type: 'image', url: "https://imgur.com/Q7STdUU.jpeg" },
+            { type: 'image', url: "https://imgur.com/j13cQ93.jpeg" },
+            { type: 'image', url: "https://imgur.com/j3Drim2.jpeg" }
+        ],
+        "Pedicures": [
+            { type: 'image', url: "https://imgur.com/YAMI8Wj.jpeg" },
+            { type: 'image', url: "https://imgur.com/4Fa1sfN.jpeg" },
+            { type: 'image', url: "https://imgur.com/nV9cTWb.jpeg" },
+            { type: 'image', url: "https://imgur.com/qSoXlh9.jpeg" }
+        ]
+    };
+
+    // DOM elements
+    const portfolioButtons = document.getElementById('portfolio-buttons');
+    const portfolioGallery = document.getElementById('portfolio-gallery');
+    const imageModal = document.getElementById('image-modal');
+    const modalContentContainer = imageModal.querySelector('.modal-content-container');
+    const modalClose = imageModal.querySelector('.modal-close');
+    
+    // Function to render the gallery for a given service
+    function renderGallery(serviceName) {
+        portfolioGallery.innerHTML = ''; // Clear previous images/videos
+        const items = portfolioData[serviceName];
+        if (items) {
+            items.forEach(item => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'w-full h-auto object-cover rounded-lg shadow-md cursor-pointer relative overflow-hidden';
+                galleryItem.onclick = () => showModal(item.type, item.url);
+
+                if (item.type === 'image') {
+                    const img = document.createElement('img');
+                    img.src = item.url;
+                    img.alt = serviceName + ' photo';
+                    img.className = 'w-full h-auto rounded-lg';
+                    galleryItem.appendChild(img);
+                } else if (item.type === 'video') {
+                    const videoPlaceholder = document.createElement('img');
+                    // Use a generic placeholder for video thumbnail
+                    videoPlaceholder.src = "https://placehold.co/600x600/6C544E/FFFFFF?text=Video";
+                    videoPlaceholder.alt = serviceName + ' video';
+                    videoPlaceholder.className = 'w-full h-auto rounded-lg';
+                    galleryItem.appendChild(videoPlaceholder);
+
+                    const playButton = document.createElement('span');
+                    playButton.innerHTML = '&#9658;'; // Unicode for play button
+                    playButton.className = 'play-button';
+                    galleryItem.appendChild(playButton);
+                }
+                
+                portfolioGallery.appendChild(galleryItem);
+            });
+        }
+    }
+
+    // Function to handle button clicks
+    function handleButtonClick(event) {
+        // Remove 'active' class from all buttons
+        document.querySelectorAll('.portfolio-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        // Add 'active' class to the clicked button
+        event.target.classList.add('active');
+
+        // Render the new gallery
+        const serviceName = event.target.dataset.service;
+        renderGallery(serviceName);
+    }
+
+    // Function to create the interactive buttons
+    function createButtons() {
+        Object.keys(portfolioData).forEach((serviceName, index) => {
+            const button = document.createElement('button');
+            button.className = 'portfolio-btn';
+            button.textContent = serviceName;
+            button.dataset.service = serviceName;
+            button.addEventListener('click', handleButtonClick);
+            portfolioButtons.appendChild(button);
+
+            // Set the first button as active on initial load
+            if (index === 0) {
+                button.classList.add('active');
+            }
+        });
+    }
+
+    // Function to show the modal with the clicked media
+    function showModal(type, url) {
+        modalContentContainer.innerHTML = '';
+        if (type === 'image') {
+            const img = document.createElement('img');
+            img.src = url; 
+            img.className = 'modal-content';
+            modalContentContainer.appendChild(img);
+        } else if (type === 'video') {
+            const iframe = document.createElement('iframe');
+            iframe.src = url; 
+            iframe.className = 'modal-content w-full h-full';
+            iframe.setAttribute('allowfullscreen', 'true');
+            iframe.setAttribute('frameborder', '0');
+            modalContentContainer.appendChild(iframe);
+        }
+        imageModal.style.display = 'flex';
+    }
+
+    // Function to hide the modal
+    function hideModal() {
+        imageModal.style.display = 'none';
+        modalContentContainer.innerHTML = ''; // Clear content on close
+    }
+
+    // Event listeners for the modal
+    modalClose.onclick = hideModal;
+    imageModal.onclick = (event) => {
+        if (event.target === imageModal) {
+            hideModal();
+        }
+    };
+
+    // Initial page load setup
+    window.onload = function() {
+        createButtons();
+        // Render the gallery for the first service by default
+        renderGallery(Object.keys(portfolioData)[0]);
+    };
+</script>
