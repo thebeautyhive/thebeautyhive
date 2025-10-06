@@ -53,3 +53,8 @@ secrets.*
 *.swp
 *.swo
 
+# Local Python virtual environment
+.venv/
+
+# Project-specific backups
+/CUSTOM_WIDGET_BACKUP.html

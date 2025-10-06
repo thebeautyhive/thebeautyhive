@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Beauty Hive</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-        
+
         html {
             scroll-behavior: smooth;
         }
@@ -17,7 +17,7 @@
             font-family: 'Montserrat', sans-serif;
             color: #4A4A4A;
         }
-        
+
         .font-playfair {
             font-family: 'Playfair Display', serif;
         }
@@ -33,7 +33,7 @@
         .light-brown-bg {
             background-color: #C0A99A;
         }
-        
+
         .social-link {
             display: inline-flex;
             align-items: center;
@@ -43,11 +43,11 @@
             border-radius: 50%;
             border: 1px solid #4A4A4A;
         }
-        
+
         .social-link:hover {
             background-color: #4A4A4A;
         }
-        
+
         .social-link svg {
             color: #4A4A4A;
             transition: color 0.3s ease;
@@ -115,7 +115,7 @@
             text-decoration: none;
             cursor: pointer;
         }
-        
+
         /* Play button overlay for videos */
         .video-overlay-container {
             position: relative;
@@ -139,27 +139,27 @@
         @media (min-width: 768px) {
             #nail-care-grid {
                 /* Centering the two columns on large screens to reduce their overall footprint */
-                max-width: 960px; 
+                max-width: 960px;
                 margin-left: auto;
                 margin-right: auto;
-                
+
                 display: flex;
                 align-items: stretch;
             }
             #nail-care-grid > div {
-                flex: 1; 
+                flex: 1;
             }
 
             /* Force the inner white content boxes to match height */
             .nail-care-content {
-                height: 100%; 
+                height: 100%;
                 display: flex;
                 flex-direction: column;
             }
             .nail-care-list-container {
                 flex-grow: 1;
                 /* Applying min-height to ensure balance across the narrow column design */
-                min-height: 380px; 
+                min-height: 380px;
             }
             /* Adjust padding/margins for better wrapping/filling */
             .nail-care-list-container {
@@ -188,12 +188,12 @@
             cursor: pointer;
             border: 2px solid transparent;
         }
-        
+
         .insta-control-btn:hover {
             background-color: #F8F6F4;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
         }
-        
+
         .insta-control-btn.active {
             background-color: #6C544E;
             color: white;
@@ -208,18 +208,18 @@
             transition: transform 0.3s ease;
             background-color: #f0f0f0;
         }
-        
+
         .insta-post-card:hover {
             transform: scale(1.05);
         }
-        
+
         .insta-post-card img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
         }
-        
+
         .insta-post-overlay {
             position: absolute;
             top: 0;
@@ -236,18 +236,18 @@
             color: white;
             padding: 1rem;
         }
-        
+
         .insta-post-card:hover .insta-post-overlay {
             opacity: 1;
         }
-        
+
         .insta-post-stats {
             display: flex;
             gap: 1.5rem;
             font-size: 0.9rem;
             font-weight: 600;
         }
-        
+
         .insta-post-stat {
             display: flex;
             align-items: center;
@@ -260,19 +260,19 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
         }
-        
+
         @media (min-width: 768px) {
             .insta-grid-view {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
-        
+
         @media (min-width: 1024px) {
             .insta-grid-view {
                 grid-template-columns: repeat(4, 1fr);
             }
         }
-        
+
         .insta-grid-view .insta-post-card {
             aspect-ratio: 1;
         }
@@ -282,19 +282,19 @@
             column-count: 2;
             column-gap: 1rem;
         }
-        
+
         @media (min-width: 768px) {
             .insta-masonry-view {
                 column-count: 3;
             }
         }
-        
+
         @media (min-width: 1024px) {
             .insta-masonry-view {
                 column-count: 4;
             }
         }
-        
+
         .insta-masonry-view .insta-post-card {
             break-inside: avoid;
             margin-bottom: 1rem;
@@ -308,7 +308,7 @@
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .insta-list-view .insta-post-card {
             display: flex;
             flex-direction: column;
@@ -317,26 +317,26 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             overflow: visible;
         }
-        
+
         .insta-list-view .insta-post-card img {
             border-radius: 0;
             aspect-ratio: 1;
         }
-        
+
         .insta-list-view .insta-post-card:hover {
             transform: none;
         }
-        
+
         .insta-list-caption {
             padding: 1rem;
             text-align: left;
         }
-        
+
         .insta-list-caption h4 {
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
-        
+
         .insta-list-caption p {
             color: #4A4A4A;
             font-size: 0.875rem;
@@ -379,18 +379,18 @@
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .insta-carousel-track {
             display: flex;
             transition: transform 0.5s ease;
             gap: 1rem;
         }
-        
+
         .insta-carousel-view .insta-post-card {
             min-width: 100%;
             flex-shrink: 0;
         }
-        
+
         .carousel-nav {
             position: absolute;
             top: 50%;
@@ -408,27 +408,27 @@
             z-index: 10;
             transition: all 0.3s ease;
         }
-        
+
         .carousel-nav:hover {
             background: white;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
-        
+
         .carousel-nav-prev {
             left: 1rem;
         }
-        
+
         .carousel-nav-next {
             right: 1rem;
         }
-        
+
         .carousel-dots {
             display: flex;
             justify-content: center;
             gap: 0.5rem;
             margin-top: 1.5rem;
         }
-        
+
         .carousel-dot {
             width: 10px;
             height: 10px;
@@ -439,7 +439,7 @@
             transition: all 0.3s ease;
             padding: 0;
         }
-        
+
         .carousel-dot.active {
             background: #6C544E;
             width: 24px;
@@ -453,7 +453,7 @@
             margin: 0 auto;
             overflow: hidden;
         }
-        
+
         .insta-slider-track {
             display: flex;
             gap: 1rem;
@@ -463,39 +463,39 @@
             scrollbar-width: thin;
             scrollbar-color: #C0A99A #f1f1f1;
         }
-        
+
         .insta-slider-track::-webkit-scrollbar {
             height: 8px;
         }
-        
+
         .insta-slider-track::-webkit-scrollbar-track {
             background: #f1f1f1;
             border-radius: 4px;
         }
-        
+
         .insta-slider-track::-webkit-scrollbar-thumb {
             background: #C0A99A;
             border-radius: 4px;
         }
-        
+
         .insta-slider-track::-webkit-scrollbar-thumb:hover {
             background: #6C544E;
         }
-        
+
         .insta-slider-view .insta-post-card {
             min-width: 280px;
             max-width: 280px;
             flex-shrink: 0;
             aspect-ratio: 1;
         }
-        
+
         @media (min-width: 768px) {
             .insta-slider-view .insta-post-card {
                 min-width: 320px;
                 max-width: 320px;
             }
         }
-        
+
         .slider-nav {
             position: absolute;
             top: 40%;
@@ -513,18 +513,194 @@
             z-index: 10;
             transition: all 0.3s ease;
         }
-        
+
         .slider-nav:hover {
             background: white;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
-        
+
         .slider-nav-prev {
             left: 0.5rem;
         }
-        
+
         .slider-nav-next {
             right: 0.5rem;
+        }
+
+        /* Search box */
+        .insta-search-box {
+            max-width: 500px;
+            margin: 0 auto 1.5rem;
+            position: relative;
+        }
+
+        .insta-search-input {
+            width: 100%;
+            padding: 0.75rem 3rem 0.75rem 1rem;
+            border: 2px solid #C0A99A;
+            border-radius: 9999px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .insta-search-input:focus {
+            outline: none;
+            border-color: #6C544E;
+            box-shadow: 0 0 0 3px rgba(192, 169, 154, 0.2);
+        }
+
+        .insta-search-icon {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6C544E;
+            pointer-events: none;
+        }
+
+        /* Share buttons */
+        .insta-share-buttons {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            justify-content: center;
+        }
+
+        .insta-share-btn {
+            padding: 0.5rem;
+            border-radius: 50%;
+            background: #f0f0f0;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+        }
+
+        .insta-share-btn:hover {
+            background: #C0A99A;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Animation effects */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        .animate-scale-in {
+            animation: scaleIn 0.4s ease forwards;
+        }
+
+        .insta-post-card {
+            animation-fill-mode: both;
+        }
+
+        /* Account switcher */
+        .insta-account-switcher {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .insta-account-btn {
+            padding: 0.5rem 1rem;
+            background: white;
+            border: 2px solid #C0A99A;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            color: #4A4A4A;
+        }
+
+        .insta-account-btn:hover {
+            background: #F8F6F4;
+        }
+
+        .insta-account-btn.active {
+            background: #6C544E;
+            color: white;
+            border-color: #6C544E;
+        }
+
+        /* Video indicator enhanced */
+        .insta-video-play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .insta-video-duration {
+            position: absolute;
+            bottom: 0.75rem;
+            right: 0.75rem;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 10;
+        }
+
+        /* Infinite scroll loading indicator */
+        .insta-loading {
+            text-align: center;
+            padding: 2rem;
+            color: #6C544E;
+        }
+
+        .insta-loading-spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #6C544E;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
@@ -567,7 +743,7 @@
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-12 md:px-8">
-        
+
         <!-- Meet The Nail Tech Section -->
         <section class="mb-16">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -577,13 +753,13 @@
                     <h3 class="text-5xl md:text-6xl font-extrabold tracking-tight mt-2">NAIL TECH</h3>
                     <div class="mt-6 text-sm md:text-base leading-relaxed space-y-4">
                         <p class="text-2xl font-bold accent-color">✨ Welcome to Beauty Hive ✨</p>
-                        <p>Hi, I’m Brenda! I’ve been creating nail magic since 2019—starting out in my own little studio, then sharpening my skills at a busy nail shop, and now I’m back in a space that’s entirely mine (and filled with the plants I adore 🌿).</p>
+                        <p>Hi, I'm Brenda! I've been creating nail magic since 2019—starting out in my own little studio, then sharpening my skills at a busy nail shop, and now I'm back in a space that's entirely mine (and filled with the plants I adore 🌿).</p>
 
-                        <p>For me, nails aren’t just about color—they’re about self-expression, care, and confidence. I love blending creativity with clean, lasting techniques to give you nails that feel just as good as they look.</p>
+                        <p>For me, nails aren't just about color—they're about self-expression, care, and confidence. I love blending creativity with clean, lasting techniques to give you nails that feel just as good as they look.</p>
 
-                        <p>From Gel-X and Acrylics to Builder Gel and pedicures, I’m here to turn your nail goals into reality—whether that’s sleek and minimal or bold and artistic.</p>
-                        
-                        <p>Step into my little plant-filled haven, relax, and let’s create something beautiful together.</p>
+                        <p>From Gel-X and Acrylics to Builder Gel and pedicures, I'm here to turn your nail goals into reality—whether that's sleek and minimal or bold and artistic.</p>
+
+                        <p>Step into my little plant-filled haven, relax, and let's create something beautiful together.</p>
                     </div>
                 </div>
 
@@ -627,11 +803,8 @@
                     <div class="brown-bg rounded-full p-3 mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11v6m-3-3h6" />
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4a3 3 0 10-6 0v2" />
-                          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4a3 3 0 10-6 0v2"/>
-                          <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2"/>
+                          <line x1="16" y1="12" x2="8" y2="20" stroke="currentColor" stroke-width="2"/>
+                          <line x1="8" y1="12" x2="16" y2="20" stroke="currentColor" stroke-width="2"/>
                         </svg>
                     </div>
                     <h5 class="text-xl font-bold mb-2">CANCELLATION & RESCHEDULING</h5>
@@ -641,14 +814,7 @@
                 <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-lg">
                     <div class="brown-bg rounded-full p-3 mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11a4 4 0 11-8 0 4 4 0 018 0z" />
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10a2 2 0 10-4 0v1h4v-1z" />
-                          <path d="M12 18v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M12 18a2 2 0 10-4 0v1a2 2 0 004 0v-1z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M12 18a2 2 0 10-4 0v1a2 2 0 004 0v-1z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M12 18a2 2 0 10-4 0v1a2 2 0 004 0v-1z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                          <path d="M16 11a4 4 0 11-8 0 4 4 0 018 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                         </svg>
                     </div>
                     <h5 class="text-xl font-bold mb-2">PAYMENTS</h5>
@@ -663,7 +829,7 @@
                         </svg>
                     </div>
                     <h5 class="text-xl font-bold mb-2">APPOINTMENTS</h5>
-                    <p class="text-sm">Please arrive promptly for your appointment so we can make the most of your time. If you’re bringing a guest, they’re welcome to relax in our cozy waiting area while you get pampered.</p>
+                    <p class="text-sm">Please arrive promptly for your appointment so we can make the most of your time. If you're bringing a guest, they're welcome to relax in our cozy waiting area while you get pampered.</p>
                 </div>
                 <!-- Later Arrivals -->
                 <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-lg">
@@ -684,7 +850,7 @@
         <!-- Information & FAQ Section -->
         <section class="mb-16">
             <h4 class="text-4xl md:text-5xl text-center font-playfair accent-color mb-8">NAIL CARE INFORMATION</h4>
-            
+
             <div id="nail-care-grid" class="grid md:grid-cols-2 gap-4">
                 <!-- BEFORE APPOINTMENT COLUMN -->
                 <div class="nail-care-content">
@@ -806,7 +972,7 @@
     const imageModal = document.getElementById('image-modal');
     const modalContentContainer = imageModal.querySelector('.modal-content-container');
     const modalClose = imageModal.querySelector('.modal-close');
-    
+
     // Function to render the gallery for a given service
     function renderGallery(serviceName) {
         portfolioGallery.innerHTML = ''; // Clear previous images/videos
@@ -836,7 +1002,7 @@
                     playButton.className = 'play-button';
                     galleryItem.appendChild(playButton);
                 }
-                
+
                 portfolioGallery.appendChild(galleryItem);
             });
         }
@@ -879,12 +1045,12 @@
         modalContentContainer.innerHTML = '';
         if (type === 'image') {
             const img = document.createElement('img');
-            img.src = url; 
+            img.src = url;
             img.className = 'modal-content';
             modalContentContainer.appendChild(img);
         } else if (type === 'video') {
             const iframe = document.createElement('iframe');
-            iframe.src = url; 
+            iframe.src = url;
             iframe.className = 'modal-content w-full h-full';
             iframe.setAttribute('allowfullscreen', 'true');
             iframe.setAttribute('frameborder', '0');
@@ -912,7 +1078,7 @@
         createButtons();
         // Render the gallery for the first service by default
         renderGallery(Object.keys(portfolioData)[0]);
-        
+
         // Initialize Instagram Feed (DISABLED - uncomment when ready)
         // initInstagramFeed();
     };
@@ -920,7 +1086,7 @@
     // ============================================
     // INSTAGRAM FEED WIDGET - AUTO-UPDATE VERSION
     // ============================================
-    
+
     // Instagram API Configuration
     // IMPORTANT: Add your Instagram Access Token here after setup
     // See INSTAGRAM_API_SETUP.md for instructions on getting your token
@@ -928,9 +1094,33 @@
         accessToken: '', // ADD YOUR ACCESS TOKEN HERE (leave empty to use manual posts)
         userId: '', // This will be auto-detected from the token
         postsLimit: 25, // Number of posts to fetch
-        cacheExpiry: 3600000 // Cache for 1 hour (in milliseconds)
+        cacheExpiry: 3600000, // Cache for 1 hour (in milliseconds)
+        enableInfiniteScroll: true, // Enable infinite scroll (set to false to use Load More button)
+        enableAnimations: true // Enable entrance animations
     };
-    
+
+    // Multiple Instagram Accounts Configuration
+    // Add more accounts here to switch between them
+    const INSTAGRAM_ACCOUNTS = {
+        'main': {
+            name: '@isssbeenails',
+            username: '@isssbeenails',
+            profilePicUrl: 'https://placehold.co/150x150/6C544E/FFFFFF?text=TBH',
+            postsCount: 124,
+            followersCount: 1847,
+            followingCount: 312,
+            bio: '✨ Professional Nail Artist<br>💅 Gel-X | Acrylics | Builder Gel | Pedicures<br>📍 San Diego, CA<br>🔗 Book your appointment below!',
+            instagramUrl: 'https://instagram.com/isssbeenails',
+            accessToken: '' // Separate token if needed
+        }
+        // Add more accounts like this:
+        // 'secondary': {
+        //     name: '@another_account',
+        //     username: '@another_account',
+        //     ...
+        // }
+    };
+
     // Instagram Profile Configuration
     const instagramProfile = {
         username: '@isssbeenails',
@@ -1059,8 +1249,13 @@
     let currentView = 'grid';
     let displayedPostsCount = 8;
     let activePosts = [...instagramPosts]; // Will be replaced with API data if available
+    let allPosts = [...instagramPosts]; // Keep unfiltered copy
     let carouselIndex = 0;
     let sliderScrollPosition = 0;
+    let searchQuery = '';
+    let isLoading = false;
+    let currentAccount = 'main';
+    let infiniteScrollObserver = null;
 
     // ============================================
     // INSTAGRAM API INTEGRATION
@@ -1082,7 +1277,7 @@
 
         try {
             console.log('🔄 Fetching fresh posts from Instagram API...');
-            
+
             // Fetch user's media
             const response = await fetch(
                 `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp,like_count,comments_count&access_token=${INSTAGRAM_CONFIG.accessToken}&limit=${INSTAGRAM_CONFIG.postsLimit}`
@@ -1093,14 +1288,15 @@
             }
 
             const data = await response.json();
-            
-            // Transform Instagram API data to our format
+
+            // Transform Instagram API data to our format (INCLUDING VIDEOS!)
             const transformedPosts = data.data
-                .filter(post => post.media_type === 'IMAGE' || post.media_type === 'CAROUSEL_ALBUM')
+                .filter(post => ['IMAGE', 'VIDEO', 'CAROUSEL_ALBUM'].includes(post.media_type))
                 .map((post, index) => ({
                     id: index + 1,
-                    type: 'image',
-                    imageUrl: post.media_url,
+                    type: post.media_type === 'VIDEO' ? 'video' : 'image',
+                    imageUrl: post.media_type === 'VIDEO' ? post.thumbnail_url : post.media_url,
+                    videoUrl: post.media_type === 'VIDEO' ? post.media_url : null,
                     caption: post.caption || '',
                     likes: post.like_count || 0,
                     comments: post.comments_count || 0,
@@ -1110,7 +1306,7 @@
 
             // Cache the posts
             cachePosts(transformedPosts);
-            
+
             console.log(`✅ Successfully fetched ${transformedPosts.length} posts from Instagram`);
             return transformedPosts;
 
@@ -1157,15 +1353,29 @@
     async function initInstagramFeed() {
         // Update profile information
         updateProfileInfo();
-        
+
         // Fetch posts (from API or fallback to manual)
         activePosts = await fetchInstagramPosts();
-        
+        allPosts = [...activePosts]; // Keep copy for filtering
+
+        // Render account switcher if multiple accounts
+        if (Object.keys(INSTAGRAM_ACCOUNTS).length > 1) {
+            renderAccountSwitcher();
+        }
+
+        // Render search box
+        renderSearchBox();
+
         // Render initial posts
         renderInstagramFeed();
-        
+
         // Setup event listeners
         setupInstaEventListeners();
+
+        // Setup infinite scroll if enabled
+        if (INSTAGRAM_CONFIG.enableInfiniteScroll && currentView !== 'carousel') {
+            setupInfiniteScroll();
+        }
     }
 
     function updateProfileInfo() {
@@ -1175,7 +1385,7 @@
         document.getElementById('insta-followers-count').textContent = formatNumber(instagramProfile.followersCount);
         document.getElementById('insta-following-count').textContent = formatNumber(instagramProfile.followingCount);
         document.getElementById('insta-bio').innerHTML = instagramProfile.bio;
-        
+
         // Update Instagram link
         const instaLink = document.querySelector('a[href*="instagram.com"]');
         if (instaLink) {
@@ -1195,13 +1405,13 @@
     function renderInstagramFeed() {
         const container = document.getElementById('insta-feed-container');
         const postsToShow = activePosts.slice(0, displayedPostsCount);
-        
+
         // Clear container
         container.innerHTML = '';
-        
+
         // Set layout class
         container.className = `insta-${currentView}-view`;
-        
+
         // Render based on view type
         if (currentView === 'carousel') {
             renderCarousel(container, postsToShow);
@@ -1214,7 +1424,12 @@
                 container.appendChild(postElement);
             });
         }
-        
+
+        // Add animations after render
+        if (INSTAGRAM_CONFIG.enableAnimations) {
+            setTimeout(() => addAnimations(), 50);
+        }
+
         // Update "Load More" button visibility
         const loadMoreBtn = document.getElementById('insta-load-more');
         if (currentView === 'carousel' || currentView === 'slider') {
@@ -1231,45 +1446,45 @@
         const track = document.createElement('div');
         track.className = 'insta-carousel-track';
         track.style.transform = `translateX(-${carouselIndex * 100}%)`;
-        
+
         posts.forEach(post => {
             const postElement = createPostElement(post);
             track.appendChild(postElement);
         });
-        
+
         container.appendChild(track);
-        
+
         // Add navigation buttons
         const prevBtn = document.createElement('button');
         prevBtn.className = 'carousel-nav carousel-nav-prev';
         prevBtn.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>';
         prevBtn.onclick = () => navigateCarousel('prev');
-        
+
         const nextBtn = document.createElement('button');
         nextBtn.className = 'carousel-nav carousel-nav-next';
         nextBtn.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>';
         nextBtn.onclick = () => navigateCarousel('next');
-        
+
         container.appendChild(prevBtn);
         container.appendChild(nextBtn);
-        
+
         // Add dots
         const dotsContainer = document.createElement('div');
         dotsContainer.className = 'carousel-dots';
-        
+
         posts.forEach((_, index) => {
             const dot = document.createElement('button');
             dot.className = `carousel-dot ${index === carouselIndex ? 'active' : ''}`;
             dot.onclick = () => navigateCarousel(index);
             dotsContainer.appendChild(dot);
         });
-        
+
         container.parentElement.appendChild(dotsContainer);
     }
 
     function navigateCarousel(direction) {
         const totalPosts = activePosts.slice(0, displayedPostsCount).length;
-        
+
         if (typeof direction === 'number') {
             carouselIndex = direction;
         } else if (direction === 'prev') {
@@ -1277,7 +1492,7 @@
         } else if (direction === 'next') {
             carouselIndex = (carouselIndex + 1) % totalPosts;
         }
-        
+
         renderInstagramFeed();
     }
 
@@ -1285,25 +1500,25 @@
         // Create slider track
         const track = document.createElement('div');
         track.className = 'insta-slider-track';
-        
+
         posts.forEach(post => {
             const postElement = createPostElement(post);
             track.appendChild(postElement);
         });
-        
+
         container.appendChild(track);
-        
+
         // Add navigation buttons
         const prevBtn = document.createElement('button');
         prevBtn.className = 'slider-nav slider-nav-prev';
         prevBtn.innerHTML = '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>';
         prevBtn.onclick = () => scrollSlider('left');
-        
+
         const nextBtn = document.createElement('button');
         nextBtn.className = 'slider-nav slider-nav-next';
         nextBtn.innerHTML = '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>';
         nextBtn.onclick = () => scrollSlider('right');
-        
+
         container.appendChild(prevBtn);
         container.appendChild(nextBtn);
     }
@@ -1311,9 +1526,9 @@
     function scrollSlider(direction) {
         const track = document.querySelector('.insta-slider-track');
         if (!track) return;
-        
+
         const scrollAmount = 340; // Card width + gap
-        
+
         if (direction === 'left') {
             track.scrollLeft -= scrollAmount;
         } else {
@@ -1325,15 +1540,15 @@
         const postDiv = document.createElement('div');
         postDiv.className = 'insta-post-card';
         postDiv.onclick = () => openInstaModal(post);
-        
+
         // Image
         const img = document.createElement('img');
         img.src = post.imageUrl;
         img.alt = post.caption.substring(0, 50);
         img.loading = 'lazy';
         postDiv.appendChild(img);
-        
-        // Video indicator if applicable
+
+        // Video indicators if applicable
         if (post.type === 'video') {
             const videoIndicator = document.createElement('div');
             videoIndicator.className = 'insta-video-indicator';
@@ -1344,8 +1559,18 @@
                 Video
             `;
             postDiv.appendChild(videoIndicator);
+
+            // Add play button overlay
+            const playOverlay = document.createElement('div');
+            playOverlay.className = 'insta-video-play-overlay';
+            playOverlay.innerHTML = `
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+                </svg>
+            `;
+            postDiv.appendChild(playOverlay);
         }
-        
+
         // Overlay for grid and masonry views
         if (currentView !== 'list') {
             const overlay = document.createElement('div');
@@ -1368,7 +1593,7 @@
             `;
             postDiv.appendChild(overlay);
         }
-        
+
         // Caption for list view
         if (currentView === 'list') {
             const caption = document.createElement('div');
@@ -1395,7 +1620,7 @@
             `;
             postDiv.appendChild(caption);
         }
-        
+
         return postDiv;
     }
 
@@ -1404,7 +1629,7 @@
         const now = new Date();
         const diffTime = Math.abs(now - date);
         const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        
+
         if (diffDays === 0) return 'Today';
         if (diffDays === 1) return 'Yesterday';
         if (diffDays < 7) return `${diffDays} days ago`;
@@ -1420,10 +1645,10 @@
         document.getElementById('insta-view-list').addEventListener('click', () => switchView('list'));
         document.getElementById('insta-view-carousel').addEventListener('click', () => switchView('carousel'));
         document.getElementById('insta-view-slider').addEventListener('click', () => switchView('slider'));
-        
+
         // Load more button
         document.getElementById('insta-load-more').addEventListener('click', loadMorePosts);
-        
+
         // Modal close
         const instaModal = document.getElementById('insta-modal');
         const modalClose = instaModal.querySelector('.modal-close');
@@ -1435,24 +1660,24 @@
 
     function switchView(view) {
         currentView = view;
-        
+
         // Reset carousel index when switching views
         if (view === 'carousel') {
             carouselIndex = 0;
         }
-        
+
         // Update button states
         document.querySelectorAll('.insta-control-btn').forEach(btn => {
             btn.classList.remove('active');
         });
         document.getElementById(`insta-view-${view}`).classList.add('active');
-        
+
         // Remove any existing carousel dots
         const existingDots = document.querySelector('.carousel-dots');
         if (existingDots) {
             existingDots.remove();
         }
-        
+
         // Re-render feed
         renderInstagramFeed();
     }
@@ -1465,7 +1690,7 @@
     function openInstaModal(post) {
         const modal = document.getElementById('insta-modal');
         const modalContent = document.getElementById('insta-modal-content');
-        
+
         modalContent.innerHTML = `
             <div class="grid md:grid-cols-2 gap-0">
                 <div class="bg-black flex items-center justify-center">
@@ -1503,11 +1728,12 @@
                             </svg>
                             View on Instagram
                         </a>
+                        ${createShareButtons(post)}
                     </div>
                 </div>
             </div>
         `;
-        
+
         modal.style.display = 'flex';
     }
 
@@ -1515,4 +1741,183 @@
         const modal = document.getElementById('insta-modal');
         modal.style.display = 'none';
     }
+
+    // ============================================
+    // NEW FEATURES: Search, Video, Multi-Account, Share, Animations, Infinite Scroll
+    // ============================================
+
+    function renderAccountSwitcher() {
+        const container = document.getElementById('insta-feed-container');
+        const switcherDiv = document.createElement('div');
+        switcherDiv.className = 'insta-account-switcher';
+        switcherDiv.id = 'insta-account-switcher';
+
+        Object.keys(INSTAGRAM_ACCOUNTS).forEach(accountKey => {
+            const account = INSTAGRAM_ACCOUNTS[accountKey];
+            const btn = document.createElement('button');
+            btn.className = `insta-account-btn ${accountKey === currentAccount ? 'active' : ''}`;
+            btn.textContent = account.name;
+            btn.onclick = () => switchAccount(accountKey);
+            switcherDiv.appendChild(btn);
+        });
+
+        container.parentElement.insertBefore(switcherDiv, container);
+    }
+
+    async function switchAccount(accountKey) {
+        currentAccount = accountKey;
+        const account = INSTAGRAM_ACCOUNTS[accountKey];
+
+        // Update profile
+        instagramProfile.username = account.username;
+        instagramProfile.profilePicUrl = account.profilePicUrl;
+        instagramProfile.postsCount = account.postsCount;
+        instagramProfile.followersCount = account.followersCount;
+        instagramProfile.followingCount = account.followingCount;
+        instagramProfile.bio = account.bio;
+        instagramProfile.instagramUrl = account.instagramUrl;
+
+        updateProfileInfo();
+
+        // Update active button
+        document.querySelectorAll('.insta-account-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        event.target.classList.add('active');
+
+        // Fetch new posts (would use account-specific token in real scenario)
+        activePosts = await fetchInstagramPosts();
+        allPosts = [...activePosts];
+        displayedPostsCount = 8;
+        renderInstagramFeed();
+    }
+
+    function renderSearchBox() {
+        const container = document.getElementById('insta-feed-container');
+        const searchDiv = document.createElement('div');
+        searchDiv.className = 'insta-search-box';
+        searchDiv.innerHTML = `
+            <input
+                type="text"
+                class="insta-search-input"
+                id="insta-search-input"
+                placeholder="Search posts by caption or hashtags..."
+                value="${searchQuery}"
+            />
+            <svg class="w-5 h-5 insta-search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+        `;
+
+        container.parentElement.insertBefore(searchDiv, container);
+
+        // Add search listener
+        document.getElementById('insta-search-input').addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            filterPosts();
+        });
+    }
+
+    function filterPosts() {
+        if (!searchQuery.trim()) {
+            activePosts = [...allPosts];
+        } else {
+            const query = searchQuery.toLowerCase();
+            activePosts = allPosts.filter(post =>
+                post.caption.toLowerCase().includes(query)
+            );
+        }
+        displayedPostsCount = 8;
+        renderInstagramFeed();
+    }
+
+    function setupInfiniteScroll() {
+        // Clean up existing observer
+        if (infiniteScrollObserver) {
+            infiniteScrollObserver.disconnect();
+        }
+
+        // Create sentinel element
+        let sentinel = document.getElementById('insta-scroll-sentinel');
+        if (!sentinel) {
+            sentinel = document.createElement('div');
+            sentinel.id = 'insta-scroll-sentinel';
+            sentinel.style.height = '1px';
+            document.getElementById('insta-feed-container').parentElement.appendChild(sentinel);
+        }
+
+        // Create intersection observer
+        infiniteScrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !isLoading && displayedPostsCount < activePosts.length) {
+                    loadMorePosts();
+                }
+            });
+        }, {
+            rootMargin: '200px'
+        });
+
+        infiniteScrollObserver.observe(sentinel);
+    }
+
+    function addAnimations() {
+        if (!INSTAGRAM_CONFIG.enableAnimations) return;
+
+        const posts = document.querySelectorAll('.insta-post-card');
+        posts.forEach((post, index) => {
+            post.style.opacity = '0';
+            post.style.animationDelay = `${index * 0.05}s`;
+            post.classList.add('animate-fade-in-up');
+        });
+    }
+
+    function sharePost(post, platform) {
+        const url = post.permalink || instagramProfile.instagramUrl;
+        const text = post.caption ? post.caption.substring(0, 100) : 'Check out this post!';
+
+        let shareUrl = '';
+
+        switch(platform) {
+            case 'facebook':
+                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+                break;
+            case 'twitter':
+                shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
+                break;
+            case 'pinterest':
+                shareUrl = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&media=${encodeURIComponent(post.imageUrl)}&description=${encodeURIComponent(text)}`;
+                break;
+            case 'copy':
+                navigator.clipboard.writeText(url).then(() => {
+                    alert('Link copied to clipboard!');
+                });
+                return;
+        }
+
+        if (shareUrl) {
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+    }
+
+    function createShareButtons(post) {
+        return `
+            <div class="insta-share-buttons">
+                <button class="insta-share-btn" onclick="sharePost(${JSON.stringify(post).replace(/"/g, '&quot;')}, 'facebook')" title="Share on Facebook">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </button>
+                <button class="insta-share-btn" onclick="sharePost(${JSON.stringify(post).replace(/"/g, '&quot;')}, 'twitter')" title="Share on Twitter">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                </button>
+                <button class="insta-share-btn" onclick="sharePost(${JSON.stringify(post).replace(/"/g, '&quot;')}, 'pinterest')" title="Share on Pinterest">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
+                </button>
+                <button class="insta-share-btn" onclick="sharePost(${JSON.stringify(post).replace(/"/g, '&quot;')}, 'copy')" title="Copy Link">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                </button>
+            </div>
+        `;
+    }
+
+    // Expose sharePost to global scope for onclick handlers
+    window.sharePost = sharePost;
 </script>
