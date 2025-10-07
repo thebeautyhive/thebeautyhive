@@ -702,23 +702,115 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
+        /* Hamburger menu styles */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 767px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #6C544E;
+                flex-direction: column;
+                padding: 1rem 0;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                z-index: 100;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links > div {
+                padding: 0.75rem 1rem;
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            .mobile-only {
+                display: flex !important;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex !important;
+            }
+
+            .mobile-only {
+                display: none !important;
+            }
+        }
+
+        /* Sticky Book Now Footer CTA */
+        .sticky-book-now {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.25rem 1rem;
+            background-color: #6C544E;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.125rem;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+            transition: bottom 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .sticky-book-now.hidden {
+            bottom: -100px;
+            pointer-events: none;
+        }
+
+        .sticky-book-now:hover {
+            background-color: #5a4540;
+        }
+
+        @media (min-width: 768px) {
+            .sticky-book-now {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 <body class="bg-[#F8F6F4]">
 
-    <!-- SQUARE APPOINTMENTS WIDGET (ABSOLUTE FIRST SECTION) -->
-    <section id="booking" class="bg-white py-8 md:py-12">
-        <div class="container mx-auto px-4 md:px-8 text-center">
-            <h4 class="text-4xl md:text-5xl text-center font-playfair accent-color mb-8">BOOK YOUR APPOINTMENT</h4>
-            <div class="max-w-xl mx-auto">
-                <!-- Embed Code for Square Appointments Widget -->
-                <script src='https://square.site/appointments/buyer/widget/gn9xb1o39f6xx8/LEARA9W2DYKBR.js'></script>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Bar (FULL WIDTH) - CONVERTED TO NAVIGATION) -->
-    <section class="brown-bg text-white py-4 px-4 flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12 text-center shadow-xl">
+    <section class="brown-bg text-white py-4 px-4 shadow-xl relative">
+        <div class="container mx-auto flex items-center justify-between md:justify-center">
+            <!-- Hamburger Menu Button (Mobile Only) -->
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="nav-links md:flex md:flex-row md:items-center md:space-x-12" id="nav-links">
         <div class="flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.27a.997.997 0 01.372 1.348l-6 10a.997.997 0 01-1.636.002l-6-10a.997.997 0 01.372-1.348A9 9 0 1121 12a.997.997 0 01-.632.923" />
@@ -738,6 +830,15 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <a href="#faq" class="hover:underline font-bold text-sm md:text-base">FAQ</a>
+        </div>
+        <!-- BOOK NOW - Mobile Only -->
+        <div class="flex items-center mobile-only">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <a href="#booking" class="hover:underline font-bold text-sm md:text-base">BOOK NOW</a>
+        </div>
+            </div>
         </div>
     </section>
 
@@ -767,6 +868,9 @@
                 <div class="order-1 lg:order-2 flex justify-center">
                     <div class="max-w-sm w-full rounded-lg overflow-hidden shadow-xl">
                         <img src="https://imgur.com/9eS7xDe.jpeg" onerror="this.onerror=null;this.src='https://placehold.co/600x600/F8F6F4/C0A99A?text=Nail+Tech+Photo';" alt="Brenda, your nail tech" class="w-full h-auto object-cover rounded-lg">
+                        <div class="p-4 bg-white text-center">
+                            <a href="#booking" class="inline-block px-6 py-3 rounded-full text-white font-semibold brown-bg hover:opacity-90">BOOK NOW</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -847,6 +951,18 @@
             <!-- NOTE: The repetitive 'BOOK NOW' button here was removed as the Square section handles this -->
         </section>
 
+        <!-- ACUITY SCHEDULING WIDGET (AFTER POLICIES) -->
+        <section id="booking" class="bg-[#F8F6F4] py-8 md:py-12 mb-16">
+            <div class="container mx-auto px-4 md:px-8 text-center">
+                <h4 class="text-4xl md:text-5xl text-center font-playfair accent-color mb-8">BOOK YOUR APPOINTMENT</h4>
+                <div class="max-w-xl mx-auto">
+                    <!-- Embed Code for Acuity Scheduling Widget -->
+                    <iframe src="https://app.acuityscheduling.com/schedule.php?owner=37153930&ref=embedded_csp" title="Schedule Appointment" width="100%" height="800" frameBorder="0" allow="payment"></iframe>
+                    <script src="https://embed.acuityscheduling.com/js/embed.js" type="text/javascript"></script>
+                </div>
+            </div>
+        </section>
+
         <!-- Information & FAQ Section -->
         <section class="mb-16">
             <h4 class="text-4xl md:text-5xl text-center font-playfair accent-color mb-8">NAIL CARE INFORMATION</h4>
@@ -885,6 +1001,11 @@
                     <!-- Images will be generated here by JavaScript -->
                 </div>
             </section>
+
+            <!-- Book Now Button (Desktop Only) -->
+            <div class="hidden md:flex justify-center mb-16">
+                <a href="#booking" class="inline-block px-8 py-4 rounded-full text-white text-lg font-bold brown-bg hover:opacity-90 transition-opacity shadow-lg">BOOK NOW</a>
+            </div>
 
             <!-- FAQ Section -->
             <section id="faq" class="space-y-6">
@@ -935,6 +1056,9 @@
             <!-- Content will be an img or iframe for video -->
         </div>
     </div>
+
+    <!-- Sticky Book Now Footer CTA (Mobile Only) -->
+    <a href="#booking" class="sticky-book-now hidden" id="sticky-book-now">BOOK NOW</a>
 
 </body>
 <script>
@@ -1073,11 +1197,72 @@
         }
     };
 
+    // Hamburger menu toggle
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        const navLinksItems = navLinks.querySelectorAll('a');
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+
+    // Sticky Book Now Footer CTA - Show after scrolling past book now button
+    function initStickyFooterCTA() {
+        const stickyBookNow = document.getElementById('sticky-book-now');
+        if (!stickyBookNow) return;
+
+        // Find the first book now button (under nail tech photo)
+        const bookNowLinks = document.querySelectorAll('a[href="#booking"]');
+        let firstBookNowButton = null;
+
+        // Find the button that's in the nail tech section (not in nav or sticky or desktop button)
+        for (let link of bookNowLinks) {
+            if (link.id !== 'sticky-book-now' && !link.closest('.nav-links') && !link.closest('.hidden.md\\:flex')) {
+                firstBookNowButton = link;
+                break;
+            }
+        }
+
+        if (!firstBookNowButton) return;
+
+        function checkScroll() {
+            const buttonRect = firstBookNowButton.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            // Check if the original button is visible in the viewport
+            const isButtonVisible = buttonRect.top >= 0 && buttonRect.top < windowHeight;
+
+            if (isButtonVisible) {
+                // Original button is visible, hide sticky
+                stickyBookNow.classList.add('hidden');
+            } else if (buttonRect.bottom < 0) {
+                // Original button is above viewport (scrolled past), show sticky
+                stickyBookNow.classList.remove('hidden');
+            }
+        }
+
+        window.addEventListener('scroll', checkScroll);
+        // Check on load
+        checkScroll();
+    }
+
     // Initial page load setup
     window.onload = function() {
         createButtons();
         // Render the gallery for the first service by default
         renderGallery(Object.keys(portfolioData)[0]);
+
+        // Initialize sticky footer CTA
+        initStickyFooterCTA();
 
         // Initialize Instagram Feed (DISABLED - uncomment when ready)
         // initInstagramFeed();
