@@ -983,7 +983,7 @@
                 <h4 class="text-4xl md:text-5xl text-center font-playfair accent-color mb-8">BOOK YOUR APPOINTMENT</h4>
                 <div class="max-w-xl mx-auto">
                     <!-- Embed Code for Acuity Scheduling Widget -->
-                    <iframe src="https://app.acuityscheduling.com/schedule.php?owner=37153930&ref=embedded_csp" title="Schedule Appointment" width="100%" height="800" frameBorder="0" allow="payment"></iframe>
+                    <iframe id="acuity-iframe" src="https://app.acuityscheduling.com/schedule.php?owner=37153930&ref=embedded_csp" title="Schedule Appointment" width="100%" height="800" frameBorder="0" allow="payment"></iframe>
                     <script src="https://embed.acuityscheduling.com/js/embed.js" type="text/javascript"></script>
                 </div>
             </div>
@@ -1297,6 +1297,101 @@
         checkScroll();
     }
 
+    // ============================================
+    // ACUITY BOOKING TRACKING
+    // ============================================
+
+    let bookingSectionViewed = false;
+    let acuityIframeInteracted = false;
+
+    function initBookingTracking() {
+        const bookingSection = document.getElementById('booking');
+        const acuityIframe = document.getElementById('acuity-iframe');
+
+        if (!bookingSection || !acuityIframe) return;
+
+        // Track when booking section becomes visible (enters viewport)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !bookingSectionViewed) {
+                    bookingSectionViewed = true;
+                    console.log('Booking section viewed');
+
+                    // Track that user viewed booking form
+                    if (typeof fbq !== 'undefined') {
+                        fbq('track', 'InitiateCheckout', {
+                            content_name: 'Booking Form Viewed',
+                            content_category: 'Nail Services',
+                            content_type: 'booking_form'
+                        });
+                        console.log('Fired InitiateCheckout: Booking Form Viewed');
+                    }
+                }
+            });
+        }, {
+            threshold: 0.3 // Fire when 30% of section is visible
+        });
+
+        observer.observe(bookingSection);
+
+        // Track when user clicks into the Acuity iframe (indicates booking intent)
+        acuityIframe.addEventListener('load', function() {
+            console.log('Acuity iframe loaded');
+
+            // Track clicks/focus on iframe
+            acuityIframe.addEventListener('click', function() {
+                if (!acuityIframeInteracted) {
+                    acuityIframeInteracted = true;
+                    console.log('User clicked into Acuity booking form');
+
+                    if (typeof fbq !== 'undefined') {
+                        fbq('track', 'InitiateCheckout', {
+                            content_name: 'Booking Form Interaction',
+                            content_category: 'Nail Services',
+                            content_type: 'booking_form_click'
+                        });
+                        console.log('Fired InitiateCheckout: Booking Form Interaction');
+                    }
+                }
+            });
+        });
+
+        // Listen for postMessage from Acuity (if they send appointment data)
+        window.addEventListener('message', function(event) {
+            // Verify it's from Acuity
+            if (event.origin !== 'https://app.acuityscheduling.com') return;
+
+            console.log('Message from Acuity:', event.data);
+
+            // If Acuity sends appointment data, track it
+            if (event.data && event.data.appointmentType) {
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'InitiateCheckout', {
+                        content_name: event.data.appointmentType,
+                        content_category: 'Nail Services',
+                        content_type: 'service_selected',
+                        value: event.data.price || 0,
+                        currency: 'USD'
+                    });
+                    console.log('Fired InitiateCheckout for service:', event.data.appointmentType);
+                }
+            }
+
+            // Track completed bookings
+            if (event.data && event.data.type === 'appointment_scheduled') {
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'Lead', {
+                        content_name: event.data.appointmentType || 'Appointment',
+                        content_category: 'Nail Services',
+                        value: event.data.price || 0,
+                        currency: 'USD'
+                    });
+                    console.log('Fired Lead event: Appointment Completed');
+                }
+            }
+        });
+    }
+
     // Initial page load setup
     window.onload = function() {
         createButtons();
@@ -1305,6 +1400,9 @@
 
         // Initialize sticky footer CTA
         initStickyFooterCTA();
+
+        // Initialize booking tracking
+        initBookingTracking();
 
         // Initialize Instagram Feed (DISABLED - uncomment when ready)
         // initInstagramFeed();
