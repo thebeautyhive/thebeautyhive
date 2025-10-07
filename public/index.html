@@ -895,7 +895,7 @@
                     <div class="max-w-sm w-full rounded-lg overflow-hidden shadow-xl">
                         <img src="https://imgur.com/9eS7xDe.jpeg" onerror="this.onerror=null;this.src='https://placehold.co/600x600/F8F6F4/C0A99A?text=Nail+Tech+Photo';" alt="Brenda, your nail tech" class="w-full h-auto object-cover rounded-lg">
                         <div class="p-4 bg-white text-center">
-                            <a href="#booking" class="inline-block px-6 py-3 rounded-full text-white font-semibold brown-bg hover:opacity-90">BOOK NOW</a>
+                            <a href="#booking" onclick="if(typeof fbq !== 'undefined') fbq('track', 'Schedule');" class="inline-block px-6 py-3 rounded-full text-white font-semibold brown-bg hover:opacity-90">BOOK NOW</a>
                         </div>
                     </div>
                 </div>
@@ -1030,7 +1030,7 @@
 
             <!-- Book Now Button (Desktop Only) -->
             <div class="hidden md:flex justify-center mb-16">
-                <a href="#booking" class="inline-block px-8 py-4 rounded-full text-white text-lg font-bold brown-bg hover:opacity-90 transition-opacity shadow-lg">BOOK NOW</a>
+                <a href="#booking" onclick="if(typeof fbq !== 'undefined') fbq('track', 'Schedule');" class="inline-block px-8 py-4 rounded-full text-white text-lg font-bold brown-bg hover:opacity-90 transition-opacity shadow-lg">BOOK NOW</a>
             </div>
 
             <!-- FAQ Section -->
@@ -1082,7 +1082,7 @@
     </div>
 
     <!-- Sticky Book Now Footer CTA (Mobile Only) -->
-    <a href="#booking" class="sticky-book-now hidden" id="sticky-book-now">BOOK NOW</a>
+    <a href="#booking" onclick="if(typeof fbq !== 'undefined') fbq('track', 'Schedule');" class="sticky-book-now hidden" id="sticky-book-now">BOOK NOW</a>
 
 </body>
 <script>
@@ -1166,8 +1166,19 @@
         // Add 'active' class to the clicked button
         event.target.classList.add('active');
 
-        // Render the new gallery
+        // Get the service name
         const serviceName = event.target.dataset.service;
+
+        // Track ViewContent event with Facebook Pixel
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'ViewContent', {
+                content_name: serviceName,
+                content_category: 'Nail Services',
+                content_type: 'service'
+            });
+        }
+
+        // Render the new gallery
         renderGallery(serviceName);
     }
 
