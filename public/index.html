@@ -1169,13 +1169,20 @@
         // Get the service name
         const serviceName = event.target.dataset.service;
 
+        // Debug logging
+        console.log('Service clicked:', serviceName);
+        console.log('Facebook Pixel available:', typeof fbq !== 'undefined');
+
         // Track ViewContent event with Facebook Pixel
         if (typeof fbq !== 'undefined') {
+            console.log('Firing ViewContent event for:', serviceName);
             fbq('track', 'ViewContent', {
                 content_name: serviceName,
                 content_category: 'Nail Services',
                 content_type: 'service'
             });
+        } else {
+            console.warn('Facebook Pixel (fbq) not loaded yet');
         }
 
         // Render the new gallery
