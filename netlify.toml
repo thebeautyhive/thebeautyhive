@@ -1,0 +1,27 @@
+# Netlify configuration file
+[build]
+  publish = "public"
+
+# Remove .html extension from URLs
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy-policy.html"
+  status = 200
+
+[[redirects]]
+  from = "/data-deletion"
+  to = "/data-deletion.html"
+  status = 200
+
+# Redirect .html URLs to clean URLs (permanent redirect)
+[[redirects]]
+  from = "/privacy-policy.html"
+  to = "/privacy-policy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/data-deletion.html"
+  to = "/data-deletion"
+  status = 301
+  force = true

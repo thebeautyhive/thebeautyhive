@@ -1,0 +1,10 @@
+# Netlify redirects file
+# This removes the .html extension from URLs
+
+# Clean URL rewrites
+/privacy-policy    /privacy-policy.html    200
+/data-deletion     /data-deletion.html     200
+
+# Redirect .html URLs to clean URLs
+/privacy-policy.html    /privacy-policy    301!
+/data-deletion.html     /data-deletion     301!
