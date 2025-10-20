@@ -1,20 +1,26 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
-    { "source": "/data-deletion", "destination": "/data-deletion.html" }
-  ],
-  "redirects": [
+  "functions": {
+    "api/instagram.js": {
+      "maxDuration": 10
+    }
+  },
+  "headers": [
     {
-      "source": "/privacy-policy.html",
-      "destination": "/privacy-policy",
-      "permanent": true
-    },
-    {
-      "source": "/data-deletion.html",
-      "destination": "/data-deletion",
-      "permanent": true
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type"
+        }
+      ]
     }
   ]
 }

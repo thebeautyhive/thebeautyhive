@@ -1040,7 +1040,7 @@
                 </div>
                 <div>
                     <h5 class="text-lg font-bold">Q: DO I NEED TO REMOVE MY OLD SET?</h5>
-                    <p class="mt-2 text-sm">Please arrive with your bare nails, free of any old polish or product. A removal fee will be added if a removal service is required. This ensures proper prep and application for your new set.</p>
+                    <p class="mt-2 text-sm">A removal fee will be added if a removal service is required. This ensures proper prep and application for your new set.</p>
                 </div>
                 <div>
                     <h5 class="text-lg font-bold">Q: HOW DO I CARE FOR MY NAIL ART?</h5>
@@ -1410,11 +1410,11 @@
     // INSTAGRAM FEED WIDGET - AUTO-UPDATE VERSION
     // ============================================
 
-    // Instagram API Configuration
+    // Instagram API Configuration - Automatic Feed
     // IMPORTANT: Add your Instagram Access Token here after setup
-    // See INSTAGRAM_API_SETUP.md for instructions on getting your token
+    // See instructions below for getting your token
     const INSTAGRAM_CONFIG = {
-        accessToken: '', // ADD YOUR ACCESS TOKEN HERE (leave empty to use manual posts)
+        accessToken: '', // ADD YOUR LONG-LIVED ACCESS TOKEN HERE (lasts 60 days)
         userId: '', // This will be auto-detected from the token
         postsLimit: 25, // Number of posts to fetch
         cacheExpiry: 3600000, // Cache for 1 hour (in milliseconds)
@@ -1585,12 +1585,6 @@
     // ============================================
 
     async function fetchInstagramPosts() {
-        // If no access token, use manual posts
-        if (!INSTAGRAM_CONFIG.accessToken) {
-            console.log('📝 Using manual posts (no access token provided)');
-            return instagramPosts;
-        }
-
         // Check cache first
         const cached = getCachedPosts();
         if (cached) {
@@ -1599,39 +1593,34 @@
         }
 
         try {
-            console.log('🔄 Fetching fresh posts from Instagram API...');
+            console.log('🔄 Fetching posts from backend API...');
 
-            // Fetch user's media
-            const response = await fetch(
-                `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp,like_count,comments_count&access_token=${INSTAGRAM_CONFIG.accessToken}&limit=${INSTAGRAM_CONFIG.postsLimit}`
-            );
+            // Fetch from our Vercel serverless function
+            // In production: /api/instagram
+            // In development: http://localhost:3000/api/instagram
+            const apiUrl = window.location.hostname === 'localhost'
+                ? 'http://localhost:3000/api/instagram'
+                : '/api/instagram';
+
+            const response = await fetch(apiUrl);
 
             if (!response.ok) {
-                throw new Error(`Instagram API error: ${response.status}`);
+                throw new Error(`API error: ${response.status}`);
             }
 
             const data = await response.json();
 
-            // Transform Instagram API data to our format (INCLUDING VIDEOS!)
-            const transformedPosts = data.data
-                .filter(post => ['IMAGE', 'VIDEO', 'CAROUSEL_ALBUM'].includes(post.media_type))
-                .map((post, index) => ({
-                    id: index + 1,
-                    type: post.media_type === 'VIDEO' ? 'video' : 'image',
-                    imageUrl: post.media_type === 'VIDEO' ? post.thumbnail_url : post.media_url,
-                    videoUrl: post.media_type === 'VIDEO' ? post.media_url : null,
-                    caption: post.caption || '',
-                    likes: post.like_count || 0,
-                    comments: post.comments_count || 0,
-                    date: post.timestamp.split('T')[0],
-                    permalink: post.permalink
-                }));
+            if (!data.success) {
+                throw new Error(data.error || 'Failed to fetch posts');
+            }
+
+            const posts = data.posts;
 
             // Cache the posts
-            cachePosts(transformedPosts);
+            cachePosts(posts);
 
-            console.log(`✅ Successfully fetched ${transformedPosts.length} posts from Instagram`);
-            return transformedPosts;
+            console.log(`✅ Successfully fetched ${posts.length} posts from Instagram`);
+            return posts;
 
         } catch (error) {
             console.error('❌ Error fetching Instagram posts:', error);
