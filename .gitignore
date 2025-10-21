@@ -1,60 +1,21 @@
-# Private markdown and guides at repo root
-/*.md
-!/README.md
-!/LICENSE
-!/LICENSE.md
-!/CONTRIBUTING.md
-!/CODE_OF_CONDUCT.md
-!/SECURITY.md
-!/CHANGELOG.md
-
-# Common private docs directories anywhere
-**/private/**
-**/internal/**
-**/docs-private/**
-**/notes/**
-**/scratch/**
-**/drafts/**
-
-# File naming conventions for private content
-**/*_PRIVATE.*
-**/*.private.*
-**/*.secret.*
-**/*.draft.*
-
-# Environment and secrets
+# Environment variables
 .env
-.env.*
-.envrc
-.direnv/
-secrets.*
-**/*.key
-**/*.pem
-**/*.p12
-**/*.pfx
-**/*.crt
-**/*.cer
-**/*.der
-**/*.kdb
-**/*.jks
+.env.local
+.env*.local
 
-# Backups and temp files
-*.bak
-*.tmp
-*.temp
-*~
-*.orig
+# Vercel
+.vercel
 
-# OS/editor cruft
+# Node modules
+node_modules/
+
+# OS files
 .DS_Store
-*.log
-.idea/
+Thumbs.db
+
+# IDE
 .vscode/
+.idea/
 *.swp
 *.swo
-
-# Local Python virtual environment
-.venv/
-
-# Project-specific backups
-/CUSTOM_WIDGET_BACKUP.html
+*~
