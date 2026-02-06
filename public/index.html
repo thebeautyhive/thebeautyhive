@@ -1582,70 +1582,98 @@
             });
         });
 
-        // Listen for postMessage from Acuity (if they send appointment data)
+        // Listen for postMessage from Acuity Custom Conversion Tracking
+        // Acuity fires this from sandbox.acuityinnovation.com/conversion.php
+        // after a booking completes, using the script we added in Acuity's
+        // Integrations > Custom Conversion Tracking
         window.addEventListener('message', function(event) {
-            // Verify it's from Acuity
-            if (event.origin !== 'https://app.acuityscheduling.com') return;
+            // Accept messages from Acuity domains
+            var acuityDomains = [
+                'https://app.acuityscheduling.com',
+                'https://sandbox.acuityinnovation.com'
+            ];
+            var isAcuity = acuityDomains.some(function(domain) {
+                return event.origin.indexOf(domain.replace('https://', '')) !== -1;
+            }) || (event.data && event.data.event === 'acuityConversion');
+
+            if (!isAcuity) return;
 
             console.log('Message from Acuity:', event.data);
 
-            // If Acuity sends appointment data, track it
-            if (event.data && event.data.appointmentType) {
+            // Handle Acuity Custom Conversion Tracking postMessage
+            // This fires when a booking is COMPLETED (confirmation page shown)
+            if (event.data && event.data.event === 'acuityConversion') {
+                var appointmentType = event.data.appointmentType || 'Appointment';
+                var price = parseFloat(event.data.price) || 0;
+                var appointmentId = event.data.appointmentId || '';
+                var email = event.data.email || '';
+                var calendar = event.data.calendar || '';
+                var clientDate = event.data.clientDate || '';
+                var clientTime = event.data.clientTime || '';
+
+                console.log('Acuity Conversion Data:', {
+                    appointmentType: appointmentType,
+                    price: price,
+                    appointmentId: appointmentId,
+                    email: email,
+                    calendar: calendar,
+                    date: clientDate,
+                    time: clientTime
+                });
+
+                // =============================================
+                // FACEBOOK PIXEL: Schedule + Lead events
+                // =============================================
                 if (typeof fbq !== 'undefined') {
-                    fbq('track', 'InitiateCheckout', {
-                        content_name: event.data.appointmentType,
+                    fbq('track', 'Schedule', {
+                        content_name: appointmentType,
                         content_category: 'Nail Services',
-                        content_type: 'service_selected',
-                        value: event.data.price || 0,
+                        value: price,
                         currency: 'USD'
                     });
-                    console.log('Fired InitiateCheckout for service:', event.data.appointmentType);
+                    console.log('FB Pixel: Fired Schedule event for:', appointmentType, '$' + price);
+
+                    fbq('track', 'Lead', {
+                        content_name: appointmentType,
+                        content_category: 'Nail Services',
+                        value: price,
+                        currency: 'USD'
+                    });
+                    console.log('FB Pixel: Fired Lead event for:', appointmentType);
                 }
 
-                // Google Ads: Track service selected in Acuity
+                // =============================================
+                // GOOGLE ADS: Purchase conversion with value
+                // =============================================
                 if (typeof gtag !== 'undefined') {
-                    gtag('event', 'add_to_cart', {
-                        event_category: 'booking',
-                        event_label: event.data.appointmentType,
-                        value: event.data.price || 0,
-                        currency: 'USD'
+                    // Fire the Purchase conversion (primary conversion action)
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-17914761724/a7tPCJyY5u4bEPyjtt5C',
+                        'value': price > 0 ? price : 1.0,
+                        'currency': 'USD',
+                        'transaction_id': appointmentId
                     });
-                    console.log('Google Ads: Fired add_to_cart for service:', event.data.appointmentType);
+                    console.log('Google Ads: Fired Purchase conversion - $' + price + ' - ID: ' + appointmentId);
+
+                    // Fire custom "Booked Appointment" event
+                    gtag('event', 'booked_appointment', {
+                        'event_category': 'booking',
+                        'event_label': appointmentType,
+                        'value': price,
+                        'currency': 'USD',
+                        'appointment_id': appointmentId,
+                        'appointment_type': appointmentType,
+                        'appointment_date': clientDate,
+                        'appointment_time': clientTime,
+                        'calendar': calendar
+                    });
+                    console.log('Google Ads: Fired booked_appointment custom event for:', appointmentType);
                 }
             }
 
-            // Track completed bookings
-            if (event.data && event.data.type === 'appointment_scheduled') {
-                if (typeof fbq !== 'undefined') {
-                    // Fire Schedule event (standard event for appointment booking)
-                    fbq('track', 'Schedule', {
-                        content_name: event.data.appointmentType || 'Appointment',
-                        content_category: 'Nail Services',
-                        value: event.data.price || 0,
-                        currency: 'USD'
-                    });
-                    console.log('Fired Schedule event: Appointment Booked');
-
-                    // Also fire Lead event (for conversion tracking)
-                    fbq('track', 'Lead', {
-                        content_name: event.data.appointmentType || 'Appointment',
-                        content_category: 'Nail Services',
-                        value: event.data.price || 0,
-                        currency: 'USD'
-                    });
-                    console.log('Fired Lead event: Appointment Completed');
-                }
-
-                // Google Ads: Fire Purchase conversion (main conversion event)
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'conversion', {
-                        'send_to': 'AW-17914761724/a7tPCJyY5u4bEPyjtt5C',
-                        'value': event.data.price || 1.0,
-                        'currency': 'USD',
-                        'transaction_id': event.data.appointmentId || ''
-                    });
-                    console.log('Google Ads: Fired Purchase conversion - Appointment Booked');
-                }
+            // Also handle Acuity iframe resize messages (keep existing behavior)
+            if (event.data && typeof event.data === 'string' && event.data.indexOf('acuity') !== -1) {
+                console.log('Acuity iframe message (resize/navigation):', event.data);
             }
         });
     }
