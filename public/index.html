@@ -1655,7 +1655,16 @@
                     });
                     console.log('Google Ads: Fired Purchase conversion - $' + price + ' - ID: ' + appointmentId);
 
-                    // Fire custom "Booked Appointment" event
+                    // Fire the Book Appointment conversion (custom conversion action)
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-17914761724/yDTVCPWVh_QbEPyjtt5C',
+                        'value': price > 0 ? price : 1.0,
+                        'currency': 'USD',
+                        'transaction_id': appointmentId
+                    });
+                    console.log('Google Ads: Fired Book Appointment conversion - $' + price + ' - ID: ' + appointmentId);
+
+                    // Fire custom "Booked Appointment" event for reporting
                     gtag('event', 'booked_appointment', {
                         'event_category': 'booking',
                         'event_label': appointmentType,
