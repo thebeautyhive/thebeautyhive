@@ -49,6 +49,16 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
 
+    <!-- Google Ads (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17914761724"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17914761724');
+    </script>
+    <!-- End Google Ads Tag -->
+
     <link rel="icon" type="image/svg+xml" href="beautyhive3.svg">
 
     <!-- Structured Data - LocalBusiness Schema -->
@@ -1015,7 +1025,7 @@
                     <div class="max-w-sm w-full rounded-lg overflow-hidden shadow-xl">
                         <img src="https://imgur.com/9eS7xDe.jpeg" onerror="this.onerror=null;this.src='https://placehold.co/600x600/F8F6F4/C0A99A?text=Nail+Tech+Photo';" alt="Brenda, nail artist at Beauty Hive Studio in San Diego" class="w-full h-auto object-cover rounded-lg">
                         <div class="p-4 bg-white text-center">
-                            <a href="#booking" onclick="if(typeof fbq !== 'undefined') fbq('trackCustom', 'BookNowClick', {button_location: 'hero_section'});" class="inline-block px-6 py-3 rounded-full text-white font-semibold brown-bg hover:opacity-90">BOOK APPOINTMENT</a>
+                            <a href="#booking" onclick="if(typeof fbq !== 'undefined') fbq('trackCustom', 'BookNowClick', {button_location: 'hero_section'}); if(typeof gtag !== 'undefined') gtag('event', 'begin_checkout', {event_category: 'booking', event_label: 'hero_section'});" class="inline-block px-6 py-3 rounded-full text-white font-semibold brown-bg hover:opacity-90">BOOK APPOINTMENT</a>
                         </div>
                     </div>
                 </div>
@@ -1179,7 +1189,7 @@
 
             <!-- Book Now Button (Desktop Only) -->
             <div class="hidden md:flex justify-center mb-16">
-                <a href="#booking" onclick="if(typeof fbq !== 'undefined') fbq('trackCustom', 'BookNowClick', {button_location: 'after_portfolio'});" class="inline-block px-8 py-4 rounded-full text-white text-lg font-bold brown-bg hover:opacity-90 transition-opacity shadow-lg">BOOK NOW</a>
+                <a href="#booking" onclick="if(typeof fbq !== 'undefined') fbq('trackCustom', 'BookNowClick', {button_location: 'after_portfolio'}); if(typeof gtag !== 'undefined') gtag('event', 'begin_checkout', {event_category: 'booking', event_label: 'after_portfolio'});" class="inline-block px-8 py-4 rounded-full text-white text-lg font-bold brown-bg hover:opacity-90 transition-opacity shadow-lg">BOOK NOW</a>
             </div>
 
             <!-- FAQ Section -->
@@ -1242,7 +1252,7 @@
                 Located on El Cajon Blvd near SDSU, we provide personalized, appointment-only service in a relaxing private setting. Serving the College Area, North Park, Kensington, Rolando, and surrounding San Diego neighborhoods.
             </p>
             <div class="mt-8">
-                <a href="#booking" onclick="if(typeof fbq !== 'undefined') fbq('trackCustom', 'BookNowClick', {button_location: 'about_section'});" class="inline-block px-8 py-3 rounded-full text-white font-semibold brown-bg hover:opacity-90 transition-opacity shadow-lg">BOOK YOUR APPOINTMENT</a>
+                <a href="#booking" onclick="if(typeof fbq !== 'undefined') fbq('trackCustom', 'BookNowClick', {button_location: 'about_section'}); if(typeof gtag !== 'undefined') gtag('event', 'begin_checkout', {event_category: 'booking', event_label: 'about_section'});" class="inline-block px-8 py-3 rounded-full text-white font-semibold brown-bg hover:opacity-90 transition-opacity shadow-lg">BOOK YOUR APPOINTMENT</a>
             </div>
         </div>
     </section>
@@ -1271,7 +1281,7 @@
     </div>
 
     <!-- Sticky Book Now Footer CTA (Mobile Only) -->
-    <a href="#booking" onclick="if(typeof fbq !== 'undefined') fbq('trackCustom', 'BookNowClick', {button_location: 'sticky_footer'});" class="sticky-book-now hidden" id="sticky-book-now">BOOK NOW</a>
+    <a href="#booking" onclick="if(typeof fbq !== 'undefined') fbq('trackCustom', 'BookNowClick', {button_location: 'sticky_footer'}); if(typeof gtag !== 'undefined') gtag('event', 'begin_checkout', {event_category: 'booking', event_label: 'sticky_footer'});" class="sticky-book-now hidden" id="sticky-book-now">BOOK NOW</a>
 
 </body>
 <script>
@@ -1372,6 +1382,15 @@
             });
         } else {
             console.warn('Facebook Pixel (fbq) not loaded yet');
+        }
+
+        // Track view_item event with Google Ads
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'view_item', {
+                event_category: 'Nail Services',
+                event_label: serviceName
+            });
+            console.log('Google Ads: Fired view_item for:', serviceName);
         }
 
         // Render the new gallery
@@ -1515,6 +1534,15 @@
                         });
                         console.log('Fired InitiateCheckout: Booking Form Viewed');
                     }
+
+                    // Google Ads: Track booking form viewed
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'begin_checkout', {
+                            event_category: 'booking',
+                            event_label: 'booking_form_viewed'
+                        });
+                        console.log('Google Ads: Fired begin_checkout - Booking Form Viewed');
+                    }
                 }
             });
         }, {
@@ -1541,6 +1569,15 @@
                         });
                         console.log('Fired InitiateCheckout: Booking Form Interaction');
                     }
+
+                    // Google Ads: Track booking form interaction
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'begin_checkout', {
+                            event_category: 'booking',
+                            event_label: 'booking_form_interaction'
+                        });
+                        console.log('Google Ads: Fired begin_checkout - Booking Form Interaction');
+                    }
                 }
             });
         });
@@ -1564,6 +1601,17 @@
                     });
                     console.log('Fired InitiateCheckout for service:', event.data.appointmentType);
                 }
+
+                // Google Ads: Track service selected in Acuity
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'add_to_cart', {
+                        event_category: 'booking',
+                        event_label: event.data.appointmentType,
+                        value: event.data.price || 0,
+                        currency: 'USD'
+                    });
+                    console.log('Google Ads: Fired add_to_cart for service:', event.data.appointmentType);
+                }
             }
 
             // Track completed bookings
@@ -1586,6 +1634,17 @@
                         currency: 'USD'
                     });
                     console.log('Fired Lead event: Appointment Completed');
+                }
+
+                // Google Ads: Fire Purchase conversion (main conversion event)
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-17914761724/a7tPCJyY5u4bEPyjtt5C',
+                        'value': event.data.price || 1.0,
+                        'currency': 'USD',
+                        'transaction_id': event.data.appointmentId || ''
+                    });
+                    console.log('Google Ads: Fired Purchase conversion - Appointment Booked');
                 }
             }
         });
