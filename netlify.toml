@@ -13,6 +13,11 @@
   to = "/data-deletion.html"
   status = 200
 
+[[redirects]]
+  from = "/welcome"
+  to = "/welcome.html"
+  status = 200
+
 # Redirect .html URLs to clean URLs (permanent redirect)
 [[redirects]]
   from = "/privacy-policy.html"
@@ -23,5 +28,11 @@
 [[redirects]]
   from = "/data-deletion.html"
   to = "/data-deletion"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/welcome.html"
+  to = "/welcome"
   status = 301
   force = true
