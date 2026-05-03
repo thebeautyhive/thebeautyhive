@@ -1069,6 +1069,39 @@
             var CACHE_EXPIRY  = 3600000; // 1 hour
             var PROFILE_URL   = 'https://www.instagram.com/isssbeenails/';
 
+            // Curated fallback posts — mirrors the main site's `instagramPosts`
+            // array. Used when /api/instagram is unreachable or has no token
+            // configured yet, so the gallery is never empty.
+            var FALLBACK_POSTS = [
+                { id: 1, type: 'image', imageUrl: 'https://i.imgur.com/4iwRNPy.jpeg',
+                  caption: 'Stunning chrome nails for the weekend.', likes: 156, comments: 23,
+                  date: '2025-10-03', permalink: PROFILE_URL },
+                { id: 2, type: 'image', imageUrl: 'https://i.imgur.com/sVWLAkG.jpeg',
+                  caption: 'Fresh acrylics with a beautiful nude design.', likes: 189, comments: 31,
+                  date: '2025-10-02', permalink: PROFILE_URL },
+                { id: 3, type: 'image', imageUrl: 'https://i.imgur.com/pHJKgQd.jpeg',
+                  caption: 'A delicate French tip variation.', likes: 214, comments: 28,
+                  date: '2025-10-01', permalink: PROFILE_URL },
+                { id: 4, type: 'image', imageUrl: 'https://i.imgur.com/HY5HtDd.jpeg',
+                  caption: 'Bold and beautiful.', likes: 178, comments: 19,
+                  date: '2025-09-30', permalink: PROFILE_URL },
+                { id: 5, type: 'image', imageUrl: 'https://i.imgur.com/vT2iKJO.jpeg',
+                  caption: 'Perfect for the season.', likes: 201, comments: 35,
+                  date: '2025-09-29', permalink: PROFILE_URL },
+                { id: 6, type: 'image', imageUrl: 'https://i.imgur.com/8BUHAuu.jpeg',
+                  caption: 'Elegance at its finest.', likes: 167, comments: 22,
+                  date: '2025-09-28', permalink: PROFILE_URL },
+                { id: 7, type: 'image', imageUrl: 'https://i.imgur.com/Cno9uaU.jpeg',
+                  caption: 'Another happy client.', likes: 192, comments: 27,
+                  date: '2025-09-27', permalink: PROFILE_URL },
+                { id: 8, type: 'image', imageUrl: 'https://i.imgur.com/Yn8fK9l.jpeg',
+                  caption: 'Classic never goes out of style.', likes: 145, comments: 18,
+                  date: '2025-09-26', permalink: PROFILE_URL },
+                { id: 9, type: 'image', imageUrl: 'https://i.imgur.com/5TeFuun.jpeg',
+                  caption: 'Builder gel perfection.', likes: 183, comments: 24,
+                  date: '2025-09-25', permalink: PROFILE_URL }
+            ];
+
             function getApiUrl() {
                 return window.location.hostname === 'localhost'
                     ? 'http://localhost:3000/api/instagram'
@@ -1104,7 +1137,7 @@
                 var cached = getCachedPosts();
                 if (cached && cached.length) {
                     // Refresh in background so subsequent visits see new posts
-                    fetch(getApiUrl()).then(function (r) { return r.json(); })
+                    fetch(getApiUrl()).then(function (r) { return r.ok ? r.json() : null; })
                         .then(function (data) {
                             if (data && data.success && Array.isArray(data.posts) && data.posts.length) {
                                 cachePosts(data.posts);
@@ -1118,7 +1151,7 @@
                         return r.json();
                     })
                     .then(function (data) {
-                        if (!data || !data.success || !Array.isArray(data.posts)) {
+                        if (!data || !data.success || !Array.isArray(data.posts) || !data.posts.length) {
                             throw new Error((data && data.error) || 'Invalid API response');
                         }
                         cachePosts(data.posts);
@@ -1237,11 +1270,18 @@
                 if (!container) return;
 
                 fetchPosts()
-                    .then(render)
+                    .then(function (posts) {
+                        if (!posts || !posts.length) {
+                            render(FALLBACK_POSTS);
+                        } else {
+                            render(posts);
+                        }
+                    })
                     .catch(function (err) {
-                        console.error('[mothers-day] Instagram feed error:', err);
-                        renderEmpty(container,
-                            "Brenda's latest posts couldn't be loaded right now. Visit @isssbeenails on Instagram for the freshest looks.");
+                        // API down, no token configured, network error, etc.
+                        // Render the curated fallback so the gallery is never empty.
+                        console.warn('[mothers-day] Instagram API unavailable, using fallback gallery:', err && err.message ? err.message : err);
+                        render(FALLBACK_POSTS);
                     });
             }
 
