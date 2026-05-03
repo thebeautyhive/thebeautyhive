@@ -4,6 +4,11 @@
       "maxDuration": 10
     }
   },
+  "rewrites": [
+    { "source": "/welcome", "destination": "/welcome.html" },
+    { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
+    { "source": "/data-deletion", "destination": "/data-deletion.html" }
+  ],
   "headers": [
     {
       "source": "/api/(.*)",
