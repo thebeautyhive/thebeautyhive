@@ -1230,7 +1230,10 @@
     <a href="#booking"
        onclick="if(typeof fbq !== 'undefined') fbq('trackCustom', 'BookNowClick', {button_location: 'mothers_day_sticky_footer'}); if(typeof gtag !== 'undefined') gtag('event', 'begin_checkout', {event_category: 'booking', event_label: 'mothers_day_sticky_footer'});"
        class="sticky-book-now hidden" id="sticky-book-now">BOOK THE COMBO SPECIAL</a>
-ment.getElementById('sticky-book-now');
+
+    <script>
+        (function() {
+            var sticky = document.getElementById('sticky-book-now');
             if (!sticky) return;
 
             var firstCta = document.querySelector('.hero a[href="#booking"]');
