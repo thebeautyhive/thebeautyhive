@@ -395,6 +395,73 @@
             object-fit: cover;
         }
 
+        /* Split hero photo pair */
+        .hero-photo-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            position: relative;
+        }
+        .hero-photo-wrap {
+            position: relative;
+            border-radius: 1.1rem;
+            overflow: hidden;
+            box-shadow: 0 16px 40px rgba(108,84,78,0.22);
+        }
+        .hero-photo-wrap img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            aspect-ratio: 3/4;
+        }
+        /* Subtle dark-to-transparent gradient at bottom of each photo for text legibility */
+        .hero-photo-wrap::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom,
+                rgba(40,28,24,0) 40%,
+                rgba(40,28,24,0.55) 100%);
+            pointer-events: none;
+        }
+        /* Centered overlay badge on the pair */
+        .hero-photo-badge {
+            position: absolute;
+            bottom: -0.9rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            background: rgba(248,246,244,0.97);
+            border: 1px solid rgba(192,169,154,0.5);
+            border-radius: 9999px;
+            padding: 0.45rem 1.2rem;
+            white-space: nowrap;
+            box-shadow: 0 4px 18px rgba(108,84,78,0.18);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.82rem;
+            color: #6C544E;
+            letter-spacing: 0.04em;
+        }
+        /* Gold divider line between the two photos */
+        .hero-photo-divider {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            background: linear-gradient(to bottom,
+                rgba(192,169,154,0) 0%,
+                rgba(192,169,154,0.7) 30%,
+                rgba(192,169,154,0.7) 70%,
+                rgba(192,169,154,0) 100%);
+            pointer-events: none;
+            z-index: 5;
+        }
+
         /* Entrance animation */
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(12px); }
@@ -862,15 +929,27 @@
                     </p>
                 </div>
 
-                <!-- Image column -->
-                <div class="lg:col-span-5 order-1 lg:order-2 reveal reveal-delay-2">
-                    <div class="hero-frame max-w-md mx-auto">
-                        <img src="/images/mothers-day-hero.jpg"
-                             onerror="this.onerror=null;this.src='https://placehold.co/1600x893/C0A99A/FFFFFF?text=Mother%27s+Day+Nails';"
-                             alt="Elegant nail art with pink roses and gold accents on marble, surrounded by peonies — Beauty Hive Studio Mother's Day special"
-                             style="aspect-ratio: 16/9; object-fit: cover; object-position: center;"
-                             fetchpriority="high"
-                             width="1600" height="893">
+                <!-- Image column: split pair of real @isssbeenails photos -->
+                <div class="lg:col-span-5 order-1 lg:order-2 reveal reveal-delay-2" style="padding-bottom: 1.5rem;">
+                    <div class="hero-photo-pair">
+                        <!-- Photo 1: green/gold floral nails -->
+                        <div class="hero-photo-wrap">
+                            <img src="/images/nails-green-floral.jpg"
+                                 alt="Green and gold floral nail art by Brenda at Beauty Hive Studio"
+                                 fetchpriority="high"
+                                 width="333" height="544">
+                        </div>
+                        <!-- Photo 2: pink floral nails -->
+                        <div class="hero-photo-wrap" style="margin-top: 1.5rem;">
+                            <img src="/images/nails-pink-floral.jpg"
+                                 alt="Pink floral nail art with 3D flowers and rhinestones by Beauty Hive Studio"
+                                 fetchpriority="high"
+                                 width="1200" height="1200">
+                        </div>
+                        <!-- Vertical gold divider -->
+                        <div class="hero-photo-divider" aria-hidden="true"></div>
+                        <!-- Floating badge between the two photos -->
+                        <div class="hero-photo-badge" aria-hidden="true">Mother's Day Special · May 10</div>
                     </div>
                 </div>
             </div>
