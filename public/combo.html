@@ -1159,48 +1159,47 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
                 <!-- Copy column -->
                 <div class="lg:col-span-7 order-2 lg:order-1">
-                    <!-- Above-fold trust bar (social proof) -->
-                    <div class="flex flex-wrap items-center gap-3 mb-5 reveal">
-                        <div class="trust-bar">
-                            <span class="trust-stars" aria-hidden="true">★★★★<span style="opacity:0.5;">★</span></span>
-                            <span class="trust-text">4.7 · 500+ happy clients</span>
-                            <span class="trust-divider"></span>
-                            <span class="trust-text">By appointment only</span>
-                        </div>
+                    <!-- Eyebrow: offer name + location -->
+                    <div class="flex flex-wrap items-center gap-2 mb-4 reveal">
+                        <span class="hero-eyebrow" style="margin-bottom:0;">The Signature Hands &amp; Feet Experience</span>
+                        <span style="color:#c0a99a; font-size:0.75rem; letter-spacing:0.1em;">&#183;</span>
+                        <span style="font-family:'Montserrat',sans-serif; font-size:0.72rem; letter-spacing:0.18em; text-transform:uppercase; color:#8a7770;">San Diego &middot; College Area</span>
                     </div>
 
-                    <span class="hero-eyebrow reveal reveal-delay-1">The Beauty Hive Signature</span>
-
-                    <h1 class="font-playfair font-semibold leading-[1.08] mt-5 reveal reveal-delay-2"
+                    <h1 class="font-playfair font-semibold leading-[1.08] reveal reveal-delay-1"
                         style="font-size: clamp(2.25rem, 5.2vw, 4rem); color:#3a2e2a;">
                         The only nail appointment
                         <span class="block accent-color italic">you&rsquo;ll ever look forward to.</span>
                     </h1>
 
-                    <p class="mt-5 text-base md:text-lg leading-relaxed max-w-xl reveal reveal-delay-2" style="color:#5a4f4b;">
-                        The <strong>Hands &amp; Feet Combo</strong> is a 2+ hour private pampering session in Brenda's boutique studio. A full set on hands <em>and</em> feet, paraffin wax, custom nail art, hot towel wrap, and a botanical hand massage — done slowly, intentionally, and just for you.
+                    <!-- Price — visible before the CTA -->
+                    <p class="mt-4 reveal reveal-delay-2" style="font-family:'Montserrat',sans-serif; font-size:0.92rem; font-weight:600; letter-spacing:0.06em; color:#6C544E;">
+                        From $180 &nbsp;&middot;&nbsp; 2+ hours &nbsp;&middot;&nbsp; Private 1-on-1 Studio
                     </p>
-                    <p class="trust-line reveal reveal-delay-2">Not your average nail salon &mdash; this is a private, boutique experience</p>
 
-                    <ul class="what-you-get reveal reveal-delay-3" aria-label="What's included in the combo">
-                        <li><span class="check" aria-hidden="true">✓</span> Full set hands &amp; feet, one appointment</li>
-                        <li><span class="check" aria-hidden="true">✓</span> Paraffin wax treatment</li>
-                        <li><span class="check" aria-hidden="true">✓</span> Custom nail art</li>
-                        <li><span class="check" aria-hidden="true">✓</span> Botanical hand massage</li>
-                        <li><span class="check" aria-hidden="true">✓</span> Hot towel wrap</li>
-                        <li><span class="check" aria-hidden="true">✓</span> Private 1-on-1 studio</li>
+                    <!-- 3 most differentiating bullets -->
+                    <ul class="what-you-get reveal reveal-delay-2" aria-label="What's included in the combo">
+                        <li><span class="check" aria-hidden="true">✓</span> Hand-painted custom nail art &mdash; hands <em>and</em> feet</li>
+                        <li><span class="check" aria-hidden="true">✓</span> Paraffin wax treatment &amp; botanical hand massage</li>
+                        <li><span class="check" aria-hidden="true">✓</span> Full set hands &amp; feet in one private 2+ hour session</li>
                     </ul>
 
-                    <div class="mt-8 flex flex-col sm:flex-row gap-4 reveal reveal-delay-4">
+                    <!-- Single primary CTA -->
+                    <div class="mt-8 reveal reveal-delay-3">
                         <a href="#booking"
                            onclick="if(typeof fbq !== 'undefined') fbq('trackCustom', 'BookNowClick', {button_location: 'combo_hero'}); if(typeof gtag !== 'undefined') gtag('event', 'begin_checkout', {event_category: 'booking', event_label: 'combo_hero'});"
                            class="cta-primary">RESERVE YOUR SESSION</a>
-                        <a href="#pricing" class="cta-ghost">SEE PRICING</a>
                     </div>
 
-                    <p class="mt-5 text-xs tracking-[0.2em] uppercase" style="color:#8a7770;">
-                        $180 Short / Medium · $220 Long / Extra-Long · 2+ hours
-                    </p>
+                    <!-- Social proof below CTA -->
+                    <div class="flex flex-wrap items-center gap-3 mt-5 reveal reveal-delay-3">
+                        <div class="trust-bar">
+                            <span class="trust-stars" aria-hidden="true">★★★★<span style="opacity:0.5;">★</span></span>
+                            <span class="trust-text">4.7 &middot; 500+ happy clients</span>
+                            <span class="trust-divider"></span>
+                            <span class="trust-text">By appointment only</span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Image column: split pair of real @isssbeenails photos -->
