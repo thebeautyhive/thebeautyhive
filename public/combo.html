@@ -697,50 +697,6 @@
             line-height: 1.3;
         }
 
-        /* Gallery (placeholder grid + IG) */
-        .ig-gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 0.75rem;
-        }
-        @media (min-width: 640px) {
-            .ig-gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-        }
-        @media (min-width: 1024px) {
-            .ig-gallery-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
-        }
-        .ig-tile {
-            position: relative;
-            display: block;
-            aspect-ratio: 1 / 1;
-            border-radius: 0.85rem;
-            overflow: hidden;
-            background: #efe7e1;
-            box-shadow: 0 8px 22px rgba(108,84,78,0.10);
-            transition: transform 0.35s ease, box-shadow 0.35s ease;
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-        }
-        .ig-tile:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 16px 32px rgba(108,84,78,0.18);
-        }
-        .ig-tile img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .ig-tile.placeholder {
-            background: linear-gradient(135deg, #F1ECE8 0%, #E8DBD2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #C0A99A;
-        }
-        .ig-tile.placeholder svg { width: 36px; height: 36px; }
-
         /* Steps */
         .steps-list {
             display: grid;
@@ -892,6 +848,87 @@
             font-weight: 600;
         }
         .position-chip svg { width: 12px; height: 12px; }
+
+        /* Pricing card carousel */
+        .pc-carousel {
+            position: relative;
+            width: 100%;
+            margin-bottom: 1.25rem;
+            border-radius: 0.85rem;
+            overflow: hidden;
+            background: #efe7e1;
+            aspect-ratio: 4 / 3;
+            user-select: none;
+        }
+        .pc-track {
+            display: flex;
+            height: 100%;
+            transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: transform;
+        }
+        .pc-slide {
+            flex: 0 0 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .pc-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            pointer-events: none;
+        }
+        /* Arrow buttons */
+        .pc-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            width: 32px;
+            height: 32px;
+            border-radius: 9999px;
+            background: rgba(248,246,244,0.92);
+            border: 1px solid rgba(108,84,78,0.18);
+            color: #6C544E;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(108,84,78,0.18);
+            transition: background 0.2s ease, transform 0.2s ease;
+            backdrop-filter: blur(2px);
+        }
+        .pc-arrow:hover {
+            background: rgba(255,255,255,1);
+            transform: translateY(-50%) scale(1.08);
+        }
+        .pc-arrow svg { width: 14px; height: 14px; pointer-events: none; }
+        .pc-prev { left: 0.5rem; }
+        .pc-next { right: 0.5rem; }
+        .pc-arrow.hidden { display: none; }
+        /* Dot indicators */
+        .pc-dots {
+            position: absolute;
+            bottom: 0.55rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.35rem;
+            z-index: 10;
+        }
+        .pc-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 9999px;
+            background: rgba(255,255,255,0.55);
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+        .pc-dot.active {
+            background: rgba(255,255,255,0.95);
+            transform: scale(1.25);
+        }
     </style>
 </head>
 <body class="bg-[#F8F6F4]">
@@ -1096,7 +1133,7 @@
                         Brenda has been creating nails since <strong>2019</strong> — first from her own little studio, then a busy nail shop, and now from her plant-filled boutique space on El Cajon Blvd. She built Beauty Hive Studio for the kind of appointment <em>she</em> always wished she could find: quiet, private, unhurried, and finished with care.
                     </p>
                     <p class="mt-4 text-base md:text-lg leading-relaxed" style="color:#5a4f4b;">
-                        She works <strong>1-on-1 only</strong> — no overlapping clients, no double-booking, no rushing. Every set uses premium professional brands (Apres Gel-X, Akzéntz Builder Gel, Gelish &amp; OPI gel polish), sterilized tools, and clean studio practices. Her work is hand-painted, never stamped.
+                        She works <strong>1-on-1 only</strong> — no overlapping clients, no double-booking, no rushing. Every set uses premium products, sterilized tools, and clean studio practices. Her work is hand-painted, never stamped.
                     </p>
 
                     <div class="about-stat-row">
@@ -1133,22 +1170,6 @@
                 <p class="mt-5 text-base md:text-lg" style="color:#5a4f4b;">
                     Real sets from Brenda's studio. Follow <a href="https://www.instagram.com/isssbeenails/" target="_blank" class="underline brown-text">@isssbeenails</a> for daily inspiration.
                 </p>
-            </div>
-
-            <!-- Static placeholder grid (instant paint, accessible without 3rd party scripts) -->
-            <div class="ig-gallery-grid mb-10">
-                <a href="https://www.instagram.com/isssbeenails/" target="_blank" rel="noopener" class="ig-tile">
-                    <img src="/images/nails-green-floral.jpg" alt="Green and gold floral nail art" loading="lazy">
-                </a>
-                <a href="https://www.instagram.com/isssbeenails/" target="_blank" rel="noopener" class="ig-tile">
-                    <img src="/images/nails-pink-floral.jpg" alt="Pink floral nail art with 3D flowers" loading="lazy">
-                </a>
-                <a href="https://www.instagram.com/isssbeenails/" target="_blank" rel="noopener" class="ig-tile">
-                    <img src="/images/mothers-day-hero.jpg" alt="Soft pink luxury manicure" loading="lazy">
-                </a>
-                <a href="https://www.instagram.com/isssbeenails/" target="_blank" rel="noopener" class="ig-tile placeholder" aria-label="See more on Instagram">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                </a>
             </div>
 
             <!-- Live Instagram feed (Elfsight) — lazy-loaded -->
@@ -1331,6 +1352,23 @@
             <div class="pricing-grid">
                 <!-- SHORT/MEDIUM -->
                 <div class="pricing-card reveal">
+                    <!-- Carousel: clean / elegant sets -->
+                    <div class="pc-carousel" id="pc-short" aria-label="Short and medium nail set examples">
+                        <div class="pc-track" id="pc-short-track">
+                            <div class="pc-slide"><img src="https://i.imgur.com/sVWLAkG.jpeg" alt="Nude acrylic nail design" loading="lazy"></div>
+                            <div class="pc-slide"><img src="https://i.imgur.com/pHJKgQd.jpeg" alt="French tip nail variation" loading="lazy"></div>
+                            <div class="pc-slide"><img src="https://i.imgur.com/Yn8fK9l.jpeg" alt="Classic timeless nail set" loading="lazy"></div>
+                            <div class="pc-slide"><img src="https://i.imgur.com/j13cQ93.jpeg" alt="Soft pink and white nail combo" loading="lazy"></div>
+                            <div class="pc-slide"><img src="https://i.imgur.com/Q7STdUU.jpeg" alt="Clean minimal nail aesthetic" loading="lazy"></div>
+                        </div>
+                        <button class="pc-arrow pc-prev hidden" id="pc-short-prev" aria-label="Previous image">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                        </button>
+                        <button class="pc-arrow pc-next" id="pc-short-next" aria-label="Next image">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                        </button>
+                        <div class="pc-dots" id="pc-short-dots"></div>
+                    </div>
                     <p class="pricing-badge">Short to Medium Length</p>
                     <h3 class="font-playfair text-5xl md:text-6xl mt-2" style="color:#3a2e2a;">
                         $180
@@ -1361,6 +1399,23 @@
 
                 <!-- LONG/EXTRA-LONG -->
                 <div class="pricing-card featured reveal reveal-delay-1">
+                    <!-- Carousel: dramatic / custom art sets -->
+                    <div class="pc-carousel" id="pc-long" aria-label="Long and extra-long nail set examples">
+                        <div class="pc-track" id="pc-long-track">
+                            <div class="pc-slide"><img src="https://i.imgur.com/4iwRNPy.jpeg" alt="Stunning chrome nail art" loading="lazy"></div>
+                            <div class="pc-slide"><img src="/images/nails-pink-floral.jpg" alt="Pink floral 3D nail art" loading="lazy"></div>
+                            <div class="pc-slide"><img src="https://i.imgur.com/HY5HtDd.jpeg" alt="Bold custom nail design" loading="lazy"></div>
+                            <div class="pc-slide"><img src="/images/nails-green-floral.jpg" alt="Green and gold floral nail art" loading="lazy"></div>
+                            <div class="pc-slide"><img src="https://i.imgur.com/vT2iKJO.jpeg" alt="Dramatic fall nail art" loading="lazy"></div>
+                        </div>
+                        <button class="pc-arrow pc-prev hidden" id="pc-long-prev" aria-label="Previous image">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                        </button>
+                        <button class="pc-arrow pc-next" id="pc-long-next" aria-label="Next image">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                        </button>
+                        <div class="pc-dots" id="pc-long-dots"></div>
+                    </div>
                     <p class="pricing-badge">Long or Extra-Long Length</p>
                     <h3 class="font-playfair text-5xl md:text-6xl mt-2" style="color:#3a2e2a;">
                         $220
@@ -1411,7 +1466,7 @@
                 <details class="faq-item" open>
                     <summary>Is it really worth $180?</summary>
                     <div class="faq-body">
-                        Honest answer: if you want a quick polish change, no — book a regular manicure. The Hands &amp; Feet Combo is for the woman who wants her one beauty appointment of the month to actually feel like a luxury. You're paying for a 2+ hour <strong>private</strong> session, premium products (Apres, Akzéntz, Gelish), hand-painted custom art, paraffin wax, hot towel wrap, and a hand massage — done by one nail artist who only takes a handful of clients per day. The price reflects what you're getting and what you're <em>not</em> getting (rushed work, salon noise, an assembly line).
+                        Honest answer: if you want a quick polish change, no — book a regular manicure. The Hands &amp; Feet Combo is for the woman who wants her one beauty appointment of the month to actually feel like a luxury. You're paying for a 2+ hour <strong>private</strong> session, premium products, hand-painted custom art, paraffin wax, hot towel wrap, and a hand massage — done by one nail artist who only takes a handful of clients per day. The price reflects what you're getting and what you're <em>not</em> getting (rushed work, salon noise, an assembly line).
                     </div>
                 </details>
 
@@ -1439,7 +1494,7 @@
                 <details class="faq-item">
                     <summary>What products do you use?</summary>
                     <div class="faq-body">
-                        Premium professional brands only. <strong>Apres Gel-X</strong> for soft-gel extensions, <strong>Akzéntz Builder Gel</strong> for natural-nail strengthening, salon-grade acrylic systems, and <strong>Gelish &amp; OPI</strong> gel polish. Paraffin and massage products are botanical and skin-safe. All implements are sterilized between guests; pumice and disposable items are single-use.
+                        Premium professional-grade products only — soft-gel extensions, builder gel, and salon-grade acrylic systems. Paraffin and massage products are botanical and skin-safe. All implements are sterilized between guests; pumice and disposable items are single-use.
                     </div>
                 </details>
 
@@ -1847,6 +1902,79 @@
                 }
             });
         })();
+    </script>
+
+    <!-- Pricing card carousels: arrow nav + touch swipe -->
+    <script>
+    (function() {
+        function initPricingCarousel(cfg) {
+            var track   = document.getElementById(cfg.trackId);
+            var prevBtn = document.getElementById(cfg.prevId);
+            var nextBtn = document.getElementById(cfg.nextId);
+            var dotsEl  = document.getElementById(cfg.dotsId);
+            if (!track) return;
+
+            var slides  = track.querySelectorAll('.pc-slide');
+            var total   = slides.length;
+            var current = 0;
+
+            // Build dots
+            var dots = [];
+            for (var i = 0; i < total; i++) {
+                var d = document.createElement('button');
+                d.className = 'pc-dot' + (i === 0 ? ' active' : '');
+                d.setAttribute('aria-label', 'Go to image ' + (i + 1));
+                (function(idx) {
+                    d.addEventListener('click', function() { goTo(idx); });
+                })(i);
+                dotsEl.appendChild(d);
+                dots.push(d);
+            }
+
+            function goTo(idx) {
+                current = (idx + total) % total;
+                track.style.transform = 'translateX(-' + (current * 100) + '%)';
+                dots.forEach(function(d, i) {
+                    d.classList.toggle('active', i === current);
+                });
+                prevBtn.classList.toggle('hidden', current === 0);
+                nextBtn.classList.toggle('hidden', current === total - 1);
+            }
+
+            prevBtn.addEventListener('click', function() { goTo(current - 1); });
+            nextBtn.addEventListener('click', function() { goTo(current + 1); });
+
+            // Touch / swipe
+            var touchStartX = null;
+            track.parentElement.addEventListener('touchstart', function(e) {
+                touchStartX = e.touches[0].clientX;
+            }, { passive: true });
+            track.parentElement.addEventListener('touchend', function(e) {
+                if (touchStartX === null) return;
+                var dx = e.changedTouches[0].clientX - touchStartX;
+                touchStartX = null;
+                if (Math.abs(dx) < 30) return;
+                if (dx < 0 && current < total - 1) goTo(current + 1);
+                if (dx > 0 && current > 0) goTo(current - 1);
+            }, { passive: true });
+
+            // Init state
+            goTo(0);
+        }
+
+        initPricingCarousel({
+            trackId: 'pc-short-track',
+            prevId:  'pc-short-prev',
+            nextId:  'pc-short-next',
+            dotsId:  'pc-short-dots'
+        });
+        initPricingCarousel({
+            trackId: 'pc-long-track',
+            prevId:  'pc-long-prev',
+            nextId:  'pc-long-next',
+            dotsId:  'pc-long-dots'
+        });
+    })();
     </script>
 </body>
 </html>
