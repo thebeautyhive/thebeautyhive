@@ -876,8 +876,15 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center top;
+            object-position: center 30%;
             pointer-events: none;
+        }
+        /* Portrait video stills: shift focal point upward so nails fill the frame */
+        .pc-slide img[data-focal="nails-top"] {
+            object-position: center 15%;
+        }
+        .pc-slide img[data-focal="nails-center"] {
+            object-position: center 40%;
         }
         /* Arrow buttons */
         .pc-arrow {
@@ -1117,7 +1124,7 @@
                 <!-- Photo -->
                 <div>
                     <div class="about-photo-frame">
-                        <img src="/images/nails-they-are-everything.jpg"
+                        <img src="https://imgur.com/9eS7xDe.jpeg"
                              onerror="this.onerror=null;this.src='https://placehold.co/800x1000/F8F6F4/C0A99A?text=Brenda+%E2%80%94+Beauty+Hive+Studio';"
                              alt="Brenda, founder and nail artist of Beauty Hive Studio in San Diego's College Area">
                     </div>
@@ -1355,9 +1362,11 @@
                     <!-- Carousel: clean / elegant sets -->
                     <div class="pc-carousel" id="pc-short" aria-label="Short and medium nail set examples">
                         <div class="pc-track" id="pc-short-track">
-                            <div class="pc-slide"><img src="/images/nails-bows-polkadots.jpg" alt="3D bow and polka dot French tip nails by Brenda" loading="lazy"></div>
-                            <div class="pc-slide"><img src="/images/nails-green-floral.jpg" alt="Green and gold floral nail art by Brenda" loading="lazy"></div>
-                            <div class="pc-slide"><img src="/images/nails-pink-floral.jpg" alt="Pink 3D floral nail art with rhinestones by Brenda" loading="lazy"></div>
+                            <div class="pc-slide"><img src="https://i.imgur.com/sVWLAkG.jpeg" alt="Nude acrylic nail design" loading="lazy"></div>
+                            <div class="pc-slide"><img src="https://i.imgur.com/pHJKgQd.jpeg" alt="French tip nail variation" loading="lazy"></div>
+                            <div class="pc-slide"><img src="https://i.imgur.com/Yn8fK9l.jpeg" alt="Classic timeless nail set" loading="lazy"></div>
+                            <div class="pc-slide"><img src="https://i.imgur.com/j13cQ93.jpeg" alt="Soft pink and white nail combo" loading="lazy"></div>
+                            <div class="pc-slide"><img src="https://i.imgur.com/Q7STdUU.jpeg" alt="Clean minimal nail aesthetic" loading="lazy"></div>
                         </div>
                         <button class="pc-arrow pc-prev hidden" id="pc-short-prev" aria-label="Previous image">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
@@ -1400,10 +1409,11 @@
                     <!-- Carousel: dramatic / custom art sets -->
                     <div class="pc-carousel" id="pc-long" aria-label="Long and extra-long nail set examples">
                         <div class="pc-track" id="pc-long-track">
-                            <div class="pc-slide"><img src="/images/nails-they-are-everything.jpg" alt="Pink and gold floral nail art with 3D flowers and rhinestones by Brenda" loading="lazy"></div>
-                            <div class="pc-slide"><img src="/images/nails-they-are-everything-2.jpg" alt="Luxury pink and silver floral nail set by Brenda" loading="lazy"></div>
-                            <div class="pc-slide"><img src="/images/nails-kaboom.jpg" alt="Bold custom mixed nail art by Brenda" loading="lazy"></div>
-                            <div class="pc-slide"><img src="/images/nails-vacation.jpg" alt="Tropical vacation nail art by Brenda" loading="lazy"></div>
+                            <div class="pc-slide"><img src="https://i.imgur.com/4iwRNPy.jpeg" alt="Stunning chrome nail art" loading="lazy"></div>
+                            <div class="pc-slide"><img src="/images/nails-pink-floral.jpg" alt="Pink floral 3D nail art" loading="lazy" data-focal="nails-center"></div>
+                            <div class="pc-slide"><img src="https://i.imgur.com/HY5HtDd.jpeg" alt="Bold custom nail design" loading="lazy"></div>
+                            <div class="pc-slide"><img src="/images/nails-green-floral.jpg" alt="Green and gold floral nail art" loading="lazy" data-focal="nails-center"></div>
+                            <div class="pc-slide"><img src="https://i.imgur.com/vT2iKJO.jpeg" alt="Dramatic fall nail art" loading="lazy"></div>
                         </div>
                         <button class="pc-arrow pc-prev hidden" id="pc-long-prev" aria-label="Previous image">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
