@@ -106,7 +106,8 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            color: #4A4A4A;
+            color: #2f2927;
+            background: #fbfaf8;
         }
 
         .font-playfair {
@@ -114,78 +115,169 @@
         }
 
         /* Brand palette (match index.html) */
-        .accent-color { color: #C0A99A; }
-        .brown-text   { color: #6C544E; }
-        .brown-bg     { background-color: #6C544E; }
-        .light-brown-bg { background-color: #C0A99A; }
-        .cream-bg     { background-color: #F8F6F4; }
+        .accent-color { color: #ad6f7b; }
+        .brown-text   { color: #3a302d; }
+        .brown-bg     { background-color: #2f2927; }
+        .light-brown-bg { background-color: #c7a771; }
+        .cream-bg     { background-color: #f6f2ed; }
 
         /* Hero ----------------------------------------------------- */
         .hero {
             position: relative;
+            min-height: calc(100svh - 56px);
+            display: flex;
+            align-items: center;
             background:
-              linear-gradient(180deg, rgba(248,246,244,0.92) 0%, rgba(248,246,244,0.78) 60%, rgba(248,246,244,1) 100%),
-              radial-gradient(120% 80% at 70% 0%, rgba(192,169,154,0.45) 0%, rgba(192,169,154,0) 70%),
-              #F8F6F4;
+              linear-gradient(90deg, rgba(47,41,39,0.98) 0%, rgba(47,41,39,0.94) 56%, rgba(246,242,237,0.98) 56.1%, rgba(246,242,237,1) 100%);
             overflow: hidden;
         }
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image:
-              radial-gradient(circle at 12% 20%, rgba(108,84,78,0.05) 0 2px, transparent 3px),
-              radial-gradient(circle at 80% 75%, rgba(108,84,78,0.05) 0 2px, transparent 3px),
-              radial-gradient(circle at 35% 85%, rgba(108,84,78,0.04) 0 2px, transparent 3px);
-            background-size: 220px 220px, 280px 280px, 320px 320px;
-            pointer-events: none;
+        .hero .container-page {
+            width: 100%;
         }
         .hero-eyebrow {
             display: inline-block;
             font-size: 0.72rem;
-            letter-spacing: 0.32em;
+            letter-spacing: 0.22em;
             text-transform: uppercase;
-            color: #6C544E;
-            background: rgba(255,255,255,0.7);
-            border: 1px solid rgba(108,84,78,0.18);
-            padding: 0.5rem 1rem;
-            border-radius: 9999px;
-            backdrop-filter: blur(2px);
+            color: #f1e8df;
+            background: rgba(173,111,123,0.18);
+            border: 1px solid rgba(241,232,223,0.22);
+            padding: 0.5rem 0.8rem;
+        }
+        .hero h1,
+        .hero-copy,
+        .hero-note { color: #fff7ef !important; }
+        .hero h1 .accent-color { color: #d9a0ac; }
+        .hero-copy { max-width: 42rem; }
+        .hero-note { opacity: 0.72; }
+        .offer-panel {
+            max-width: 620px;
+            margin-top: 1.5rem;
+            background: #fffaf7;
+            border: 1px solid rgba(255,255,255,0.42);
+            box-shadow: 0 24px 70px rgba(0,0,0,0.24);
+            padding: clamp(1.1rem, 2vw, 1.55rem);
+        }
+        .offer-panel-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .offer-kicker {
+            margin: 0 0 0.35rem;
+            color: #ad6f7b;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+        .offer-title {
+            margin: 0;
+            color: #2f2927;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.75rem, 3vw, 2.45rem);
+            line-height: 1.03;
+        }
+        .offer-price {
+            min-width: 112px;
+            text-align: right;
+            color: #2f2927;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 0.95;
+        }
+        .offer-price span {
+            display: block;
+            margin-top: 0.3rem;
+            color: #79675f;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.62rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+        .offer-includes {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.55rem 1rem;
+            margin-top: 1rem;
+            color: #4e4541;
+            font-size: 0.86rem;
+            line-height: 1.35;
+        }
+        .offer-includes span::before {
+            content: "";
+            display: inline-block;
+            width: 0.45rem;
+            height: 0.45rem;
+            margin-right: 0.45rem;
+            background: #ad6f7b;
+            transform: rotate(45deg) translateY(-1px);
+        }
+        .hero-media {
+            display: grid;
+            grid-template-columns: 0.84fr 0.62fr;
+            gap: 0.85rem;
+            align-items: end;
+        }
+        .hero-media img {
+            width: 100%;
+            object-fit: cover;
+            box-shadow: 0 22px 54px rgba(47,41,39,0.26);
+        }
+        .hero-media .media-main {
+            aspect-ratio: 4 / 5.35;
+        }
+        .hero-media .media-stack {
+            display: grid;
+            gap: 0.85rem;
+        }
+        .hero-media .media-stack img {
+            aspect-ratio: 4 / 5;
+        }
+        .media-caption {
+            margin-top: 0.8rem;
+            color: #5c514d;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
         }
 
         /* CTA buttons --------------------------------------------- */
         .cta-primary {
             display: inline-block;
-            background-color: #6C544E;
+            background-color: #ad6f7b;
             color: #ffffff;
             font-weight: 700;
             letter-spacing: 0.06em;
             padding: 1rem 2rem;
-            border-radius: 9999px;
-            box-shadow: 0 8px 24px rgba(108,84,78,0.25);
+            border-radius: 0.35rem;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.22);
             transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
             text-decoration: none;
         }
         .cta-primary:hover {
-            background-color: #5a4540;
+            background-color: #9f5f6c;
             transform: translateY(-2px);
-            box-shadow: 0 12px 28px rgba(108,84,78,0.32);
+            box-shadow: 0 16px 34px rgba(0,0,0,0.3);
         }
         .cta-ghost {
             display: inline-block;
-            color: #6C544E;
+            color: #fff7ef;
             font-weight: 600;
             letter-spacing: 0.04em;
             padding: 0.85rem 1.5rem;
-            border: 1.5px solid #6C544E;
-            border-radius: 9999px;
+            border: 1.5px solid rgba(255,247,239,0.62);
+            border-radius: 0.35rem;
             transition: all 0.25s ease;
             text-decoration: none;
             background: transparent;
         }
         .cta-ghost:hover {
-            background-color: #6C544E;
-            color: #ffffff;
+            background-color: #fff7ef;
+            color: #2f2927;
         }
 
         /* Includes cards ----------------------------------------- */
@@ -193,7 +285,7 @@
             position: relative;
             background-color: #ffffff;
             border: 1px solid rgba(192,169,154,0.35);
-            border-radius: 1rem;
+            border-radius: 0.45rem;
             padding: 2rem 1.5rem;
             box-shadow: 0 6px 22px rgba(108,84,78,0.06);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -213,7 +305,7 @@
         .ritual-icon {
             width: 56px;
             height: 56px;
-            border-radius: 9999px;
+            border-radius: 0.35rem;
             background: linear-gradient(135deg, #F8F6F4 0%, #EDE4DD 100%);
             display: flex;
             align-items: center;
@@ -279,7 +371,7 @@
         .choice-card {
             background: #ffffff;
             border: 1px solid rgba(192,169,154,0.35);
-            border-radius: 0.85rem;
+            border-radius: 0.45rem;
             padding: 1.25rem;
             box-shadow: 0 6px 18px rgba(108,84,78,0.06);
             height: 100%;
@@ -288,14 +380,14 @@
             width: 100%;
             aspect-ratio: 4/3;
             object-fit: cover;
-            border-radius: 0.65rem;
+            border-radius: 0.35rem;
             margin-bottom: 1rem;
         }
         .price-pill {
             display: inline-flex;
             align-items: center;
             border: 1px solid rgba(108,84,78,0.18);
-            border-radius: 9999px;
+            border-radius: 0.35rem;
             padding: 0.35rem 0.75rem;
             font-size: 0.72rem;
             letter-spacing: 0.12em;
@@ -308,7 +400,7 @@
             width: 100%;
             aspect-ratio: 4/5;
             object-fit: cover;
-            border-radius: 0.9rem;
+            border-radius: 0.35rem;
             box-shadow: 0 10px 24px rgba(108,84,78,0.10);
         }
 
@@ -320,7 +412,7 @@
         .policy-item {
             background: #ffffff;
             border: 1px solid rgba(192,169,154,0.28);
-            border-radius: 0.8rem;
+            border-radius: 0.45rem;
             padding: 1.15rem;
         }
         @media (min-width: 768px) {
@@ -330,7 +422,7 @@
         /* Testimonial -------------------------------------------- */
         .testimonial-card {
             background-color: #ffffff;
-            border-radius: 1rem;
+            border-radius: 0.45rem;
             padding: 2rem;
             box-shadow: 0 8px 24px rgba(108,84,78,0.08);
             border: 1px solid rgba(192,169,154,0.25);
@@ -382,7 +474,7 @@
         details.faq-item {
             background: #ffffff;
             border: 1px solid rgba(192,169,154,0.28);
-            border-radius: 0.75rem;
+            border-radius: 0.45rem;
             padding: 1.1rem 1.4rem;
             box-shadow: 0 4px 14px rgba(108,84,78,0.05);
             transition: box-shadow 0.25s ease;
@@ -485,7 +577,7 @@
         /* Hero image frame */
         .hero-frame {
             position: relative;
-            border-radius: 1.25rem;
+            border-radius: 0.45rem;
             overflow: hidden;
             box-shadow: 0 24px 60px rgba(108,84,78,0.25);
             transform: rotate(0.5deg);
@@ -495,7 +587,7 @@
             position: absolute;
             inset: 14px;
             border: 1px solid rgba(255,255,255,0.5);
-            border-radius: 0.95rem;
+            border-radius: 0.3rem;
             pointer-events: none;
         }
         .hero-frame img {
@@ -547,9 +639,76 @@
             margin: 0 auto;
             background: #ffffff;
             border: 1px solid rgba(192,169,154,0.3);
-            border-radius: 1rem;
+            border-radius: 0.45rem;
             box-shadow: 0 12px 30px rgba(108,84,78,0.08);
             padding: 1rem;
+        }
+        @media (max-width: 1023px) {
+            .hero {
+                min-height: auto;
+                background: linear-gradient(180deg, #2f2927 0%, #2f2927 64%, #f6f2ed 64%, #f6f2ed 100%);
+            }
+            .hero .container-page {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+            .offer-includes {
+                grid-template-columns: 1fr;
+            }
+            .hero-media {
+                max-width: 520px;
+                margin: 0 auto;
+            }
+        }
+        @media (max-width: 640px) {
+            .hero .grid {
+                gap: 1rem !important;
+            }
+            .hero h1 {
+                margin-top: 0.85rem !important;
+                font-size: 2.2rem !important;
+            }
+            .hero-copy {
+                margin-top: 0.85rem !important;
+                font-size: 0.96rem !important;
+                line-height: 1.48 !important;
+            }
+            .offer-panel {
+                margin-top: 0.85rem;
+                padding: 0.9rem;
+            }
+            .offer-panel-top {
+                display: block;
+            }
+            .offer-price {
+                margin-top: 0.85rem;
+                text-align: left;
+                font-size: 2.25rem;
+            }
+            .offer-includes {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 0.42rem 0.65rem;
+                margin-top: 0.65rem;
+                font-size: 0.8rem;
+            }
+            .hero .cta-primary,
+            .hero .cta-ghost {
+                padding: 0.85rem 1rem;
+                text-align: center;
+            }
+            .hero .mt-10 {
+                margin-top: 0.95rem !important;
+            }
+            .hero-note {
+                display: none;
+            }
+            .hero-media {
+                grid-template-columns: 1fr 0.54fr;
+                gap: 0.55rem;
+            }
+            .hero-media .media-stack {
+                gap: 0.55rem;
+            }
         }
     </style>
 </head>
@@ -601,7 +760,7 @@
         <div class="container-page py-14 md:py-20 relative">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
                 <!-- Copy column -->
-                <div class="lg:col-span-7 order-2 lg:order-1">
+                <div class="lg:col-span-7 order-1">
                     <span class="hero-eyebrow reveal">Beauty Hive Signature Set</span>
 
                     <h1 class="font-playfair font-semibold leading-[1.05] mt-6 reveal reveal-delay-1"
@@ -610,18 +769,26 @@
                         <span class="block accent-color italic">the whole look.</span>
                     </h1>
 
-                    <p class="mt-6 text-base md:text-lg leading-relaxed max-w-xl reveal reveal-delay-2" style="color:#5a4f4b;">
+                    <p class="hero-copy mt-6 text-base md:text-lg leading-relaxed reveal reveal-delay-2">
                         Book a private 1:1 appointment with Brenda for premium prep, clean shaping,
                         and elevated detail work designed around your style, your plans, and the way
                         you want to show up.
                     </p>
 
-                    <div class="flex flex-wrap items-center gap-4 mt-8 reveal reveal-delay-3">
-                        <div class="value-badge">
-                            <span class="value">$135+</span>
-                            <span class="label">Signature Set</span>
+                    <div class="offer-panel reveal reveal-delay-3">
+                        <div class="offer-panel-top">
+                            <div>
+                                <p class="offer-kicker">Featured Booking</p>
+                                <h2 class="offer-title">The Signature Set</h2>
+                            </div>
+                            <div class="offer-price">$135+<span>Before Tip</span></div>
                         </div>
-                        <span class="text-sm" style="color:#7a6c66;">premium full sets before tip, based on length and art</span>
+                        <div class="offer-includes">
+                            <span>Premium prep</span>
+                            <span>Clean shaping</span>
+                            <span>Custom base choice</span>
+                            <span>Elevated art direction</span>
+                        </div>
                     </div>
 
                     <div class="mt-10 flex flex-col sm:flex-row gap-4 reveal reveal-delay-4">
@@ -631,19 +798,22 @@
                         <a href="https://www.instagram.com/isssbeenails/" class="cta-ghost">DM YOUR INSPO</a>
                     </div>
 
-                    <p class="mt-6 text-xs tracking-[0.2em] uppercase" style="color:#8a7770;">
+                    <p class="hero-note mt-6 text-xs tracking-[0.2em] uppercase">
                         Menu-based pricing · $25 deposit holds your appointment · Private San Diego studio
                     </p>
                 </div>
 
                 <!-- Image column -->
-                <div class="lg:col-span-5 order-1 lg:order-2 reveal reveal-delay-2">
-                    <div class="hero-frame max-w-md mx-auto">
-                        <img src="assets/site/nails-summer-cherry-art.jpg"
-                             onerror="this.onerror=null;this.src='https://placehold.co/800x900/C0A99A/FFFFFF?text=Beauty+Hive+Studio';"
-                             alt="Custom nail art set by Brenda at Beauty Hive Studio in San Diego's College Area"
-                             style="aspect-ratio: 4/5;">
+                <div class="lg:col-span-5 order-2 reveal reveal-delay-2">
+                    <div class="hero-media">
+                        <img class="media-main" src="images/nails-they-are-everything.jpg"
+                             alt="Glossy custom nail set by Beauty Hive Studio">
+                        <div class="media-stack">
+                            <img src="images/nails-green-floral.jpg" alt="Green floral nail art by Beauty Hive Studio">
+                            <img src="assets/site/nails-summer-nude-clasped.jpg" alt="Neutral polished nail set by Beauty Hive Studio">
+                        </div>
                     </div>
+                    <p class="media-caption">Custom detail work · Private appointment · San Diego</p>
                 </div>
             </div>
         </div>
@@ -854,10 +1024,10 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 proof-grid mb-10">
-                <img src="assets/site/nails-summer-nude-clasped.jpg" alt="Soft neutral Beauty Hive nail set">
+                <img src="images/nails-summer-french-tip.jpg" alt="French tip nail set by Beauty Hive Studio">
                 <img src="assets/site/nails-vacation.jpg" alt="Vacation nail art by Beauty Hive Studio">
                 <img src="assets/site/nails-bows-polkadots.jpg" alt="Bow and polka dot custom nail art by Beauty Hive Studio">
-                <img src="assets/site/nails-pink-floral.jpg" alt="Pink floral nail art by Beauty Hive Studio">
+                <img src="images/nails-they-are-everything-2.jpg" alt="Detailed custom nail art by Beauty Hive Studio">
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
