@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Beauty Hive Welcome Experience | First-Time Guest Offer</title>
+    <title>Beauty Hive Studio | New Client Signature Set</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Exclusively for first-time guests of Beauty Hive Studio. Book your first Gel-X or Builder Gel service in San Diego's College Area and receive our complimentary Welcome Experience — a $35+ value. Spaces are limited.">
-    <meta name="keywords" content="Beauty Hive Studio welcome experience, first-time nail appointment San Diego, Gel-X first time offer, builder gel new client, College Area nail studio, private nail studio near SDSU, San Diego nail artist Brenda">
+    <meta name="description" content="Book your first Gel-X, acrylic, or builder gel full set at Beauty Hive Studio near SDSU and ask for classic nail art included. Private one-on-one nail appointments in San Diego's College Area.">
+    <meta name="keywords" content="Beauty Hive Studio, first nail appointment San Diego, Gel-X San Diego, builder gel San Diego, acrylic nails near SDSU, private nail studio College Area, San Diego nail artist Brenda">
     <meta name="author" content="Brenda - Beauty Hive Studio">
     <meta name="geo.region" content="US-CA">
     <meta name="geo.placename" content="San Diego">
@@ -16,18 +16,18 @@
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="The Beauty Hive Welcome Experience | Exclusively for First-Time Guests">
-    <meta property="og:description" content="Book your first Gel-X or Builder Gel service in San Diego's College Area and receive our complimentary Welcome Experience — a $35+ value. Spaces are limited.">
+    <meta property="og:title" content="Beauty Hive Studio | New Client Signature Set">
+    <meta property="og:description" content="First-time clients can book a full set with classic nail art included at Beauty Hive Studio, a private nail studio near SDSU.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.beautyhivestudio.com/welcome">
-    <meta property="og:image" content="https://i.imgur.com/4iwRNPy.jpeg">
+    <meta property="og:image" content="https://www.beautyhivestudio.com/images/nails-summer-cherry-art.jpg">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="The Beauty Hive Welcome Experience">
-    <meta name="twitter:description" content="A complimentary $35+ ritual, exclusively for first-time guests of Beauty Hive Studio in San Diego's College Area.">
-    <meta name="twitter:image" content="https://i.imgur.com/4iwRNPy.jpeg">
+    <meta name="twitter:title" content="Beauty Hive Studio | New Client Signature Set">
+    <meta name="twitter:description" content="Classic nail art included for first-time full set clients at Beauty Hive Studio near SDSU.">
+    <meta name="twitter:image" content="https://www.beautyhivestudio.com/images/nails-summer-cherry-art.jpg">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.beautyhivestudio.com/welcome">
@@ -45,8 +45,8 @@
     fbq('init', '809511211491558');
     fbq('track', 'PageView');
     fbq('track', 'ViewContent', {
-        content_name: 'Welcome Experience Landing',
-        content_category: 'First-Time Offer',
+        content_name: 'New Client Signature Set Landing',
+        content_category: 'First-Time Booking Offer',
         content_type: 'landing_page'
     });
     </script>
@@ -72,12 +72,10 @@
     {
       "@context": "https://schema.org",
       "@type": "Offer",
-      "name": "The Beauty Hive Welcome Experience",
-      "description": "A complimentary signature ritual for first-time Gel-X or Builder Gel guests at Beauty Hive Studio. Includes a paraffin wax foot treatment, custom nail art, a botanical hand massage, and a take-home luxury cuticle care kit.",
+      "name": "Beauty Hive New Client Signature Set",
+      "description": "Classic nail art included for first-time Gel-X, acrylic, or builder gel full set clients at Beauty Hive Studio near SDSU.",
       "url": "https://www.beautyhivestudio.com/welcome",
       "eligibleCustomerType": "https://schema.org/NewCustomer",
-      "price": "0",
-      "priceCurrency": "USD",
       "availability": "https://schema.org/LimitedAvailability",
       "offeredBy": {
         "@type": "NailSalon",
@@ -245,6 +243,86 @@
             letter-spacing: 0.24em;
             text-transform: uppercase;
             color: #8A7770;
+        }
+
+        .trust-strip {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 1px;
+            background: rgba(192,169,154,0.32);
+            border: 1px solid rgba(192,169,154,0.32);
+        }
+        .trust-item {
+            background: #ffffff;
+            padding: 1.25rem;
+            text-align: center;
+        }
+        .trust-item .top {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.45rem;
+            color: #6C544E;
+            line-height: 1.1;
+        }
+        .trust-item .bottom {
+            margin-top: 0.35rem;
+            font-size: 0.68rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #8A7770;
+        }
+        @media (min-width: 768px) {
+            .trust-strip { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        }
+
+        .choice-card {
+            background: #ffffff;
+            border: 1px solid rgba(192,169,154,0.35);
+            border-radius: 0.85rem;
+            padding: 1.25rem;
+            box-shadow: 0 6px 18px rgba(108,84,78,0.06);
+            height: 100%;
+        }
+        .choice-card img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            border-radius: 0.65rem;
+            margin-bottom: 1rem;
+        }
+        .price-pill {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid rgba(108,84,78,0.18);
+            border-radius: 9999px;
+            padding: 0.35rem 0.75rem;
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #6C544E;
+            background: #F8F6F4;
+        }
+
+        .proof-grid img {
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            border-radius: 0.9rem;
+            box-shadow: 0 10px 24px rgba(108,84,78,0.10);
+        }
+
+        .policy-list {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 1rem;
+        }
+        .policy-item {
+            background: #ffffff;
+            border: 1px solid rgba(192,169,154,0.28);
+            border-radius: 0.8rem;
+            padding: 1.15rem;
+        }
+        @media (min-width: 768px) {
+            .policy-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
         }
 
         /* Testimonial -------------------------------------------- */
@@ -522,43 +600,44 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
                 <!-- Copy column -->
                 <div class="lg:col-span-7 order-2 lg:order-1">
-                    <span class="hero-eyebrow reveal">Exclusively for First-Time Guests</span>
+                    <span class="hero-eyebrow reveal">First-time client offer near SDSU</span>
 
                     <h1 class="font-playfair font-semibold leading-[1.05] mt-6 reveal reveal-delay-1"
                         style="font-size: clamp(2.5rem, 5.5vw, 4.25rem); color:#3a2e2a;">
-                        The Beauty Hive
-                        <span class="block accent-color italic">Welcome Experience</span>
+                        Your first full set
+                        <span class="block accent-color italic">with art included.</span>
                     </h1>
 
                     <p class="mt-6 text-base md:text-lg leading-relaxed max-w-xl reveal reveal-delay-2" style="color:#5a4f4b;">
-                        A complimentary signature ritual for your first appointment with Brenda — a private,
-                        plant-filled studio in San Diego's College Area, designed around you and you alone.
+                        Book a Gel-X, acrylic, or builder gel full set with Brenda at Beauty Hive Studio.
+                        Send your inspo, choose the right service, and ask for classic nail art included on
+                        your first visit.
                     </p>
 
                     <div class="flex flex-wrap items-center gap-4 mt-8 reveal reveal-delay-3">
                         <div class="value-badge">
-                            <span class="value">$35+</span>
-                            <span class="label">Complimentary Value</span>
+                            <span class="value">$15</span>
+                            <span class="label">Art Upgrade Value</span>
                         </div>
-                        <span class="text-sm" style="color:#7a6c66;">with any first-time Gel-X or Builder Gel booking</span>
+                        <span class="text-sm" style="color:#7a6c66;">with a first-time full set booking</span>
                     </div>
 
                     <div class="mt-10 flex flex-col sm:flex-row gap-4 reveal reveal-delay-4">
                         <a href="#booking"
-                           onclick="if(typeof fbq !== 'undefined') fbq('trackCustom', 'BookNowClick', {button_location: 'welcome_hero'}); if(typeof gtag !== 'undefined') gtag('event', 'begin_checkout', {event_category: 'booking', event_label: 'welcome_hero'});"
-                           class="cta-primary">RESERVE YOUR WELCOME EXPERIENCE</a>
-                        <a href="#included" class="cta-ghost">SEE WHAT'S INCLUDED</a>
+                           onclick="if(typeof fbq !== 'undefined') fbq('trackCustom', 'BookNowClick', {button_location: 'art_upgrade_hero'}); if(typeof gtag !== 'undefined') gtag('event', 'begin_checkout', {event_category: 'booking', event_label: 'art_upgrade_hero'});"
+                           class="cta-primary">BOOK YOUR FIRST SET</a>
+                        <a href="https://www.instagram.com/isssbeenails/" class="cta-ghost">DM YOUR INSPO</a>
                     </div>
 
                     <p class="mt-6 text-xs tracking-[0.2em] uppercase" style="color:#8a7770;">
-                        Spaces are limited · By appointment only
+                        Starting at $65 · $25 deposit holds your appointment · College Area, San Diego
                     </p>
                 </div>
 
                 <!-- Image column -->
                 <div class="lg:col-span-5 order-1 lg:order-2 reveal reveal-delay-2">
                     <div class="hero-frame max-w-md mx-auto">
-                        <img src="https://i.imgur.com/4iwRNPy.jpeg"
+                        <img src="assets/site/nails-summer-cherry-art.jpg"
                              onerror="this.onerror=null;this.src='https://placehold.co/800x900/C0A99A/FFFFFF?text=Beauty+Hive+Studio';"
                              alt="Custom nail art set by Brenda at Beauty Hive Studio in San Diego's College Area"
                              style="aspect-ratio: 4/5;">
@@ -575,10 +654,33 @@
                 <span class="line"></span><span class="dot"></span><span class="line"></span>
             </div>
             <p class="text-2xl md:text-3xl font-playfair italic" style="color:#3a2e2a; line-height:1.4;">
-                "Step into a space that's unmistakably mine — quiet, plant-filled, and entirely yours
-                for the hour. Welcome home."
+                "Send the inspo, pick your length, and I will tell you what to book before you sit down."
             </p>
             <p class="mt-4 text-sm tracking-[0.3em] uppercase accent-color">— Brenda, Founder & Nail Artist</p>
+        </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="bg-white py-8">
+        <div class="container-page">
+            <div class="trust-strip">
+                <div class="trust-item">
+                    <p class="top">Custom</p>
+                    <p class="bottom">Nail art focus</p>
+                </div>
+                <div class="trust-item">
+                    <p class="top">1:1</p>
+                    <p class="bottom">Private appointments</p>
+                </div>
+                <div class="trust-item">
+                    <p class="top">$65+</p>
+                    <p class="bottom">Full sets start</p>
+                </div>
+                <div class="trust-item">
+                    <p class="top">3 days</p>
+                    <p class="bottom">Complimentary repairs</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -586,13 +688,13 @@
     <section id="included" class="py-16 md:py-24 cream-bg">
         <div class="container-page">
             <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
-                <p class="text-xs tracking-[0.32em] uppercase accent-color font-semibold">What's Included</p>
+                <p class="text-xs tracking-[0.32em] uppercase accent-color font-semibold">The Offer</p>
                 <h2 class="font-playfair text-4xl md:text-5xl mt-3" style="color:#3a2e2a;">
-                    Four small luxuries,<br class="hidden md:block"> one unforgettable first visit.
+                    Know what you are booking<br class="hidden md:block"> before you tap a time.
                 </h2>
                 <p class="mt-5 text-base md:text-lg" style="color:#5a4f4b;">
-                    Every element of the Welcome Experience is designed to introduce you to Brenda's signature
-                    standard of care — the kind of detail you only find in a private, one-on-one studio.
+                    The best booking pages make the choice obvious: service, price range, proof, availability,
+                    and what happens after you reserve. Start here, then book or DM Brenda your inspo.
                 </p>
             </div>
 
@@ -610,11 +712,11 @@
                     </div>
                     <p class="ritual-number">01</p>
                     <h3 class="font-playfair text-xl md:text-2xl mb-3" style="color:#3a2e2a;">
-                        Paraffin Wax Foot Treatment
+                        Choose Your Full Set
                     </h3>
                     <p class="text-sm leading-relaxed" style="color:#5a4f4b;">
-                        A warm, full-immersion paraffin ritual to soften, hydrate, and quiet the body before
-                        a single brush is lifted.
+                        Gel-X, acrylic, or builder gel. Start with the service that matches your nail goals,
+                        length, and the inspo photo you are bringing in.
                     </p>
                 </div>
 
@@ -630,11 +732,11 @@
                     </div>
                     <p class="ritual-number">02</p>
                     <h3 class="font-playfair text-xl md:text-2xl mb-3" style="color:#3a2e2a;">
-                        Custom Nail Art
+                        Classic Art Included
                     </h3>
                     <p class="text-sm leading-relaxed" style="color:#5a4f4b;">
-                        Hand-painted by Brenda — chrome, line work, florals, or a quiet detail of your choosing.
-                        A first taste of the studio's artistry.
+                        First-time full set clients can ask for classic art included, normally a $15 menu add-on.
+                        Brenda can confirm if your inspo belongs in creative or signature art.
                     </p>
                 </div>
 
@@ -649,11 +751,11 @@
                     </div>
                     <p class="ritual-number">03</p>
                     <h3 class="font-playfair text-xl md:text-2xl mb-3" style="color:#3a2e2a;">
-                        Botanical Hand Massage
+                        Private Studio Energy
                     </h3>
                     <p class="text-sm leading-relaxed" style="color:#5a4f4b;">
-                        A slow, plant-infused massage with warmed botanical oil — designed to undo a week's
-                        worth of typing, scrolling, and holding it together.
+                        One artist, one chair, one appointment. No crowded salon pace, rotating techs,
+                        or rushed handoff.
                     </p>
                 </div>
 
@@ -669,136 +771,170 @@
                     </div>
                     <p class="ritual-number">04</p>
                     <h3 class="font-playfair text-xl md:text-2xl mb-3" style="color:#3a2e2a;">
-                        Take-Home Cuticle Care Kit
+                        Easy Booking Or DM Help
                     </h3>
                     <p class="text-sm leading-relaxed" style="color:#5a4f4b;">
-                        A small luxury to take with you: a curated cuticle oil and care card so the finish you
-                        leave with stays just as flawless at home.
+                        Book through Acuity, or DM Brenda your inspo first if you are not sure which service,
+                        length, or art tier fits.
                     </p>
                 </div>
             </div>
 
             <div class="text-center mt-12 md:mt-14">
                 <p class="font-playfair italic text-lg md:text-xl" style="color:#6C544E;">
-                    Complimentary with any first-time Gel-X or Builder Gel booking · A $35+ value
+                    Classic art included with a first-time full set booking · A $15 value
                 </p>
                 <p class="mt-2 text-xs tracking-[0.28em] uppercase" style="color:#8a7770;">
-                    Available to first-time guests only · Spaces are limited
+                    First-time clients only · by appointment only
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- WHO IT'S FOR / WHY IT'S DIFFERENT -->
+    <!-- SERVICE CHOICE -->
     <section class="py-16 md:py-24 bg-white">
         <div class="container-page">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-                <div>
-                    <p class="text-xs tracking-[0.32em] uppercase accent-color font-semibold">A Studio of One</p>
-                    <h2 class="font-playfair text-3xl md:text-5xl mt-3" style="color:#3a2e2a; line-height:1.1;">
-                        Not a salon.<br>A sanctuary.
-                    </h2>
-                    <div class="space-y-4 mt-6 text-base leading-relaxed" style="color:#5a4f4b;">
-                        <p>
-                            Beauty Hive Studio is a private, appointment-only nail studio in San Diego's College Area,
-                            tucked just off El Cajon Blvd near SDSU. There are no walk-ins, no overlapping clients,
-                            no rushed turnover.
-                        </p>
-                        <p>
-                            For your hour, the studio belongs to you alone — surrounded by Brenda's plants, her tools,
-                            and her singular focus. The Welcome Experience is our way of saying: this is what your visits
-                            here will feel like.
-                        </p>
-                    </div>
-                    <div class="mt-8 grid grid-cols-2 gap-4 max-w-md">
-                        <div class="p-4 cream-bg rounded-lg">
-                            <p class="font-playfair text-2xl brown-text">2019</p>
-                            <p class="text-xs tracking-widest uppercase mt-1" style="color:#8a7770;">Artistry since</p>
-                        </div>
-                        <div class="p-4 cream-bg rounded-lg">
-                            <p class="font-playfair text-2xl brown-text">1:1</p>
-                            <p class="text-xs tracking-widest uppercase mt-1" style="color:#8a7770;">Private appointments</p>
-                        </div>
-                        <div class="p-4 cream-bg rounded-lg">
-                            <p class="font-playfair text-2xl brown-text">Gel-X</p>
-                            <p class="text-xs tracking-widest uppercase mt-1" style="color:#8a7770;">& Builder Gel specialist</p>
-                        </div>
-                        <div class="p-4 cream-bg rounded-lg">
-                            <p class="font-playfair text-2xl brown-text">SDSU</p>
-                            <p class="text-xs tracking-widest uppercase mt-1" style="color:#8a7770;">College Area · 92115</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="text-center max-w-2xl mx-auto mb-12 md:mb-14">
+                <p class="text-xs tracking-[0.32em] uppercase accent-color font-semibold">Pick Your Lane</p>
+                <h2 class="font-playfair text-4xl md:text-5xl mt-3" style="color:#3a2e2a;">
+                    Which full set is right for you?
+                </h2>
+                <p class="mt-4 text-base" style="color:#5a4f4b;">
+                    If you already know your service, book it below. If you only know the look, send the inspo
+                    and Brenda will point you to the closest match.
+                </p>
+            </div>
 
-                <div class="hero-frame max-w-md mx-auto">
-                    <img src="https://imgur.com/9eS7xDe.jpeg"
-                         onerror="this.onerror=null;this.src='https://placehold.co/700x800/C0A99A/FFFFFF?text=Brenda+%E2%80%94+Beauty+Hive+Studio';"
-                         alt="Brenda — expert nail artist at Beauty Hive Studio, a private, plant-filled nail studio in San Diego's College Area"
-                         style="aspect-ratio: 4/5;">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <div class="choice-card">
+                    <img src="assets/site/nails-summer-cherry-art.jpg" alt="Gel-X nail art set at Beauty Hive Studio">
+                    <span class="price-pill">Gel-X from $65</span>
+                    <h3 class="font-playfair text-2xl mt-4 mb-3" style="color:#3a2e2a;">For a fresh full set</h3>
+                    <p class="text-sm leading-relaxed" style="color:#5a4f4b;">
+                        Lightweight extensions with length options from short to x-long. Best if you want a clean,
+                        camera-ready set without growing your natural nails first.
+                    </p>
+                </div>
+                <div class="choice-card">
+                    <img src="assets/site/nails-kaboom.jpg" alt="Acrylic custom nail art at Beauty Hive Studio">
+                    <span class="price-pill">Acrylic from $69</span>
+                    <h3 class="font-playfair text-2xl mt-4 mb-3" style="color:#3a2e2a;">For structure and drama</h3>
+                    <p class="text-sm leading-relaxed" style="color:#5a4f4b;">
+                        A stronger classic full set option for clients who like shape, length, bold color, charms,
+                        and more detailed custom art.
+                    </p>
+                </div>
+                <div class="choice-card">
+                    <img src="assets/builder.jpg" alt="Builder gel natural nail growth result at Beauty Hive Studio">
+                    <span class="price-pill">Builder gel from $65</span>
+                    <h3 class="font-playfair text-2xl mt-4 mb-3" style="color:#3a2e2a;">For growing real nails</h3>
+                    <p class="text-sm leading-relaxed" style="color:#5a4f4b;">
+                        A growth-focused option when you want strength, length, and cute nails while giving your
+                        natural nails a better chance to thrive.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TESTIMONIALS -->
+    <!-- PORTFOLIO PROOF -->
     <section id="guests" class="py-16 md:py-24 cream-bg">
         <div class="container-page">
             <div class="text-center max-w-2xl mx-auto mb-12 md:mb-14">
-                <p class="text-xs tracking-[0.32em] uppercase accent-color font-semibold">What Our Guests Say</p>
+                <p class="text-xs tracking-[0.32em] uppercase accent-color font-semibold">Proof Before The Click</p>
                 <h2 class="font-playfair text-4xl md:text-5xl mt-3" style="color:#3a2e2a;">
-                    A studio that returns the favor.
+                    Proof that matches the promise.
                 </h2>
+                <p class="mt-4 text-base" style="color:#5a4f4b;">
+                    People book when they can picture themselves in the chair. Browse the work, then use the
+                    scheduler when you know your service.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 proof-grid mb-10">
+                <img src="assets/site/nails-summer-nude-clasped.jpg" alt="Soft neutral Beauty Hive nail set">
+                <img src="assets/site/nails-vacation.jpg" alt="Vacation nail art by Beauty Hive Studio">
+                <img src="assets/site/nails-bows-polkadots.jpg" alt="Bow and polka dot custom nail art by Beauty Hive Studio">
+                <img src="assets/site/nails-pink-floral.jpg" alt="Pink floral nail art by Beauty Hive Studio">
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 <div class="testimonial-card reveal">
-                    <p class="stars">★★★★★</p>
-                    <p class="text-base leading-relaxed" style="color:#3a2e2a;">
-                        I've never felt more cared for at a nail appointment. Brenda's space is calm, the work
-                        is meticulous, and my Gel-X set lasted weeks without a chip.
-                    </p>
-                    <p class="mt-5 text-sm font-semibold" style="color:#6C544E;">Alyssa R.</p>
-                    <p class="text-xs tracking-widest uppercase" style="color:#8a7770;">First-time guest · San Diego</p>
+                    <p class="text-base leading-relaxed" style="color:#3a2e2a;">Clean, neutral full sets for clients who want polished nails that still feel expensive.</p>
+                    <p class="mt-5 text-sm font-semibold" style="color:#6C544E;">Soft Neutral Sets</p>
+                    <p class="text-xs tracking-widest uppercase" style="color:#8a7770;">Gel-X · Acrylic · Builder Gel</p>
                 </div>
                 <div class="testimonial-card reveal reveal-delay-1">
-                    <p class="stars">★★★★★</p>
-                    <p class="text-base leading-relaxed" style="color:#3a2e2a;">
-                        The plant-filled studio alone is worth the visit. Add Brenda's nail art and the
-                        one-on-one attention and it's the only place I'll go now.
-                    </p>
-                    <p class="mt-5 text-sm font-semibold" style="color:#6C544E;">Maya K.</p>
-                    <p class="text-xs tracking-widest uppercase" style="color:#8a7770;">Builder Gel client · College Area</p>
+                    <p class="text-base leading-relaxed" style="color:#3a2e2a;">Trip, birthday, weekend, and photo-ready sets when the nails are part of the outfit.</p>
+                    <p class="mt-5 text-sm font-semibold" style="color:#6C544E;">Vacation And Event Nails</p>
+                    <p class="text-xs tracking-widest uppercase" style="color:#8a7770;">Custom art · First-time upgrade</p>
                 </div>
                 <div class="testimonial-card reveal reveal-delay-2">
-                    <p class="stars">★★★★★</p>
-                    <p class="text-base leading-relaxed" style="color:#3a2e2a;">
-                        Quiet, private, and completely focused on you. Exactly the kind of nail studio I'd
-                        been hoping to find in San Diego.
-                    </p>
-                    <p class="mt-5 text-sm font-semibold" style="color:#6C544E;">Jasmine T.</p>
-                    <p class="text-xs tracking-widest uppercase" style="color:#8a7770;">Custom nail art · Near SDSU</p>
+                    <p class="text-base leading-relaxed" style="color:#3a2e2a;">Statement details for clients who want the artist to execute the actual inspo, not water it down.</p>
+                    <p class="mt-5 text-sm font-semibold" style="color:#6C544E;">Custom Detail Work</p>
+                    <p class="text-xs tracking-widest uppercase" style="color:#8a7770;">Classic · Creative · Signature art</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <p class="text-center text-xs italic mt-8" style="color:#8a7770;">
-                Reviews paraphrased from feedback received by Beauty Hive Studio. Want to share yours? Tag <a href="https://www.instagram.com/isssbeenails/" class="underline" style="color:#6C544E;">@isssbeenails</a>.
-            </p>
+    <!-- PRIVATE STUDIO / POLICIES -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container-page">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+                <div class="hero-frame max-w-md mx-auto">
+                    <img src="assets/site/nails-summer-nude-rings.jpg"
+                         onerror="this.onerror=null;this.src='https://placehold.co/700x800/C0A99A/FFFFFF?text=Beauty+Hive+Studio';"
+                         alt="Neutral custom nail set from Beauty Hive Studio"
+                         style="aspect-ratio: 4/5;">
+                </div>
+                <div>
+                    <p class="text-xs tracking-[0.32em] uppercase accent-color font-semibold">Private Studio Near SDSU</p>
+                    <h2 class="font-playfair text-3xl md:text-5xl mt-3" style="color:#3a2e2a; line-height:1.1;">
+                        One artist, one appointment, one set done right.
+                    </h2>
+                    <div class="space-y-4 mt-6 text-base leading-relaxed" style="color:#5a4f4b;">
+                        <p>
+                            Beauty Hive Studio is a private, appointment-only nail studio in San Diego's College Area,
+                            just off El Cajon Blvd near SDSU.
+                        </p>
+                        <p>
+                            Brenda works one-on-one, so the page answers the practical questions before you book:
+                            what to choose, what it starts at, where to go, and how to protect your spot.
+                        </p>
+                    </div>
+                    <div class="policy-list mt-8">
+                        <div class="policy-item">
+                            <p class="font-playfair text-xl brown-text">$25 deposit</p>
+                            <p class="text-sm mt-2" style="color:#5a4f4b;">Required to reserve your appointment.</p>
+                        </div>
+                        <div class="policy-item">
+                            <p class="font-playfair text-xl brown-text">48-hour notice</p>
+                            <p class="text-sm mt-2" style="color:#5a4f4b;">Deposits are transferable with proper notice.</p>
+                        </div>
+                        <div class="policy-item">
+                            <p class="font-playfair text-xl brown-text">3-day repairs</p>
+                            <p class="text-sm mt-2" style="color:#5a4f4b;">Broken nail repairs are complimentary for the first 3 days.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- BOOKING -->
     <section id="booking" class="py-16 md:py-24 bg-white">
         <div class="container-page text-center">
-            <p class="text-xs tracking-[0.32em] uppercase accent-color font-semibold">Reserve Your Welcome</p>
+            <p class="text-xs tracking-[0.32em] uppercase accent-color font-semibold">Reserve Your First Set</p>
             <h2 class="font-playfair text-4xl md:text-5xl mt-3" style="color:#3a2e2a;">
                 Claim your spot.
             </h2>
             <p class="mt-4 text-base md:text-lg max-w-2xl mx-auto" style="color:#5a4f4b;">
-                Choose any first-time <strong>Gel-X</strong> or <strong>Builder Gel</strong> service below. Your complimentary
-                Welcome Experience will be added to your appointment automatically.
+                Choose a first-time <strong>Gel-X</strong>, <strong>Acrylic</strong>, or <strong>Builder Gel</strong> full set below.
+                Add your inspo in the notes or DM Brenda before booking.
             </p>
             <p class="mt-3 text-xs tracking-[0.28em] uppercase" style="color:#8a7770;">
-                Exclusively for first-time guests · Spaces are limited
+                Ask for the classic art upgrade · first-time clients only
             </p>
 
             <div class="mt-8 acuity-wrap">
@@ -808,7 +944,7 @@
                 </p>
                 <iframe id="acuity-iframe"
                         src="https://app.acuityscheduling.com/schedule.php?owner=37153930&ref=embedded_csp"
-                        title="Schedule your Beauty Hive Welcome Experience"
+                        title="Schedule your Beauty Hive first set at Beauty Hive Studio"
                         width="100%" height="800" frameBorder="0" allow="payment"></iframe>
                 <script src="https://embed.acuityscheduling.com/js/embed.js" type="text/javascript"></script>
             </div>
@@ -833,29 +969,25 @@
 
             <div class="space-y-3">
                 <details class="faq-item">
-                    <summary>Who qualifies for the Welcome Experience?</summary>
-                    <p>The Welcome Experience is offered exclusively to first-time guests of Beauty Hive Studio
-                       booking a Gel-X or Builder Gel service. One per guest.</p>
+                    <summary>Who qualifies for the first-set art upgrade?</summary>
+                    <p>First-time Beauty Hive clients booking a Gel-X, acrylic, or builder gel full set. One per client.</p>
                 </details>
                 <details class="faq-item">
-                    <summary>Do I need to redeem a code at checkout?</summary>
-                    <p>No code is required. When you book a first-time Gel-X or Builder Gel appointment through the
-                       form above, the complimentary ritual is added to your visit automatically.</p>
+                    <summary>Do I need to pick a specific service?</summary>
+                    <p>Book the full set that matches your nails and length. If you are unsure, DM Brenda your inspo and she will point you to the right option.</p>
                 </details>
                 <details class="faq-item">
                     <summary>Can I gift this to a friend?</summary>
-                    <p>The Welcome Experience is reserved for the first-time guest at their own appointment. If
-                       you'd like to send a friend, simply share this page — they can claim their spot the same way.</p>
+                    <p>Yes. Share the page with them. The offer is tied to their first full set appointment at Beauty Hive.</p>
                 </details>
                 <details class="faq-item">
                     <summary>How long does the appointment take?</summary>
-                    <p>Plan for the time of your booked Gel-X or Builder Gel service. The Welcome Experience is
-                       woven into your appointment so you can fully relax — it does not require additional time.</p>
+                    <p>Plan for the time listed on the service you book. Detailed art can require a different tier, so send inspo if your design is complex.</p>
                 </details>
                 <details class="faq-item">
                     <summary>Where is the studio located?</summary>
                     <p>Beauty Hive Studio is located at 6244 El Cajon Blvd, Suite 21, San Diego, CA 92115 — in
-                       the College Area near SDSU. Parking is available on site.</p>
+                       the College Area near SDSU. Check your booking details for arrival information.</p>
                 </details>
                 <details class="faq-item">
                     <summary>What if I need to reschedule?</summary>
@@ -874,17 +1006,17 @@
                 Your first visit, made unforgettable.
             </h2>
             <p class="mt-5 text-base md:text-lg" style="color:#EFE2D9;">
-                Reserve your Welcome Experience today and step into San Diego's quietest, most considered nail studio.
+                Reserve your first set today and step into San Diego's private, plant-filled nail studio near SDSU.
             </p>
             <div class="mt-8">
                 <a href="#booking"
-                   onclick="if(typeof fbq !== 'undefined') fbq('trackCustom', 'BookNowClick', {button_location: 'welcome_final_cta'}); if(typeof gtag !== 'undefined') gtag('event', 'begin_checkout', {event_category: 'booking', event_label: 'welcome_final_cta'});"
+                   onclick="if(typeof fbq !== 'undefined') fbq('trackCustom', 'BookNowClick', {button_location: 'art_upgrade_final_cta'}); if(typeof gtag !== 'undefined') gtag('event', 'begin_checkout', {event_category: 'booking', event_label: 'art_upgrade_final_cta'});"
                    class="inline-block bg-white text-[#6C544E] font-bold tracking-[0.06em] px-8 py-4 rounded-full shadow-lg hover:bg-[#F8F6F4] transition-colors">
-                    RESERVE YOUR WELCOME EXPERIENCE
+                    BOOK YOUR FIRST SET
                 </a>
             </div>
             <p class="mt-6 text-xs tracking-[0.28em] uppercase" style="color:#E8DBD2;">
-                Exclusively for first-time guests
+                First-time clients only · classic art value included
             </p>
         </div>
     </section>
@@ -908,8 +1040,8 @@
 
     <!-- Sticky Mobile CTA -->
     <a href="#booking"
-       onclick="if(typeof fbq !== 'undefined') fbq('trackCustom', 'BookNowClick', {button_location: 'welcome_sticky_footer'}); if(typeof gtag !== 'undefined') gtag('event', 'begin_checkout', {event_category: 'booking', event_label: 'welcome_sticky_footer'});"
-       class="sticky-book-now hidden" id="sticky-book-now">CLAIM YOUR WELCOME EXPERIENCE</a>
+       onclick="if(typeof fbq !== 'undefined') fbq('trackCustom', 'BookNowClick', {button_location: 'art_upgrade_sticky_footer'}); if(typeof gtag !== 'undefined') gtag('event', 'begin_checkout', {event_category: 'booking', event_label: 'art_upgrade_sticky_footer'});"
+       class="sticky-book-now hidden" id="sticky-book-now">BOOK YOUR FIRST SET</a>
 
     <script>
         // Hamburger
@@ -966,7 +1098,7 @@
                         bookingSectionViewed = true;
                         if (typeof fbq !== 'undefined') {
                             fbq('track', 'InitiateCheckout', {
-                                content_name: 'Welcome Experience Booking Form Viewed',
+                                content_name: 'New Client Signature Set Booking Form Viewed',
                                 content_category: 'Nail Services',
                                 content_type: 'booking_form'
                             });
@@ -974,7 +1106,7 @@
                         if (typeof gtag !== 'undefined') {
                             gtag('event', 'begin_checkout', {
                                 event_category: 'booking',
-                                event_label: 'welcome_booking_form_viewed'
+                                event_label: 'art_upgrade_booking_form_viewed'
                             });
                         }
                     }
@@ -988,7 +1120,7 @@
                         acuityIframeInteracted = true;
                         if (typeof fbq !== 'undefined') {
                             fbq('track', 'InitiateCheckout', {
-                                content_name: 'Welcome Experience Booking Form Interaction',
+                                content_name: 'New Client Signature Set Booking Form Interaction',
                                 content_category: 'Nail Services',
                                 content_type: 'booking_form_click'
                             });
@@ -996,7 +1128,7 @@
                         if (typeof gtag !== 'undefined') {
                             gtag('event', 'begin_checkout', {
                                 event_category: 'booking',
-                                event_label: 'welcome_booking_form_interaction'
+                                event_label: 'art_upgrade_booking_form_interaction'
                             });
                         }
                     }
@@ -1015,7 +1147,7 @@
                 if (!isAcuity) return;
 
                 if (event.data && event.data.event === 'acuityConversion') {
-                    var appointmentType = event.data.appointmentType || 'Welcome Experience Booking';
+                    var appointmentType = event.data.appointmentType || 'New Client Signature Set Booking';
                     var price = parseFloat(event.data.price) || 0;
                     var appointmentId = event.data.appointmentId || '';
 
@@ -1054,7 +1186,7 @@
                             'currency': 'USD',
                             'appointment_id': appointmentId,
                             'appointment_type': appointmentType,
-                            'source_page': 'welcome_landing'
+                            'source_page': 'art_upgrade_landing'
                         });
                     }
                 }
