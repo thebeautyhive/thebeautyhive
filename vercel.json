@@ -9,7 +9,9 @@
     { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
     { "source": "/data-deletion", "destination": "/data-deletion.html" },
     { "source": "/mothers-day", "destination": "/mothers-day.html" },
-    { "source": "/combo", "destination": "/combo.html" }
+    { "source": "/combo", "destination": "/combo.html" },
+    { "source": "/growth-plan", "destination": "/growth-plan.html" },
+    { "source": "/shot-list", "destination": "/shot-list.html" }
   ],
   "headers": [
     {

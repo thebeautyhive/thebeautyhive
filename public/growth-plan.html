@@ -1,0 +1,2259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Hive Growth Plan | Brenda Marketing Guide</title>
+    <meta name="description" content="Beauty Hive Studio growth plan for Brenda: offer ladder, DM funnel, content plan, and weekly execution guide.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://www.beautyhivestudio.com/growth-plan">
+    <link rel="icon" type="image/svg+xml" href="beautyhive3.svg">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+        :root {
+            --ink: #2f2927;
+            --muted: #6c5f5a;
+            --soft: #fbf8f4;
+            --cream: #f3ebe2;
+            --sand: #d8c0a2;
+            --rose: #ad6f7b;
+            --green: #60715d;
+            --line: rgba(47, 41, 39, 0.14);
+            --shadow: 0 18px 50px rgba(47, 41, 39, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--soft);
+            color: var(--ink);
+            font-family: "Montserrat", sans-serif;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .page {
+            width: min(1120px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(251, 248, 244, 0.94);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .topbar-inner {
+            width: min(1120px, calc(100% - 32px));
+            min-height: 60px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .brand img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .top-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .top-actions a,
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 42px;
+            padding: 0 14px;
+            border: 1px solid var(--line);
+            background: #fff;
+            color: var(--ink);
+            text-decoration: none;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        code {
+            padding: 0.1em 0.35em;
+            background: rgba(47, 41, 39, 0.08);
+            border-radius: 999px;
+            font-family: inherit;
+            font-size: 0.9em;
+            font-weight: 800;
+        }
+
+        .command-card.primary code {
+            background: rgba(255, 250, 245, 0.18);
+            color: #fffaf5;
+        }
+
+        .button.primary {
+            border-color: var(--ink);
+            background: var(--ink);
+            color: #fffaf5;
+        }
+
+        .button,
+        .top-actions a {
+            white-space: normal;
+            text-align: center;
+        }
+
+        .hero {
+            padding: 30px 0 18px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.75fr);
+            gap: 28px;
+            align-items: stretch;
+        }
+
+        .eyebrow {
+            margin: 0 0 14px;
+            color: var(--rose);
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Playfair Display", serif;
+            line-height: 1.02;
+            letter-spacing: 0;
+        }
+
+        h1 {
+            margin: 0;
+            max-width: 780px;
+            font-size: clamp(2.4rem, 7vw, 5.7rem);
+        }
+
+        h2 {
+            margin: 0 0 18px;
+            font-size: clamp(2rem, 5vw, 3.6rem);
+        }
+
+        h3 {
+            margin: 0 0 10px;
+            font-size: 1.45rem;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        p,
+        li,
+        a,
+        strong,
+        span {
+            overflow-wrap: anywhere;
+        }
+
+        .hero-copy {
+            margin-top: 18px;
+            max-width: 720px;
+            color: var(--muted);
+            font-size: clamp(1rem, 2.7vw, 1.18rem);
+        }
+
+        .hero-card {
+            background: var(--ink);
+            color: #fff8ef;
+            padding: 22px;
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: var(--shadow);
+        }
+
+        .hero-card .lesson-path {
+            display: grid;
+            gap: 10px;
+            margin: 18px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .hero-card .lesson-path li {
+            display: grid;
+            grid-template-columns: 28px 1fr;
+            gap: 10px;
+            align-items: center;
+            color: rgba(255, 248, 239, 0.84);
+            font-size: 0.88rem;
+        }
+
+        .hero-card .lesson-path span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border: 1px solid rgba(255, 248, 239, 0.24);
+            color: var(--sand);
+            font-size: 0.76rem;
+            font-weight: 900;
+        }
+
+        .hero-card p {
+            color: rgba(255, 248, 239, 0.78);
+        }
+
+        .hero-card strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.02rem;
+        }
+
+        .quick-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 22px;
+        }
+
+        .stat {
+            border: 1px solid rgba(255, 248, 239, 0.18);
+            padding: 12px;
+        }
+
+        .stat span {
+            display: block;
+            color: var(--sand);
+            font-family: "Playfair Display", serif;
+            font-size: 1.7rem;
+            line-height: 1;
+        }
+
+        .stat small {
+            display: block;
+            margin-top: 6px;
+            color: rgba(255, 248, 239, 0.72);
+            font-size: 0.68rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .command-center {
+            padding: 18px 0 34px;
+        }
+
+        .command-panel {
+            display: grid;
+            grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+            gap: 14px;
+            align-items: stretch;
+        }
+
+        .command-card,
+        .today-card {
+            border: 1px solid var(--line);
+            background: #fff;
+            padding: 18px;
+            box-shadow: 0 8px 24px rgba(47, 41, 39, 0.06);
+        }
+
+        .command-card.primary {
+            background: var(--green);
+            color: #fffaf5;
+        }
+
+        .command-card.primary .eyebrow,
+        .command-card.primary p {
+            color: rgba(255, 250, 245, 0.78);
+        }
+
+        .command-card h2,
+        .today-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .action-list {
+            display: grid;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .action-item {
+            display: grid;
+            grid-template-columns: 34px 1fr;
+            gap: 10px;
+            align-items: start;
+            padding: 12px;
+            background: rgba(255, 250, 245, 0.12);
+            border: 1px solid rgba(255, 250, 245, 0.18);
+        }
+
+        .action-item span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: #fffaf5;
+            color: var(--green);
+            font-size: 0.8rem;
+            font-weight: 900;
+        }
+
+        .action-item strong {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .today-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .today-card {
+            min-height: 118px;
+        }
+
+        .today-card strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 0.78rem;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--rose);
+        }
+
+        .today-card p {
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+
+        .quick-cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .toc {
+            padding: 22px 0 30px;
+        }
+
+        .course-dashboard {
+            padding: 24px 0 34px;
+            border-top: 1px solid var(--line);
+        }
+
+        .course-player {
+            padding: 28px 0 44px;
+            border-top: 1px solid var(--line);
+        }
+
+        .course-shell {
+            display: grid;
+            grid-template-columns: 290px minmax(0, 1fr);
+            gap: 18px;
+            align-items: start;
+        }
+
+        .course-nav {
+            position: sticky;
+            top: 78px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 10px 28px rgba(47, 41, 39, 0.07);
+        }
+
+        .course-nav-head {
+            padding: 16px;
+            border-bottom: 1px solid var(--line);
+            background: var(--ink);
+            color: #fff8ef;
+        }
+
+        .course-nav-head p {
+            color: rgba(255, 248, 239, 0.72);
+            font-size: 0.88rem;
+        }
+
+        .progress-track {
+            height: 8px;
+            margin-top: 14px;
+            background: rgba(255, 248, 239, 0.18);
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            display: block;
+            width: 12.5%;
+            height: 100%;
+            background: var(--sand);
+        }
+
+        .course-tabs {
+            display: grid;
+            padding: 8px;
+            gap: 6px;
+        }
+
+        .course-tab {
+            display: grid;
+            grid-template-columns: 36px 1fr;
+            gap: 10px;
+            width: 100%;
+            padding: 11px;
+            border: 1px solid transparent;
+            background: transparent;
+            color: var(--ink);
+            font: inherit;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .course-tab:hover,
+        .course-tab.active {
+            border-color: var(--line);
+            background: var(--cream);
+        }
+
+        .course-tab span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: #fff;
+            color: var(--rose);
+            font-size: 0.72rem;
+            font-weight: 900;
+        }
+
+        .course-tab strong {
+            display: block;
+            font-size: 0.82rem;
+            line-height: 1.15;
+        }
+
+        .course-tab small {
+            display: block;
+            margin-top: 3px;
+            color: var(--muted);
+            font-size: 0.72rem;
+            line-height: 1.25;
+        }
+
+        .course-stage {
+            min-height: 620px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 12px 34px rgba(47, 41, 39, 0.07);
+        }
+
+        .course-stage > section {
+            display: none;
+            padding: 26px;
+            border-top: 0;
+        }
+
+        .course-stage > section.active-lesson {
+            display: block;
+        }
+
+        .course-stage .page {
+            width: 100%;
+        }
+
+        .lesson-controls {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 16px 26px;
+            border-top: 1px solid var(--line);
+            background: var(--soft);
+        }
+
+        .lesson-controls button {
+            min-height: 42px;
+            padding: 0 14px;
+            border: 1px solid var(--line);
+            background: #fff;
+            color: var(--ink);
+            font: inherit;
+            font-size: 0.78rem;
+            font-weight: 900;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .lesson-controls button:last-child {
+            border-color: var(--ink);
+            background: var(--ink);
+            color: #fffaf5;
+        }
+
+        .lesson-controls button:disabled {
+            opacity: 0.42;
+            cursor: default;
+        }
+
+        .course-heading {
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            align-items: end;
+            margin-bottom: 14px;
+        }
+
+        .course-heading p {
+            max-width: 560px;
+            color: var(--muted);
+        }
+
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .module-card {
+            display: flex;
+            flex-direction: column;
+            min-height: 178px;
+            padding: 16px;
+            border: 1px solid var(--line);
+            background: #fff;
+            color: var(--ink);
+            text-decoration: none;
+            box-shadow: 0 8px 22px rgba(47, 41, 39, 0.05);
+        }
+
+        .module-card span {
+            color: var(--rose);
+            font-size: 0.72rem;
+            font-weight: 900;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .module-card strong {
+            display: block;
+            margin: 12px 0 8px;
+            font-family: "Playfair Display", serif;
+            font-size: 1.28rem;
+            line-height: 1.08;
+        }
+
+        .module-card p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .module-card em {
+            margin-top: auto;
+            padding-top: 16px;
+            color: var(--green);
+            font-style: normal;
+            font-size: 0.72rem;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .toc a {
+            min-height: 92px;
+            padding: 14px;
+            border: 1px solid var(--line);
+            background: #fff;
+            text-decoration: none;
+            box-shadow: 0 8px 22px rgba(47, 41, 39, 0.05);
+        }
+
+        .toc span {
+            display: block;
+            color: var(--rose);
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .toc strong {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+
+        section {
+            padding: 44px 0;
+            border-top: 1px solid var(--line);
+            scroll-margin-top: 78px;
+        }
+
+        .lesson-kicker {
+            display: inline-flex;
+            margin-bottom: 10px;
+            padding: 6px 10px;
+            border: 1px solid var(--line);
+            background: #fff;
+            color: var(--rose);
+            font-size: 0.72rem;
+            font-weight: 900;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .lesson-frame {
+            margin: 18px 0 22px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .lesson-frame div {
+            padding: 14px;
+            border: 1px solid var(--line);
+            background: #fff;
+        }
+
+        .lesson-frame strong {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--green);
+            font-size: 0.72rem;
+            font-weight: 900;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .lesson-frame p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .section-intro {
+            max-width: 760px;
+            margin-bottom: 24px;
+            color: var(--muted);
+            font-size: 1.03rem;
+        }
+
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .offer {
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .offer-image {
+            height: 220px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .offer-body {
+            padding: 20px;
+        }
+
+        .price {
+            color: var(--rose);
+            font-family: "Playfair Display", serif;
+            font-size: 2.2rem;
+            line-height: 1;
+        }
+
+        .price small {
+            color: var(--muted);
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 16px 0;
+        }
+
+        .tag {
+            border: 1px solid var(--line);
+            background: var(--cream);
+            padding: 7px 10px;
+            color: var(--ink);
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .note {
+            margin-top: 14px;
+            padding: 14px;
+            background: #f6eee8;
+            color: var(--muted);
+            border-left: 4px solid var(--rose);
+            font-size: 0.92rem;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .card,
+        .week,
+        .checklist {
+            background: #fff;
+            border: 1px solid var(--line);
+            padding: 18px;
+        }
+
+        .card p,
+        .week p,
+        .checklist p,
+        li {
+            color: var(--muted);
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 0.75fr 1fr;
+            gap: 22px;
+            align-items: start;
+        }
+
+        .pillar-list,
+        .plain-list {
+            display: grid;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .pillar-list li,
+        .plain-list li {
+            padding: 13px 14px;
+            background: #fff;
+            border: 1px solid var(--line);
+        }
+
+        .calendar {
+            display: grid;
+            gap: 12px;
+        }
+
+        .calendar-tools {
+            margin: 22px 0 14px;
+            padding: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            background: #fff;
+            border: 1px solid var(--line);
+        }
+
+        .calendar-tools label {
+            color: var(--rose);
+            font-size: 0.74rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .week-select {
+            width: min(100%, 320px);
+            min-height: 42px;
+            border: 1px solid var(--line);
+            background: var(--soft);
+            color: var(--ink);
+            padding: 0 14px;
+            font-family: inherit;
+            font-size: 0.86rem;
+            font-weight: 700;
+        }
+
+        .week {
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .week-label {
+            color: var(--rose);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+        }
+
+        .week summary {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 18px;
+            align-items: start;
+            padding: 18px;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        .week summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .week summary h3 {
+            margin-bottom: 6px;
+        }
+
+        .week summary p {
+            max-width: 720px;
+        }
+
+        .week summary::after {
+            content: "+";
+            grid-column: 2;
+            justify-self: end;
+            margin-top: -34px;
+            color: var(--rose);
+            font-size: 1.4rem;
+            font-weight: 800;
+        }
+
+        .week[open] summary::after {
+            content: "−";
+        }
+
+        .week-body {
+            padding: 0 18px 18px;
+        }
+
+        .day-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .day {
+            background: var(--soft);
+            border: 1px solid var(--line);
+            padding: 12px;
+        }
+
+        .day strong {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .asset-link {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 10px;
+            margin-right: 8px;
+            padding: 7px 10px;
+            border: 1px solid var(--line);
+            background: #fff;
+            color: var(--ink);
+            text-decoration: none;
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .execution {
+            margin-top: 8px;
+            color: var(--ink);
+        }
+
+        .voice-guardrail {
+            margin: 18px 0;
+            padding: 16px;
+            background: #fff;
+            border: 1px solid var(--line);
+        }
+
+        .voice-guardrail h3 {
+            margin-bottom: 8px;
+        }
+
+        .voice-guardrail ul,
+        .talk-track ul {
+            margin: 10px 0 0;
+            padding-left: 18px;
+        }
+
+        .talk-track {
+            margin-top: 12px;
+            border-top: 1px solid var(--line);
+            padding-top: 10px;
+        }
+
+        .talk-track summary {
+            cursor: pointer;
+            color: var(--rose);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .talk-track li {
+            margin-bottom: 7px;
+        }
+
+        .shot-list-cta {
+            margin: 18px 0 16px;
+            padding: 20px;
+            background: var(--ink);
+            color: #fff8ef;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 18px;
+            align-items: center;
+        }
+
+        .shot-list-cta p {
+            margin-top: 6px;
+            color: rgba(255, 248, 239, 0.76);
+        }
+
+        .shoot-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .footer-cta {
+            margin: 44px 0;
+            padding: 26px;
+            background: var(--ink);
+            color: #fff8ef;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .footer-cta p {
+            color: rgba(255, 248, 239, 0.74);
+            margin-top: 8px;
+        }
+
+        @media (max-width: 860px) {
+            .hero-grid,
+            .command-panel,
+            .offer-grid,
+            .split,
+            .shot-list-cta,
+            .calendar-tools,
+            .footer-cta {
+                grid-template-columns: 1fr;
+            }
+
+            .course-shell {
+                grid-template-columns: 1fr;
+            }
+
+            .course-nav {
+                position: static;
+            }
+
+            .course-tabs {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .course-heading {
+                align-items: start;
+                flex-direction: column;
+            }
+
+            .module-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .lesson-frame {
+                grid-template-columns: 1fr;
+            }
+
+            .toc-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .week {
+                grid-template-columns: 1fr;
+            }
+
+            .week summary {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .calendar-tools {
+                align-items: stretch;
+            }
+
+            .week-select {
+                width: 100%;
+            }
+
+            .week summary::after {
+                grid-column: 1;
+                margin-top: -34px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .topbar {
+                position: static;
+            }
+
+            .page,
+            .topbar-inner {
+                width: min(100% - 28px, 1120px);
+            }
+
+            h1 {
+                font-size: 2.35rem;
+            }
+
+            h2 {
+                font-size: 1.95rem;
+            }
+
+            h3 {
+                font-size: 1.28rem;
+            }
+
+            .topbar-inner {
+                min-height: auto;
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 12px 0;
+            }
+
+            .brand {
+                max-width: 100%;
+                font-size: 0.72rem;
+                letter-spacing: 0.08em;
+            }
+
+            .top-actions {
+                width: 100%;
+                overflow-x: auto;
+                padding-bottom: 2px;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .top-actions a {
+                flex: 0 0 auto;
+                min-width: 104px;
+                min-height: 38px;
+                padding: 0 10px;
+                font-size: 0.68rem;
+            }
+
+            .hero {
+                padding-top: 22px;
+            }
+
+            .hero-copy,
+            .section-intro {
+                font-size: 0.98rem;
+            }
+
+            .hero-card {
+                display: none;
+            }
+
+            .quick-cta-row .button,
+            .shot-list-cta .button,
+            .footer-cta .button {
+                width: 100%;
+            }
+
+            .toc a {
+                min-height: auto;
+            }
+
+            .offer-body,
+            .card,
+            .week-body,
+            .checklist,
+            .voice-guardrail {
+                padding: 14px;
+            }
+
+            .week summary {
+                padding: 14px;
+            }
+
+            .week summary::after {
+                margin-top: -30px;
+            }
+
+            .asset-link {
+                width: 100%;
+                justify-content: center;
+                margin-right: 0;
+            }
+
+            .shot-list-cta,
+            .footer-cta {
+                padding: 16px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .page,
+            .topbar-inner {
+                width: min(100% - 22px, 1120px);
+            }
+
+            .top-actions a {
+                min-height: 38px;
+                padding: 0 8px;
+                font-size: 0.68rem;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 24px 0 12px;
+            }
+
+            .hero-card {
+                display: none;
+            }
+
+            .quick-stats,
+            .today-grid,
+            .module-grid,
+            .course-tabs,
+            .toc-grid,
+            .day-grid,
+            .shoot-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .command-center {
+                padding: 8px 0 18px;
+            }
+
+            .command-card,
+            .today-card {
+                padding: 14px;
+            }
+
+            .command-card h2 {
+                font-size: 1.9rem;
+            }
+
+            .price {
+                font-size: 1.85rem;
+            }
+
+            .action-list {
+                gap: 8px;
+            }
+
+            .action-item {
+                padding: 10px;
+            }
+
+            .toc {
+                padding-top: 4px;
+            }
+
+            .offer-image {
+                height: 190px;
+            }
+
+            section {
+                padding: 34px 0;
+            }
+        }
+        /* Course interface pass: app-like classroom shell instead of report styling. */
+        :root {
+            --ink: #263238;
+            --muted: #66727c;
+            --soft: #f5f7fb;
+            --cream: #eef3f5;
+            --sand: #d6a243;
+            --rose: #8f4e6f;
+            --green: #2f746f;
+            --line: rgba(38, 50, 56, 0.12);
+            --shadow: 0 16px 36px rgba(31, 41, 55, 0.10);
+        }
+
+        body {
+            background: #f5f7fb;
+        }
+
+        .page,
+        .topbar-inner {
+            width: min(1240px, calc(100% - 36px));
+        }
+
+        .topbar {
+            background: rgba(255, 255, 255, 0.96);
+            box-shadow: 0 8px 24px rgba(31, 41, 55, 0.06);
+        }
+
+        .topbar-inner {
+            min-height: 68px;
+        }
+
+        .brand {
+            letter-spacing: 0.07em;
+        }
+
+        .top-actions a,
+        .button,
+        .lesson-controls button {
+            border-radius: 8px;
+            min-height: 38px;
+            background: #fff;
+        }
+
+        .button.primary,
+        .lesson-controls button:last-child {
+            background: var(--green);
+            border-color: var(--green);
+        }
+
+        .hero {
+            padding: 28px 0 14px;
+            border-top: 0;
+        }
+
+        .hero-grid {
+            grid-template-columns: minmax(0, 1fr) 340px;
+            align-items: center;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #fff;
+            padding: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Montserrat", sans-serif;
+            letter-spacing: 0;
+        }
+
+        h1 {
+            max-width: 720px;
+            font-size: clamp(2.05rem, 4vw, 4rem);
+            line-height: 1.05;
+        }
+
+        h2 {
+            font-size: clamp(1.55rem, 3vw, 2.45rem);
+            line-height: 1.12;
+        }
+
+        h3 {
+            font-size: 1.12rem;
+            line-height: 1.2;
+        }
+
+        .hero-copy {
+            max-width: 760px;
+            font-size: 1.03rem;
+        }
+
+        .eyebrow,
+        .today-card strong,
+        .lesson-kicker,
+        .course-tab span,
+        .module-card span,
+        .toc span,
+        .week-label,
+        .talk-track summary,
+        .calendar-tools label {
+            color: var(--rose);
+        }
+
+        .hero-card,
+        .course-nav-head {
+            border-radius: 8px;
+            background: #1f2933;
+            box-shadow: none;
+        }
+
+        .hero-card {
+            min-height: auto;
+            align-self: center;
+            justify-content: flex-start;
+            padding: 18px;
+        }
+
+        .hero-card .lesson-path {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px;
+        }
+
+        .hero-card .lesson-path li {
+            grid-template-columns: 26px 1fr;
+            gap: 8px;
+            font-size: 0.82rem;
+        }
+
+        .hero-card .lesson-path span {
+            width: 26px;
+            height: 26px;
+        }
+
+        .hero-card p {
+            font-size: 0.94rem;
+            line-height: 1.42;
+        }
+
+        .quick-stats {
+            margin-top: 16px;
+        }
+
+        .stat {
+            padding: 9px;
+        }
+
+        .stat span {
+            font-size: 1.35rem;
+        }
+
+        .stat small {
+            font-size: 0.62rem;
+        }
+
+        .stat,
+        .hero-card .lesson-path span {
+            border-radius: 8px;
+        }
+
+        .command-center,
+        .course-dashboard,
+        .course-player {
+            border-top: 0;
+        }
+
+        .command-panel {
+            grid-template-columns: 0.92fr 1.08fr;
+            gap: 18px;
+        }
+
+        .growth-os {
+            padding: 14px 0 26px;
+            border-top: 0;
+        }
+
+        .os-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr 0.9fr;
+            gap: 14px;
+        }
+
+        .os-card {
+            min-height: 150px;
+            padding: 18px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 8px 22px rgba(31, 41, 55, 0.06);
+        }
+
+        .os-card h3 {
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .os-card p {
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+
+        .os-list {
+            display: grid;
+            gap: 8px;
+            margin: 12px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .os-list li {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 9px 0;
+            border-top: 1px solid var(--line);
+            color: var(--ink);
+            font-size: 0.9rem;
+        }
+
+        .os-list span {
+            color: var(--green);
+            font-weight: 900;
+        }
+
+        .resource-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .command-card,
+        .today-card,
+        .module-card,
+        .course-nav,
+        .course-stage,
+        .offer,
+        .card,
+        .week,
+        .checklist,
+        .pillar-list li,
+        .plain-list li,
+        .voice-guardrail,
+        .calendar-tools,
+        .lesson-frame div,
+        .shot-list-cta,
+        .footer-cta,
+        .day {
+            border-radius: 8px;
+            box-shadow: 0 8px 22px rgba(31, 41, 55, 0.06);
+        }
+
+        .command-card.primary {
+            background: linear-gradient(135deg, #2f746f, #263238);
+        }
+
+        .today-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .today-card {
+            min-height: 132px;
+            position: relative;
+        }
+
+        .today-card::after,
+        .module-card::after {
+            content: "Start";
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            padding: 5px 8px;
+            border-radius: 999px;
+            background: rgba(47, 116, 111, 0.10);
+            color: var(--green);
+            font-size: 0.66rem;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .course-dashboard {
+            padding-top: 12px;
+        }
+
+        .module-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .module-card {
+            position: relative;
+            border-top: 4px solid var(--green);
+        }
+
+        .course-shell {
+            grid-template-columns: 320px minmax(0, 1fr);
+        }
+
+        .course-nav,
+        .course-stage {
+            overflow: hidden;
+        }
+
+        .course-tabs {
+            max-height: calc(100vh - 220px);
+            overflow: auto;
+        }
+
+        .course-tab {
+            border-radius: 8px;
+        }
+
+        .course-tab.active {
+            background: #edf7f5;
+            border-color: rgba(47, 116, 111, 0.28);
+        }
+
+        .course-stage {
+            min-height: 650px;
+            background: #fff;
+        }
+
+        .course-stage > section {
+            padding: 30px;
+        }
+
+        .lesson-frame {
+            margin-top: 22px;
+        }
+
+        .lesson-frame div {
+            background: #f8fafc;
+        }
+
+        .tag,
+        code,
+        .asset-link {
+            border-radius: 999px;
+        }
+
+        .week summary {
+            background: #fff;
+        }
+
+        .week[open] summary {
+            border-bottom: 1px solid var(--line);
+            background: #f8fafc;
+        }
+
+        @media (max-width: 900px) {
+            .hero-grid,
+            .command-panel,
+            .course-shell,
+            .os-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .today-grid,
+            .module-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 560px) {
+            .page,
+            .topbar-inner {
+                width: min(100% - 22px, 1240px);
+            }
+
+            .hero-grid {
+                padding: 18px;
+            }
+
+            .today-grid,
+            .module-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .course-stage > section {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="/">
+                <img src="beautyhive3.svg" alt="">
+                <span>Beauty Hive Course</span>
+            </a>
+            <nav class="top-actions" aria-label="Quick actions">
+                <a href="#start">Start Here</a>
+                <a href="#modules">Modules</a>
+                <a href="#calendar">Week 1</a>
+                <a href="/shot-list">Shot List</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="page hero-grid">
+                <div>
+                    <p class="eyebrow">Beauty Hive Course</p>
+                    <h1>Growth Plan Classroom</h1>
+                    <p class="hero-copy">A guided lesson dashboard for Brenda's first month of content, offers, DMs, and weekly execution. Strategy lives here. Shoot-day capture lives in the shot list so Brenda only has to look at the next video when she is filming.</p>
+                </div>
+                <aside class="hero-card" aria-label="Growth targets">
+                    <div>
+                        <strong>Your course path</strong>
+                        <p>Position Brenda as the San Diego private-suite nail artist for structured, long-lasting, design-forward nails. Content builds trust. DMs turn interest into booked appointments.</p>
+                        <ol class="lesson-path">
+                            <li><span>1</span>Pick the offer lane.</li>
+                            <li><span>2</span>Film the minimum proof.</li>
+                            <li><span>3</span>Post with one CTA keyword.</li>
+                            <li><span>4</span>Track the DMs that book.</li>
+                        </ol>
+                    </div>
+                    <div class="quick-stats">
+                        <div class="stat"><span>2</span><small>Front offers</small></div>
+                        <div class="stat"><span>5-7</span><small>Posts weekly</small></div>
+                        <div class="stat"><span>$100+</span><small>AOV goal</small></div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="growth-os" aria-labelledby="growth-os-title">
+            <div class="page">
+                <div class="os-grid">
+                    <article class="os-card">
+                        <p class="eyebrow">Growth OS</p>
+                        <h3 id="growth-os-title">Continue where the work happens.</h3>
+                        <p>Use this as the course home for the plan. When Brenda is actively shooting, skip the full plan and open the shot-list capture brief.</p>
+                        <div class="resource-row">
+                            <a class="button primary" href="#course">Open Lesson Player</a>
+                            <a class="button" href="/shot-list#start">Open Capture Brief</a>
+                        </div>
+                    </article>
+                    <article class="os-card">
+                        <p class="eyebrow">This Week</p>
+                        <h3>Week 1 content queue</h3>
+                        <ul class="os-list">
+                            <li>Proof Reel <span>SET</span></li>
+                            <li>Builder Reel <span>GROW</span></li>
+                            <li>Pricing Carousel <span>DESIGN</span></li>
+                        </ul>
+                    </article>
+                    <article class="os-card">
+                        <p class="eyebrow">Conversion</p>
+                        <h3>DM keyword lanes</h3>
+                        <ul class="os-list">
+                            <li>Full set intent <span>SET</span></li>
+                            <li>Natural nail support <span>GROW</span></li>
+                            <li>Custom art quote <span>DESIGN</span></li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="command-center" id="start">
+            <div class="page command-panel">
+                <article class="command-card primary">
+                    <p class="eyebrow">Continue Learning</p>
+                    <h2>Week 1: proof, clarity, and booking intent.</h2>
+                    <p>Work through one lesson at a time. Each lesson ends with a post job, a filming minimum, and one CTA keyword. If Brenda asks what to shoot right now, use the capture brief instead of this full plan.</p>
+                    <div class="action-list">
+                        <div class="action-item">
+                            <span>1</span>
+                            <div><strong>Pick today's job.</strong><p>Proof, education, personality, or booking. One post should do one thing.</p></div>
+                        </div>
+                        <div class="action-item">
+                            <span>2</span>
+                            <div><strong>Film the minimum.</strong><p>Finished nails first, one process clip, one reveal. Open the shot-list capture brief when Brenda is at the nail desk.</p></div>
+                        </div>
+                        <div class="action-item">
+                            <span>3</span>
+                            <div><strong>Use one CTA.</strong><p><code>SET</code> for full sets, <code>GROW</code> for builder/natural nails, <code>DESIGN</code> for inspo pricing, <code>BOOK</code> for the link.</p></div>
+                        </div>
+                    </div>
+                    <div class="quick-cta-row">
+                        <a class="button primary" href="#calendar">Start Week 1</a>
+                        <a class="button" href="/shot-list">Open Workbook</a>
+                    </div>
+                </article>
+
+                <div class="today-grid" aria-label="Week one quick picks">
+                    <article class="today-card"><strong>Day 1</strong><h3>First set with art</h3><p>Show the finished nails immediately. CTA: DM <code>SET</code>.</p></article>
+                    <article class="today-card"><strong>Day 2</strong><h3>Builder gel growth</h3><p>Before, structure, after. CTA: DM <code>GROW</code>.</p></article>
+                    <article class="today-card"><strong>Day 3</strong><h3>Brenda personality</h3><p>Show the private one-on-one appointment. CTA: book link.</p></article>
+                    <article class="today-card"><strong>Day 4</strong><h3>Custom set cost</h3><p>Explain simple vs detailed art. CTA: DM <code>DESIGN</code>.</p></article>
+                    <article class="today-card"><strong>Day 5</strong><h3>Occasion set</h3><p>Trip, birthday, photos, event. CTA: DM <code>SET</code>.</p></article>
+                    <article class="today-card"><strong>Days 6-7</strong><h3>Studio + founder story</h3><p>Private suite, clean prep, why Beauty Hive exists.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-dashboard" id="modules" aria-labelledby="module-title">
+            <div class="page">
+                <div class="course-heading">
+                    <div>
+                        <p class="eyebrow">Curriculum</p>
+                        <h2 id="module-title">Four modules built like a course library.</h2>
+                    </div>
+                    <p>The growth plan is the course home. The shot list is the workbook when Brenda needs exact clips, overlays, captions, and CTAs.</p>
+                </div>
+                <div class="module-grid">
+                    <a class="module-card" href="#offers"><span>Module 1</span><strong>Positioning + Offers</strong><p>Clarify what Brenda sells first and what stays premium.</p><em>Outcome: two DM lanes</em></a>
+                    <a class="module-card" href="#content"><span>Module 2</span><strong>Content Foundations</strong><p>Choose the post job before filming: proof, education, personality, or booking.</p><em>Outcome: less random posting</em></a>
+                    <a class="module-card" href="#calendar"><span>Module 3</span><strong>30-Day Posting Plan</strong><p>Follow the weekly lessons and keep most details collapsed until needed.</p><em>Outcome: what to post today</em></a>
+                    <a class="module-card" href="#dm"><span>Module 4</span><strong>DM Funnel + Workflow</strong><p>Turn attention into replies, bookings, and a repeatable weekly rhythm.</p><em>Outcome: booked conversations</em></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-player" id="course">
+            <div class="page course-shell">
+                <aside class="course-nav" aria-label="Growth course lessons">
+                    <div class="course-nav-head">
+                        <p class="eyebrow">Lesson Player</p>
+                        <h3 id="course-progress">Lesson 1 of 8</h3>
+                        <p>Use the sidebar like a course menu. Only the selected lesson stays open.</p>
+                        <div class="progress-track" aria-hidden="true"><span class="progress-fill" id="progress-fill"></span></div>
+                    </div>
+                    <div class="course-tabs">
+                        <button class="course-tab active" type="button" data-course-target="offers"><span>01</span><div><strong>Offer Ladder</strong><small>Choose the front-end lanes</small></div></button>
+                        <button class="course-tab" type="button" data-course-target="positioning"><span>02</span><div><strong>Positioning</strong><small>Teach premium trust</small></div></button>
+                        <button class="course-tab" type="button" data-course-target="content"><span>03</span><div><strong>Content Plan</strong><small>Pick the post job</small></div></button>
+                        <button class="course-tab" type="button" data-course-target="calendar"><span>04</span><div><strong>30-Day Plan</strong><small>Open this week's lesson</small></div></button>
+                        <button class="course-tab" type="button" data-course-target="shoot"><span>05</span><div><strong>Batch Shoot</strong><small>Capture raw material</small></div></button>
+                        <button class="course-tab" type="button" data-course-target="dm"><span>06</span><div><strong>DM Funnel</strong><small>Route replies cleanly</small></div></button>
+                        <button class="course-tab" type="button" data-course-target="weekly"><span>07</span><div><strong>Weekly Workflow</strong><small>Repeat the system</small></div></button>
+                        <button class="course-tab" type="button" data-course-target="approval"><span>08</span><div><strong>Approvals</strong><small>Lock the ad-ready details</small></div></button>
+                    </div>
+                </aside>
+                <div>
+                    <div class="course-stage" id="course-stage" aria-live="polite"></div>
+                    <div class="lesson-controls">
+                        <button type="button" id="prev-lesson">Previous Lesson</button>
+                        <button type="button" id="next-lesson">Next Lesson</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="offers">
+            <div class="page">
+                <span class="lesson-kicker">Module 1 · Lesson 1</span>
+                <p class="eyebrow">Offer Ladder</p>
+                <h2>Two simple paths, with design protected as the premium upsell.</h2>
+                <p class="section-intro">The goal is not to advertise every service. The front-end should be easy to understand, high enough to protect AOV, and simple enough for a new client to DM without knowing every length, shape, and art tier.</p>
+                <div class="lesson-frame">
+                    <div><strong>Learn</strong><p>The two front-end offers that make the booking path easier.</p></div>
+                    <div><strong>Why it matters</strong><p>Clients should not need to decode the full service menu before messaging.</p></div>
+                    <div><strong>Do</strong><p>Route full sets to <code>SET</code>, natural nail support to <code>GROW</code>, and detailed inspo to <code>DESIGN</code>.</p></div>
+                </div>
+
+                <div class="offer-grid">
+                    <article class="offer">
+                        <img class="offer-image" src="assets/builder.jpg" alt="Builder gel nail growth proof by Beauty Hive Studio">
+                        <div class="offer-body">
+                            <p class="eyebrow">Offer 1</p>
+                            <h3>The Grow-Out Reset</h3>
+                            <p class="price">$85+ <small>starting point</small></p>
+                            <div class="tag-row">
+                                <span class="tag">DM GROW</span>
+                                <span class="tag">Builder gel</span>
+                                <span class="tag">Natural nail care</span>
+                            </div>
+                            <p>For clients with broken, thin, picked, short, or damaged nails who want cute nails while their real nails grow.</p>
+                            <p class="note">Positioning: "Cute nails while your real nails grow." Keep the content educational: prep, structure, protection, retention, and healthy grow-out.</p>
+                        </div>
+                    </article>
+
+                    <article class="offer">
+                        <img class="offer-image" src="images/nails-summer-cherry-art.jpg" alt="Acrylic nail art by Beauty Hive Studio">
+                        <div class="offer-body">
+                            <p class="eyebrow">Offer 2</p>
+                            <h3>Send The Inspo</h3>
+                            <p class="price">$120+ <small>starting point</small></p>
+                            <div class="tag-row">
+                                <span class="tag">DM SET</span>
+                                <span class="tag">Acrylic or Gel-X</span>
+                                <span class="tag">Length + shape</span>
+                            </div>
+                            <p>For clients who want length, shape, and a polished first full set without having to understand every booking-menu option first.</p>
+                            <p class="note">Positioning: "Your first full set, shaped and designed for your hands." Simple or classic finish can be included. Detailed custom art is quoted from inspo.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="note">
+                    Do not make "free custom design" the broad offer. Design is the high-ticket ladder: simple finish first, detailed art quoted from inspo, heavy design priced higher.
+                </div>
+            </div>
+        </section>
+
+        <section id="positioning">
+            <div class="page split">
+                <div>
+                    <span class="lesson-kicker">Module 1 · Lesson 2</span>
+                    <p class="eyebrow">Positioning</p>
+                    <h2>What the page needs to teach.</h2>
+                    <p class="section-intro">Brenda should not post like a generic salon. The account should teach why her work costs more and why a private appointment is different.</p>
+                </div>
+                <div class="cards">
+                    <article class="card">
+                        <h3>Premium specialist</h3>
+                        <p>Private-suite nail artist in San Diego, not a walk-in discount salon.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Structure lasts</h3>
+                        <p>Explain prep, shape, product choice, and why lifting happens.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Design is planned</h3>
+                        <p>Use inspo reviews and price transparency to protect detailed art as premium work.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="content">
+            <div class="page">
+                <span class="lesson-kicker">Module 2 · Lesson 1</span>
+                <p class="eyebrow">Content Plan</p>
+                <h2>Post 5-7 times per week for the first 60 days.</h2>
+                <p class="section-intro">Every post should have one job: attract, educate, prove, build trust, or convert. Keep Brenda's personality in the account while making the booking path clearer.</p>
+                <div class="lesson-frame">
+                    <div><strong>Learn</strong><p>How to choose one job for each post before filming.</p></div>
+                    <div><strong>Why it matters</strong><p>One-job posts are easier to film, edit, caption, and measure.</p></div>
+                    <div><strong>Do</strong><p>Pick the pillar first, then open the workbook only if you need exact shot order.</p></div>
+                </div>
+                <ul class="pillar-list">
+                    <li><strong>30% Retention and structure:</strong> why nails lift, why prep matters, what makes a set last.</li>
+                    <li><strong>25% Transformation and proof:</strong> finished sets, reveals, inspo execution, before/after growth where truthful.</li>
+                    <li><strong>20% Process and BTS:</strong> cuticle prep, shaping, builder gel, acrylic structure, art detail.</li>
+                    <li><strong>15% Personality and local trust:</strong> Brenda's voice, studio story, SDSU/College Area, private-suite experience.</li>
+                    <li><strong>10% Direct offer and booking:</strong> DM `GROW`, DM `SET`, price clarity, booking link, weekly availability.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="calendar">
+            <div class="page">
+                <span class="lesson-kicker">Module 3 · Lessons 1-4</span>
+                <p class="eyebrow">30-Day Calendar</p>
+                <h2>The first month of content.</h2>
+                <p class="section-intro">Treat each week like a course lesson. Week 1 is open because it is the first assignment. The rest stay closed until Brenda gets there.</p>
+                <div class="voice-guardrail">
+                    <h3>How Brenda should talk about price.</h3>
+                    <p>Do not lead with an apology or a price-increase announcement. The content should make the value obvious: prep, structure, retention, cleanliness, design planning, and the private one-on-one experience.</p>
+                    <ul>
+                        <li>Say: "Structured sets start at..." instead of "I had to raise my prices."</li>
+                        <li>Say: "Detailed art is quoted from inspo because every set takes different time." instead of defending the cost.</li>
+                        <li>Say: "I want you booked for the right service." instead of over-explaining the menu.</li>
+                        <li>Keep the tone calm, specific, and expert. No apologizing for premium work.</li>
+                    </ul>
+                </div>
+                <div class="calendar-tools">
+                    <label for="week-selector">Open a week</label>
+                    <select class="week-select" id="week-selector">
+                        <option value="">Choose week...</option>
+                        <option value="week-1">Week 1: Profile + Proof</option>
+                        <option value="week-2">Week 2: Education + Objections</option>
+                        <option value="week-3">Week 3: Offer + DM Funnel</option>
+                        <option value="week-4">Week 4: Paid Creative Test Pack</option>
+                        <option value="week-review">Days 29-30: Review + Reset</option>
+                    </select>
+                </div>
+                <div class="calendar">
+                    <details class="week" id="week-1" open>
+                        <summary>
+                            <div class="week-label">Week 1<br>Profile + Proof</div>
+                            <div>
+                                <h3>Make the page immediately clear.</h3>
+                                <p>Use Brenda's existing posts first so this week can move fast.</p>
+                            </div>
+                        </summary>
+                        <div class="week-body">
+                            <div class="shot-list-cta">
+                                <div>
+                                    <h3>Week 1 detailed shot list</h3>
+                                    <p>Use this when filming or editing. It explains what every finished video should look like, the exact shots Brenda needs, and the CTA for each day.</p>
+                                </div>
+                        <a class="button primary" href="/shot-list#start">Open Capture Brief</a>
+                            </div>
+                            <div class="day-grid">
+                                <div class="day"><strong>Day 1 · Reel</strong><p>Hook: "San Diego, send the nail inspo you have been saving." Use this as the next video capture brief: finished nails, one process detail, inspo handoff, and a clearer DM SET CTA.</p><a class="asset-link" href="https://www.instagram.com/p/DYC74flpHYB/" target="_blank" rel="noopener">View IG post</a><details class="talk-track"><summary>What to say</summary><ul><li>"If you are new here, I am Brenda. I do custom sets in a private studio in San Diego."</li><li>"I care about the shape, structure, and art, not just putting color on your nails."</li><li>"If you have inspo saved, send it to me so I can point you to the right appointment."</li><li>"DM SET and I will help you figure out what to book."</li></ul></details></div>
+                                <div class="day"><strong>Day 2 · Reel</strong><p>Hook: "Cute nails, but make them your real nails." Use this builder/natural nail reference or film one client hand before prep, during structure, and at final reveal.</p><a class="asset-link" href="https://www.instagram.com/p/DR7kwtkj4J8/" target="_blank" rel="noopener">View IG post</a><details class="talk-track"><summary>What to say</summary><ul><li>"Builder gel is for the girls who want their natural nails to grow but still look done."</li><li>"The goal is structure and protection, not just a quick polish change."</li><li>"I look at your natural nail first, then decide how much support it needs."</li><li>"DM GROW if your nails are thin, short, or recovering."</li></ul></details></div>
+                                <div class="day"><strong>Day 3 · Reel</strong><p>Hook: "Let me hold your hand and talk to you nice." Use the Brenda-personality vibe here; keep the caption warm and route people to the booking link.</p><a class="asset-link" href="https://www.instagram.com/p/DX4yDYXPQkc/" target="_blank" rel="noopener">View IG post</a><details class="talk-track"><summary>What to say</summary><ul><li>"Your nail appointment should feel calm, not rushed."</li><li>"I am going to ask what you like, what you do with your hands, and what actually fits your lifestyle."</li><li>"You can come in with a clear idea or just a vibe. I will help you narrow it down."</li><li>"Book through the link in bio when you are ready."</li></ul></details></div>
+                                <div class="day"><strong>Day 4 · Carousel</strong><p>Topic: "What does a custom set cost?" Make 5 slides: starting price, what changes price, simple vs detailed art, what to DM, and how to send inspo.</p><p class="execution">Execution: use clean nail stills from the site, one price idea per slide, and end with "DM DESIGN with your inspo."</p><details class="talk-track"><summary>What to say</summary><ul><li>"Custom sets are priced by length, shape, and design detail."</li><li>"A simple clean set is different from charms, 3D flowers, chrome, French, or hand-painted art."</li><li>"That is why I quote detailed designs from inspo instead of guessing."</li><li>"Send your inspo before booking and I will help you choose the right service."</li></ul></details></div>
+                                <div class="day"><strong>Day 5 · Reel</strong><p>Hook: "The set you book before the trip, birthday, or photos." Use this occasion-style proof, but keep the CTA under the main SET path.</p><a class="asset-link" href="https://www.instagram.com/p/DUg5a8Qktdf/" target="_blank" rel="noopener">View IG post</a><details class="talk-track"><summary>What to say</summary><ul><li>"If you have a trip, birthday, concert, or photos coming up, this is when you book the set."</li><li>"Bring the outfit, color, or inspo. I will help the nails match the moment without doing too much."</li><li>"Book ahead if you want art. Detailed sets need time."</li><li>"DM SET with your date and your inspo."</li></ul></details></div>
+                                <div class="day"><strong>Day 6 · Stories</strong><p>Sequence: private suite, one artist, clean prep, finished set. Add a poll: "Need a new set?"</p><p class="execution">Execution: post 5-7 story frames. Start outside/inside the studio, show the chair and tools, then a nail close-up. Use a poll or question sticker on the last frame.</p><details class="talk-track"><summary>What to say</summary><ul><li>"This is my private studio setup."</li><li>"One-on-one appointment, clean prep, no rushed walk-in energy."</li><li>"I take time with shaping, structure, and the details you actually notice after you leave."</li><li>"Poll: do you need a new set this month?"</li></ul></details></div>
+                                <div class="day"><strong>Day 7 · Reel</strong><p>Hook: "I opened Beauty Hive for appointments like this." Use this soft-launch/studio story as the base for a founder trust post.</p><a class="asset-link" href="https://www.instagram.com/p/DPP5dhYCeTh/" target="_blank" rel="noopener">View IG post</a><details class="talk-track"><summary>What to say</summary><ul><li>"I opened Beauty Hive because I wanted my clients to have a more personal nail appointment."</li><li>"This space is for custom work, calm appointments, and sets that feel like you."</li><li>"I have spent years building my craft, and this studio is the next chapter of that."</li><li>"If you have been wanting to book, DM SET."</li></ul></details></div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="week" id="week-2">
+                        <summary>
+                            <div class="week-label">Week 2<br>Education</div>
+                            <div>
+                                <h3>Answer booking objections.</h3>
+                                <p>Film simple proof clips that explain prep, pricing, retention, and the private-suite experience.</p>
+                            </div>
+                        </summary>
+                        <div class="week-body">
+                            <div class="day-grid">
+                                <div class="day"><strong>Day 8 · Reel</strong><p>Topic: why nails lift after a week.</p><p class="execution">Execution: film a tight prep/cuticle close-up. Say or overlay: "Lifting usually starts before polish. Prep, cuticle cleanup, and product placement matter." End with DM GROW or SET.</p><details class="talk-track"><summary>What to say</summary><ul><li>"If your nails lift after one week, it is usually not just the color."</li><li>"Prep matters. Cuticle cleanup matters. Product placement matters."</li><li>"I take my time here because this is what helps the set last."</li><li>"If retention has been your issue, DM GROW or SET."</li></ul></details></div>
+                                <div class="day"><strong>Day 9 · Reel</strong><p>Topic: what Brenda checks before recreating inspo.</p><p class="execution">Execution: screen-record an inspo photo, then show a finished set. Point out length, shape, color, texture, charms, and what would change the quote.</p><details class="talk-track"><summary>What to say</summary><ul><li>"When you send me inspo, I am looking at more than the color."</li><li>"I check length, shape, charms, texture, 3D details, and how much hand-painted work is involved."</li><li>"Then I can tell you what to book and what the design will require."</li><li>"DM DESIGN with the inspo you have saved."</li></ul></details></div>
+                                <div class="day"><strong>Day 10 · Carousel</strong><p>Topic: Gel-X vs acrylic vs builder gel.</p><p class="execution">Execution: 4 slides. Slide 1: "Not sure what to book?" Slides 2-4: one service per slide with who it is best for. Final slide: "DM BOOK and tell me your nail goal."</p><details class="talk-track"><summary>What to say</summary><ul><li>"Not sure what to book? Start with your nail goal."</li><li>"Gel-X is for lightweight length. Acrylic is for stronger sculpted length. Builder gel is for supporting natural nails."</li><li>"You do not have to know the answer before you message me."</li><li>"DM BOOK and tell me what you want your nails to do."</li></ul></details></div>
+                                <div class="day"><strong>Day 11 · Reel</strong><p>Topic: why custom art takes longer.</p><p class="execution">Execution: film art brush/detail work from above. Overlay three steps: base shape, detail layer, seal/top coat. Explain that detailed art is quoted from inspo because time changes by design.</p><details class="talk-track"><summary>What to say</summary><ul><li>"Custom art takes longer because every detail is built in layers."</li><li>"The shape has to be clean before the art even starts."</li><li>"Then we add detail, texture, charms, or hand painting depending on the inspo."</li><li>"That is why detailed sets are quoted from the design, not guessed."</li></ul></details></div>
+                                <div class="day"><strong>Day 12 · Reel</strong><p>Topic: how Brenda protects natural nails.</p><p class="execution">Execution: film removal or prep. Keep it reassuring: "I care about what your nails look like after the set comes off." CTA: DM GROW if your nails need a reset.</p><details class="talk-track"><summary>What to say</summary><ul><li>"A good set should not ignore your natural nails underneath."</li><li>"I care about removal, prep, and the condition your nails are in after the set comes off."</li><li>"If your nails feel thin or damaged, we can choose a service that supports them."</li><li>"DM GROW if you want cute nails while they recover."</li></ul></details></div>
+                                <div class="day"><strong>Day 13 · Stories</strong><p>Topic: price Q&A sticker.</p><p class="execution">Execution: ask "What do you want to know before booking?" Save answers. Repost 3 answers as story frames: starting price, art pricing, appointment length.</p><details class="talk-track"><summary>What to say</summary><ul><li>"Ask me what you want to know before booking."</li><li>"I can answer starting prices, how art is quoted, and what service fits your nails."</li><li>"The goal is to book you correctly the first time."</li><li>"Drop your question in the sticker."</li></ul></details></div>
+                                <div class="day"><strong>Day 14 · Reel</strong><p>Topic: "Not a crowded salon" private-suite experience.</p><p class="execution">Execution: film the studio wide, chair, tools, and Brenda setting up. The point is calm and private: one artist, appointment-only, no rushed walk-in energy.</p><details class="talk-track"><summary>What to say</summary><ul><li>"Beauty Hive is not a rushed walk-in appointment."</li><li>"It is a private studio, one-on-one, appointment-only."</li><li>"That gives me time to prep, shape, design, and actually talk through what you want."</li><li>"If that is the kind of appointment you want, DM BOOK."</li></ul></details></div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="week" id="week-3">
+                        <summary>
+                            <div class="week-label">Week 3<br>Offer + DM</div>
+                            <div>
+                                <h3>Create message-ad-ready assets.</h3>
+                                <p>Make each post easy to reply to with SET, DESIGN, GROW, or BOOK.</p>
+                            </div>
+                        </summary>
+                        <div class="week-body">
+                            <div class="day-grid">
+                                <div class="day"><strong>Day 15 · Reel</strong><p>Topic: new-client structured set.</p><p class="execution">Execution: show one finished full set in 3-5 angles. Overlay: "New here? Start with a structured set." Caption should explain what SET means and what Brenda needs to know.</p><details class="talk-track"><summary>What to say</summary><ul><li>"If you are new to me, the easiest place to start is a structured set."</li><li>"We choose length, shape, and finish based on your hands and your inspo."</li><li>"Simple sets and detailed art are different appointments, so send inspo first if you want design."</li><li>"DM SET and I will help you book the right one."</li></ul></details></div>
+                                <div class="day"><strong>Day 16 · Reel</strong><p>Topic: design pricing from inspo.</p><p class="execution">Execution: use a screen recording of inspo and point to the parts that affect price: length, charms, 3D, French, chrome, hand-painted detail. CTA: DM DESIGN with your inspo.</p><details class="talk-track"><summary>What to say</summary><ul><li>"Here is how I look at design pricing."</li><li>"Length and shape are one part. Art detail is the other part."</li><li>"Charms, chrome, French, 3D flowers, and hand painting all change the time."</li><li>"Send the inspo first so I can quote it correctly. DM DESIGN."</li></ul></details></div>
+                                <div class="day"><strong>Day 17 · Reel</strong><p>Topic: builder gel growth reset.</p><p class="execution">Execution: show before, structure, and after. Keep the promise specific: "cute nails while your natural nails grow." CTA: DM GROW.</p><details class="talk-track"><summary>What to say</summary><ul><li>"This is for the natural nail girls who want to grow their nails without feeling plain."</li><li>"Builder gel gives support while we keep the look clean and cute."</li><li>"It is not magic overnight, but it gives your nails a better environment to grow."</li><li>"DM GROW if this is your nail goal."</li></ul></details></div>
+                                <div class="day"><strong>Day 18 · Carousel</strong><p>Topic: first appointment walkthrough.</p><p class="execution">Execution: slides should answer: what to send before booking, how long to expect, how Brenda chooses the service, how art is quoted, and where to book.</p><details class="talk-track"><summary>What to say</summary><ul><li>"Before your first appointment, send inspo and tell me your current nail length."</li><li>"At the appointment, we confirm length, shape, and design before I start."</li><li>"If you want detailed art, I need to plan enough time for it."</li><li>"The goal is no confusion when you sit down."</li></ul></details></div>
+                                <div class="day"><strong>Day 19 · Reel</strong><p>Topic: client hand posing and final reveal.</p><p class="execution">Execution: film the same set in natural light, hand turn, close-up, and client pose. Keep copy short: "This is your sign to book the set." CTA: DM BOOK.</p><details class="talk-track"><summary>What to say</summary><ul><li>"This is your sign to book the set you keep saving."</li><li>"Bring me the color, the vibe, the shape, or the full inspo."</li><li>"I will help you make it wearable for your hands."</li><li>"DM BOOK if you want the link."</li></ul></details></div>
+                                <div class="day"><strong>Day 20 · Stories</strong><p>Topic: available spots this week.</p><p class="execution">Execution: post the actual open days/times, then a nail proof frame, then "Reply SET and I will send the booking link."</p><details class="talk-track"><summary>What to say</summary><ul><li>"These are my openings this week."</li><li>"If you want a simple set, reply SET."</li><li>"If you want art, reply DESIGN and send your inspo."</li><li>"I will send the right booking link."</li></ul></details></div>
+                                <div class="day"><strong>Day 21 · Reel</strong><p>Topic: personal founder story.</p><p class="execution">Execution: use Brenda on camera or voiceover. Prompt: "Why I opened a private nail studio instead of working like a walk-in salon." End with follow + book.</p><a class="asset-link" href="https://www.instagram.com/p/DP1quRiicxw/" target="_blank" rel="noopener">View IG reference</a><details class="talk-track"><summary>What to say</summary><ul><li>"I have been doing nails for years, and opening Beauty Hive made the work feel personal again."</li><li>"I wanted a space where I could slow down, focus on detail, and build real relationships with clients."</li><li>"This is not just a nail appointment to me. It is my craft and my studio."</li><li>"If you have been watching from the side, come book."</li></ul></details></div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="week" id="week-4">
+                        <summary>
+                            <div class="week-label">Week 4<br>Ad Pack</div>
+                            <div>
+                                <h3>Turn organic posts into paid creative.</h3>
+                                <p>Build 6-8 ad-ready assets from the strongest visuals and clearest booking messages.</p>
+                            </div>
+                        </summary>
+                        <div class="week-body">
+                            <div class="day-grid">
+                                <div class="day"><strong>Day 22 · TOF Reel</strong><p>Nail-art scroll stopper. Use either high-performing nail-art post and keep it visual-first with minimal copy.</p><a class="asset-link" href="https://www.instagram.com/p/DKTDx6hS4Qx/" target="_blank" rel="noopener">View arts post</a><a class="asset-link" href="https://www.instagram.com/p/DL22nIuyqjx/" target="_blank" rel="noopener">View floral post</a><details class="talk-track"><summary>What to say</summary><ul><li>"This is the kind of detail I mean when I say custom set."</li><li>"The shape, color, texture, and art all have to work together."</li><li>"If you have been saving dramatic nail inspo, send it before you book."</li><li>"DM DESIGN and I will help you price it."</li></ul></details></div>
+                                <div class="day"><strong>Day 23 · MOF Reel</strong><p>Lifting/problem education from new prep footage.</p><p class="execution">Execution: hook with "If your nails lift after one week..." then show prep, product placement, and finished result. CTA: DM GROW if retention is the issue.</p><details class="talk-track"><summary>What to say</summary><ul><li>"Lifting is not just annoying. It usually tells us something about prep, product, or aftercare."</li><li>"This is why I do not rush the cuticle area or the structure."</li><li>"The pretty part matters, but the foundation matters first."</li><li>"DM GROW if you want help with retention."</li></ul></details></div>
+                                <div class="day"><strong>Day 24 · MOF Reel</strong><p>Private-suite creative from new studio footage.</p><p class="execution">Execution: show the calm appointment environment. Overlay: "Private nail studio in San Diego. One artist. Appointment only." CTA: DM BOOK.</p><details class="talk-track"><summary>What to say</summary><ul><li>"This is what your appointment feels like at Beauty Hive."</li><li>"Private suite, one artist, and time set aside for your nails."</li><li>"You are not being rushed through a crowded salon."</li><li>"DM BOOK if you want the appointment link."</li></ul></details></div>
+                                <div class="day"><strong>Day 25 · BOF Reel</strong><p>New-client set from a finished set plus price card.</p><p class="execution">Execution: use one beautiful finished set, then a simple price/CTA card. Confirm Brenda's exact offer terms before posting as ad copy.</p><details class="talk-track"><summary>What to say</summary><ul><li>"New-client structured sets start at [approved price]."</li><li>"Final price depends on length and design detail."</li><li>"If you want a simple clean set, DM SET."</li><li>"If you want detailed art, DM DESIGN with your inspo first."</li></ul></details></div>
+                                <div class="day"><strong>Day 26 · MOF/BOF Reel</strong><p>Builder gel growth creative from existing or new builder footage.</p><p class="execution">Execution: focus on weak, brittle, short, or recovering nails. Show progress or a reset, then CTA: DM GROW.</p><details class="talk-track"><summary>What to say</summary><ul><li>"If your nails keep breaking, you may not need length first. You may need support."</li><li>"Builder gel helps protect the natural nail while it grows."</li><li>"We can keep it clean, soft, or still make it cute."</li><li>"DM GROW and tell me what your nails are doing right now."</li></ul></details></div>
+                                <div class="day"><strong>Day 27 · BOF Reel</strong><p>Design pricing explainer from screen or inspo clip.</p><p class="execution">Execution: show an inspo screenshot and label what affects price. End with: "Send me your inspo before booking so I can quote the design."</p><details class="talk-track"><summary>What to say</summary><ul><li>"Two sets can look similar online and take totally different time in the chair."</li><li>"This one has [length/detail/charm/chrome/3D] so I would price it differently than a simple set."</li><li>"That is why I ask for inspo before detailed appointments."</li><li>"DM DESIGN and I will tell you what to book."</li></ul></details></div>
+                                <div class="day"><strong>Day 28 · Story Set</strong><p>Post the strongest proof, price clarity, and available appointment sticker from the week.</p><p class="execution">Execution: 4 frames: best set, starting price reminder, booking link or DM keyword, available spots.</p><details class="talk-track"><summary>What to say</summary><ul><li>"Here is the set everyone asked about this week."</li><li>"Structured sets start at [approved price], and detailed art is quoted from inspo."</li><li>"These are the openings I have right now."</li><li>"Reply SET, GROW, or DESIGN and I will point you in the right direction."</li></ul></details></div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="week" id="week-review">
+                        <summary>
+                            <div class="week-label">Days 29-30<br>Review + Reset</div>
+                            <div>
+                                <h3>Use the first month to choose the next batch.</h3>
+                                <p>Turn the best DMs, saves, replies, and booked sets into the next 10 ideas.</p>
+                            </div>
+                        </summary>
+                        <div class="week-body">
+                            <div class="day-grid">
+                                <div class="day"><strong>Day 29 · Recap</strong><p>Carousel or Reel: best sets from the month, what clients asked for, and what Brenda is booking next.</p><p class="execution">Execution: use 5-7 finished-set clips or stills. Caption: "Which one would you book?" CTA: DM SET or GROW.</p><details class="talk-track"><summary>What to say</summary><ul><li>"These were some of my favorite sets this month."</li><li>"I am noticing you all are asking for [theme: clean girl, 3D flowers, chrome, builder gel, vacation sets]."</li><li>"If you see one that feels like you, send it to me."</li><li>"DM SET or GROW and I will help you book."</li></ul></details></div>
+                                <div class="day"><strong>Day 30 · Planning Post</strong><p>Stories plus feed post: open Q&A, collect inspo screenshots, post upcoming availability, and choose the next 10 briefs.</p><p class="execution">Execution: ask followers to send inspo, screenshot the repeated requests, and use those themes for next month's shoot list.</p><details class="talk-track"><summary>What to say</summary><ul><li>"I am planning my next content and appointment ideas."</li><li>"Send me the nail inspo you keep saving."</li><li>"I will use your requests to show what to book, what it costs, and how I would recreate it."</li><li>"If you want one of the next spots, DM BOOK."</li></ul></details></div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="shoot">
+            <div class="page">
+                <span class="lesson-kicker">Workbook Prep</span>
+                <p class="eyebrow">Batch Shoot</p>
+                <h2>The plan and the filming checklist are separate.</h2>
+                <p class="section-intro">Use this section for monthly planning. When Brenda checks in while shooting, send only the next video objective, 5-7 shots, one optional talking line, and the CTA from the shot list.</p>
+                <div class="shoot-grid">
+                    <article class="checklist">
+                        <h3>Current next video</h3>
+                        <ul class="plain-list">
+                            <li><strong>Video:</strong> First Set / Send The Inspo.</li>
+                            <li><strong>Goal:</strong> get a new client to DM <code>SET</code> with nail inspo.</li>
+                            <li><strong>Hook:</strong> San Diego, send the nail inspo you have been saving.</li>
+                            <li><strong>CTA:</strong> DM <code>SET</code>.</li>
+                        </ul>
+                        <div class="quick-cta-row">
+                            <a class="button primary" href="/shot-list#start">Open The Shoot-Day Brief</a>
+                        </div>
+                    </article>
+                    <article class="checklist">
+                        <h3>Monthly batch inventory</h3>
+                        <ul class="plain-list">
+                            <li>Prep: cuticle work, shaping, dehydrator, primer, base.</li>
+                            <li>Detail: art brush, chrome, French line, top coat, charms.</li>
+                            <li>Reveal: final hand turn, before/after hand entry, client hand pose.</li>
+                            <li>Studio: door, chair, tools, plants, private-suite wide shot.</li>
+                            <li>Why I do not rush a structured set.</li>
+                            <li>What makes a set lift early.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="dm">
+            <div class="page split">
+                <div>
+                    <span class="lesson-kicker">Module 4 · Lesson 1</span>
+                    <p class="eyebrow">DM Funnel</p>
+                    <h2>Keep the keywords simple.</h2>
+                    <p class="section-intro">The first conversation should qualify the client, reduce decision friction, and send the right booking path.</p>
+                </div>
+                <ul class="pillar-list">
+                    <li><strong>DM GROW:</strong> builder gel / natural nail recovery path.</li>
+                    <li><strong>DM SET:</strong> acrylic or Gel-X full set path for length, shape, and first appointment guidance.</li>
+                    <li><strong>DM DESIGN:</strong> help pricing inspo and routing detailed art.</li>
+                    <li><strong>DM BOOK:</strong> send the booking link and ask what service they are considering.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="weekly">
+            <div class="page">
+                <span class="lesson-kicker">Module 4 · Lesson 2</span>
+                <p class="eyebrow">Weekly Workflow</p>
+                <h2>How Brenda should use this every week.</h2>
+                <div class="lesson-frame">
+                    <div><strong>Learn</strong><p>How to turn this plan into a repeatable weekly habit.</p></div>
+                    <div><strong>Why it matters</strong><p>The account grows from repeated proof and clear replies, not from one big planning session.</p></div>
+                    <div><strong>Do</strong><p>Pick ideas, label the asset job, post, then track which DMs become real appointments.</p></div>
+                </div>
+                <div class="cards">
+                    <article class="card">
+                        <h3>1. Pick 10 ideas</h3>
+                        <p>Choose from the pillars: grow-out, full set, design pricing, private suite, proof, and availability.</p>
+                    </article>
+                    <article class="card">
+                        <h3>2. Mark each idea</h3>
+                        <p>Label each as reuse, shoot, or generate. Reuse old winners first, but assign every reused Reel a new job: proof, education, personality, or booking.</p>
+                    </article>
+                    <article class="card">
+                        <h3>3. Post and track</h3>
+                        <p>Track DMs, qualified leads, booked appointments, and which hooks create real booking conversations.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="approval">
+            <div class="page">
+                <span class="lesson-kicker">Final Lesson</span>
+                <p class="eyebrow">Approval Checklist</p>
+                <h2>Decisions to confirm before ads or automation.</h2>
+                <ul class="pillar-list">
+                    <li>Final names and starting prices for <code>GROW</code> and <code>SET</code> offers.</li>
+                    <li>What is included in the starting price versus quoted from inspo.</li>
+                    <li>Whether <code>SET</code> should be acrylic-first, Gel-X-first, or Brenda-guided based on client goals.</li>
+                    <li>How clients should book art inside Acuity: add-on, separate row, or appointment note.</li>
+                    <li>DM flow copy and follow-up timing.</li>
+                    <li>Where non-booked leads should be tracked for follow-up.</li>
+                </ul>
+
+                <div class="footer-cta">
+                    <div>
+                        <h3>Next step</h3>
+                        <p>Confirm the two offer names, starting prices, and what Brenda wants included before this becomes public ad copy.</p>
+                    </div>
+                    <a class="button primary" href="#offers">Review offers</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        (function () {
+            var courseIds = ['offers', 'positioning', 'content', 'calendar', 'shoot', 'dm', 'weekly', 'approval'];
+            var stage = document.getElementById('course-stage');
+            var tabs = Array.prototype.slice.call(document.querySelectorAll('.course-tab[data-course-target]'));
+            var progress = document.getElementById('course-progress');
+            var progressFill = document.getElementById('progress-fill');
+            var previous = document.getElementById('prev-lesson');
+            var next = document.getElementById('next-lesson');
+            var activeIndex = 0;
+
+            if (stage) {
+                courseIds.forEach(function (id) {
+                    var section = document.getElementById(id);
+                    if (section) {
+                        stage.appendChild(section);
+                    }
+                });
+            }
+
+            function setLesson(targetId, shouldScroll) {
+                var index = courseIds.indexOf(targetId);
+                if (index < 0) index = 0;
+                activeIndex = index;
+
+                courseIds.forEach(function (id, itemIndex) {
+                    var section = document.getElementById(id);
+                    if (section) {
+                        section.classList.toggle('active-lesson', itemIndex === activeIndex);
+                    }
+                });
+
+                tabs.forEach(function (tab) {
+                    tab.classList.toggle('active', tab.dataset.courseTarget === courseIds[activeIndex]);
+                });
+
+                if (progress) {
+                    progress.textContent = 'Lesson ' + (activeIndex + 1) + ' of ' + courseIds.length;
+                }
+
+                if (progressFill) {
+                    progressFill.style.width = (((activeIndex + 1) / courseIds.length) * 100) + '%';
+                }
+
+                if (previous) previous.disabled = activeIndex === 0;
+                if (next) next.disabled = activeIndex === courseIds.length - 1;
+
+                if (shouldScroll) {
+                    document.getElementById('course').scrollIntoView({ behavior: shouldScroll === 'auto' ? 'auto' : 'smooth', block: 'start' });
+                }
+            }
+
+            tabs.forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                    setLesson(tab.dataset.courseTarget, true);
+                });
+            });
+
+            if (previous) {
+                previous.addEventListener('click', function () {
+                    if (activeIndex > 0) setLesson(courseIds[activeIndex - 1], true);
+                });
+            }
+
+            if (next) {
+                next.addEventListener('click', function () {
+                    if (activeIndex < courseIds.length - 1) setLesson(courseIds[activeIndex + 1], true);
+                });
+            }
+
+            var selector = document.getElementById('week-selector');
+            var weeks = document.querySelectorAll('.calendar .week[id]');
+            var weekIds = Array.prototype.map.call(weeks, function (week) {
+                return week.id;
+            });
+
+            function openWeek(weekId, shouldScroll) {
+                var target = document.getElementById(weekId);
+                if (!target) return;
+
+                weeks.forEach(function (week) {
+                    week.open = week === target;
+                });
+
+                if (selector) {
+                    selector.value = weekId;
+                }
+
+                if (shouldScroll) {
+                    target.scrollIntoView({ behavior: shouldScroll === 'auto' ? 'auto' : 'smooth', block: 'start' });
+                }
+            }
+
+            if (selector) {
+                selector.addEventListener('change', function () {
+                    if (selector.value) {
+                        openWeek(selector.value, true);
+                    }
+                });
+            }
+
+            function handleHash(shouldScroll) {
+                var hashId = window.location.hash ? window.location.hash.slice(1) : '';
+                if (!hashId) {
+                    setLesson('offers', false);
+                    return;
+                }
+
+                if (courseIds.indexOf(hashId) >= 0) {
+                    setLesson(hashId, shouldScroll);
+                    return;
+                }
+
+                if (weekIds.indexOf(hashId) >= 0) {
+                    setLesson('calendar', shouldScroll);
+                    openWeek(hashId, false);
+                }
+            }
+
+            var initialHashId = (window.location.hash || '').slice(1);
+            var initialPlayerHash = courseIds.indexOf(initialHashId) >= 0 || weekIds.indexOf(initialHashId) >= 0;
+            handleHash(initialPlayerHash ? 'auto' : false);
+            if (initialPlayerHash) {
+                window.setTimeout(function () {
+                    handleHash('auto');
+                }, 120);
+                window.addEventListener('load', function () {
+                    handleHash('auto');
+                });
+            }
+
+            window.addEventListener('hashchange', function () {
+                handleHash(true);
+            });
+        })();
+    </script>
+</body>
+</html>

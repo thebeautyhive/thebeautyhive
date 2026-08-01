@@ -7,6 +7,8 @@
 /welcome           /welcome.html           200
 /mothers-day       /mothers-day.html       200
 /combo             /combo.html             200
+/growth-plan       /growth-plan.html       200
+/shot-list         /shot-list.html         200
 
 # Redirect .html URLs to clean URLs
 /privacy-policy.html    /privacy-policy    301!
@@ -14,3 +16,5 @@
 /welcome.html           /welcome           301!
 /mothers-day.html       /mothers-day       301!
 /combo.html             /combo             301!
+/growth-plan.html       /growth-plan       301!
+/shot-list.html         /shot-list         301!
