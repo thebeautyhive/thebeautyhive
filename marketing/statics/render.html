@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beauty Hive Static Renderer</title>
+  <style>
+    :root {
+      --ink: #2f2927;
+      --paper: #fff8f1;
+      --cream: #f1e6dc;
+      --rose: #a96f78;
+      --moss: #60715d;
+      --gold: #c4a36d;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Avenir, "Avenir Next", Arial, sans-serif;
+    }
+
+    .canvas {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      isolation: isolate;
+      background:
+        linear-gradient(180deg, rgba(255, 248, 241, 0.98), rgba(241, 230, 220, 0.94)),
+        var(--paper);
+    }
+
+    .canvas::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background-image:
+        linear-gradient(120deg, rgba(96, 113, 93, 0.18), transparent 38%),
+        linear-gradient(300deg, rgba(169, 111, 120, 0.18), transparent 42%);
+    }
+
+    .photo {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.04) contrast(1.02);
+    }
+
+    .photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(47, 41, 39, 0.1) 0%, rgba(47, 41, 39, 0.06) 35%, rgba(47, 41, 39, 0.82) 100%),
+        linear-gradient(90deg, rgba(47, 41, 39, 0.45), transparent 60%);
+    }
+
+    .brand {
+      position: absolute;
+      top: 44px;
+      left: 44px;
+      right: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 25px;
+      font-weight: 900;
+      text-shadow: 0 2px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    .brand span:last-child {
+      font-size: 18px;
+      letter-spacing: 0.1em;
+      opacity: 0.86;
+      text-align: right;
+    }
+
+    .copy {
+      position: absolute;
+      left: 44px;
+      right: 44px;
+      bottom: 48px;
+      color: var(--white);
+    }
+
+    .kicker {
+      display: inline-flex;
+      width: fit-content;
+      max-width: 100%;
+      margin-bottom: 18px;
+      padding: 10px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.36);
+      background: rgba(255, 248, 241, 0.16);
+      backdrop-filter: blur(10px);
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    h1 {
+      max-width: 920px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 92px;
+      line-height: 0.94;
+      letter-spacing: 0;
+      text-wrap: balance;
+      text-shadow: 0 4px 28px rgba(0, 0, 0, 0.35);
+    }
+
+    p {
+      max-width: 720px;
+      margin: 22px 0 0;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 31px;
+      line-height: 1.22;
+      font-weight: 700;
+      text-shadow: 0 3px 20px rgba(0, 0, 0, 0.32);
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      min-height: 74px;
+      margin-top: 32px;
+      padding: 0 34px;
+      background: var(--paper);
+      color: var(--ink);
+      border: 2px solid rgba(255, 255, 255, 0.72);
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 25px;
+      font-weight: 900;
+      box-shadow: 0 16px 44px rgba(0, 0, 0, 0.26);
+    }
+
+    .feed h1 {
+      font-size: 88px;
+    }
+
+    .feed p {
+      font-size: 29px;
+    }
+
+    .story .brand {
+      top: 62px;
+      left: 54px;
+      right: 54px;
+    }
+
+    .story .copy {
+      left: 54px;
+      right: 54px;
+      bottom: 78px;
+    }
+
+    .story h1 {
+      font-size: 104px;
+    }
+
+    .story p {
+      font-size: 34px;
+    }
+
+    .builder .photo::after {
+      background:
+        linear-gradient(180deg, rgba(47, 41, 39, 0.02) 0%, rgba(47, 41, 39, 0.1) 35%, rgba(47, 41, 39, 0.8) 100%),
+        linear-gradient(90deg, rgba(96, 113, 93, 0.42), transparent 60%);
+    }
+
+    .private .photo::after {
+      background:
+        linear-gradient(180deg, rgba(47, 41, 39, 0.08) 0%, rgba(47, 41, 39, 0.08) 38%, rgba(47, 41, 39, 0.84) 100%),
+        linear-gradient(90deg, rgba(169, 111, 120, 0.32), transparent 62%);
+    }
+  </style>
+</head>
+<body>
+  <main class="canvas feed" id="canvas">
+    <div class="photo"><img id="image" alt=""></div>
+    <div class="brand">
+      <span>Beauty Hive Studio</span>
+      <span>San Diego</span>
+    </div>
+    <section class="copy">
+      <div class="kicker" id="kicker"></div>
+      <h1 id="headline"></h1>
+      <p id="subhead"></p>
+      <div class="cta" id="cta"></div>
+    </section>
+  </main>
+
+  <script>
+    const concepts = {
+      "first-set": {
+        klass: "first",
+        image: "../../public/images/nails-summer-cherry-art.jpg",
+        kicker: "New-client set",
+        headline: "Bring the inspo you have been saving.",
+        subhead: "Custom nails with Brenda near SDSU.",
+        cta: "DM SET"
+      },
+      "private-studio": {
+        klass: "private",
+        image: "../../public/images/nails-summer-nude-rings.jpg",
+        kicker: "College Area",
+        headline: "Private nail studio near SDSU.",
+        subhead: "Clean prep. Custom sets. One-on-one with Brenda.",
+        cta: "Book with Brenda"
+      },
+      "builder-gel": {
+        klass: "builder",
+        image: "../../public/assets/builder.jpg",
+        kicker: "Builder gel",
+        headline: "Cute nails, but make them your real nails.",
+        subhead: "For clients who want strength, structure, and a clean grow-out.",
+        cta: "DM GROW"
+      },
+      "occasion-set": {
+        klass: "occasion",
+        image: "../../public/images/nails-vacation.jpg",
+        kicker: "Trips + photos",
+        headline: "Book the set before the plans.",
+        subhead: "Custom nails in College Area for birthdays, trips, and weekends.",
+        cta: "DM SET"
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const concept = concepts[params.get("concept")] || concepts["first-set"];
+    const format = params.get("format") === "story" ? "story" : "feed";
+    const canvas = document.getElementById("canvas");
+    canvas.className = `canvas ${format} ${concept.klass}`;
+    document.getElementById("image").src = concept.image;
+    document.getElementById("kicker").textContent = concept.kicker;
+    document.getElementById("headline").textContent = concept.headline;
+    document.getElementById("subhead").textContent = concept.subhead;
+    document.getElementById("cta").textContent = concept.cta;
+  </script>
+</body>
+</html>

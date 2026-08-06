@@ -33,7 +33,12 @@ applied on top of the operator's existing Growth OS tooling.
 
 ## 2. Assets & access to wire up
 - Instagram handle: `@isssbeenails` (`https://www.instagram.com/isssbeenails/`).
-- Meta page + ad account: **Meta API access already set up ✅** — confirm the ad account ID.
+- Meta page + ad account: shared Meta API access works through Eskiin tooling.
+  Confirmed Page: `Beauty Hive Studio`, Page ID `805562132646120`. Confirmed
+  ad account: `Account 01`, ad account ID `242922443081874`
+  (`act_242922443081874`), under Business Manager `AdEmpyrean`
+  (`512724419175894`). Still confirm the connected Instagram professional
+  account ID and spend permission before launch.
 - **Google Ads:** account exists, but **no native Google Ads API integration yet** —
   see §8 for exactly what's needed.
 - Website booking: **Acuity Scheduling** — wire the Booking/Lead agent to the Acuity
@@ -96,7 +101,7 @@ Local angles for Content/Acquisition agents: *"College Area's private nail studi
 ## 7. Access status
 | Channel | Status |
 |---|---|
-| Meta (page + ads) | **API set up ✅** — confirm ad account ID |
+| Meta (page + ads) | Page visible via shared Eskiin Meta token: `Beauty Hive Studio` / `805562132646120`; ad account verified as `Account 01` / `act_242922443081874`; historical campaign `Mothers Day Combo` / `120245134448390563` sent ads to `https://beautyhivestudio.com/mothers-day`; still need IG professional account connection and spend permission |
 | Acuity (bookings) | on the site — needs API key + webhook wiring |
 | Google Ads | account exists — **API not set up** (see §8) |
 | Instagram | `@isssbeenails` confirmed; Apify scrape refreshed 2026-07-30 via Eskiin's canonical Apify client |
@@ -132,5 +137,5 @@ Also applies to **EatPrima / Prima** (`651-591-4497`), config at
 Install `google-ads` (python) for the Acquisition agent's Google adapter once access lands.
 
 ## 9. Open items to finish this doc
-- Meta ad account ID.
+- Connected Instagram professional account ID and Meta spend permission.
 - Where non-booking **follow-up leads** should live (sheet/CRM).
