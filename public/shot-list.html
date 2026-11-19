@@ -1,0 +1,2373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Hive 4-Week Shot List | Brenda Content Guide</title>
+    <meta name="description" content="Beauty Hive four-week shot list for Brenda's content calendar, including finished video direction, shot-by-shot filming notes, editing direction, captions, and CTAs.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://www.beautyhivestudio.com/shot-list">
+    <link rel="icon" type="image/svg+xml" href="beautyhive3.svg">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+        :root {
+            --ink: #2f2927;
+            --muted: #6a5f5a;
+            --paper: #fffaf6;
+            --soft: #f7f0ea;
+            --line: rgba(47, 41, 39, 0.14);
+            --clay: #a96f63;
+            --moss: #60715d;
+            --gold: #c5a466;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: "Montserrat", sans-serif;
+            line-height: 1.55;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: rgba(255, 250, 246, 0.94);
+            border-bottom: 1px solid var(--line);
+            backdrop-filter: blur(16px);
+        }
+
+        .topbar-inner,
+        .wrap {
+            width: min(1180px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .topbar-inner {
+            min-height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .brand img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 40px;
+            padding: 0 14px;
+            border: 1px solid var(--line);
+            background: #fff;
+            color: var(--ink);
+            text-decoration: none;
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .button.primary {
+            border-color: var(--ink);
+            background: var(--ink);
+            color: #fffaf6;
+        }
+
+        .button {
+            white-space: normal;
+            text-align: center;
+        }
+
+        code {
+            padding: 0.1em 0.35em;
+            background: rgba(47, 41, 39, 0.08);
+            border-radius: 999px;
+            font-family: inherit;
+            font-size: 0.9em;
+            font-weight: 800;
+        }
+
+        .film-card.primary code {
+            background: rgba(255, 250, 246, 0.18);
+            color: #fffaf6;
+        }
+
+        .hero {
+            padding: 38px 0 30px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.78fr);
+            gap: 28px;
+            align-items: stretch;
+        }
+
+        .eyebrow {
+            margin: 0 0 12px;
+            color: var(--clay);
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0;
+            font-family: "Playfair Display", serif;
+            line-height: 1.03;
+            letter-spacing: 0;
+        }
+
+        h1 {
+            max-width: 760px;
+            font-size: clamp(2.45rem, 7vw, 5.8rem);
+        }
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 3.35rem);
+        }
+
+        h3 {
+            font-size: 1.55rem;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        p,
+        li,
+        a,
+        strong,
+        span {
+            overflow-wrap: anywhere;
+        }
+
+        .hero-copy {
+            margin-top: 18px;
+            max-width: 720px;
+            color: var(--muted);
+            font-size: clamp(1rem, 2vw, 1.14rem);
+        }
+
+        .hero-card {
+            min-height: 100%;
+            background: var(--ink);
+            color: #fff8ee;
+            display: grid;
+            grid-template-rows: 1fr auto;
+        }
+
+        .hero-card img {
+            width: 100%;
+            height: 330px;
+            object-fit: cover;
+        }
+
+        .hero-card-body {
+            padding: 20px;
+        }
+
+        .hero-card-body p {
+            color: rgba(255, 248, 238, 0.78);
+        }
+
+        .film-first {
+            padding: 0 0 28px;
+        }
+
+        .film-panel {
+            display: grid;
+            grid-template-columns: minmax(0, 0.85fr) minmax(320px, 1.15fr);
+            gap: 14px;
+            align-items: stretch;
+        }
+
+        .film-card,
+        .day-pick {
+            border: 1px solid var(--line);
+            background: #fff;
+            padding: 18px;
+            box-shadow: 0 8px 24px rgba(47, 41, 39, 0.05);
+        }
+
+        .film-card.primary {
+            background: var(--moss);
+            color: #fffaf6;
+        }
+
+        .film-card.primary .eyebrow,
+        .film-card.primary p,
+        .film-card.primary li {
+            color: rgba(255, 250, 246, 0.8);
+        }
+
+        .film-card h2 {
+            margin-bottom: 10px;
+        }
+
+        .minimum-list {
+            display: grid;
+            gap: 9px;
+            margin: 14px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .minimum-list li {
+            padding: 10px;
+            border: 1px solid rgba(255, 250, 246, 0.18);
+            background: rgba(255, 250, 246, 0.1);
+        }
+
+        .day-pick-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .day-pick {
+            min-height: 108px;
+            text-decoration: none;
+        }
+
+        .day-pick strong {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--clay);
+            font-size: 0.76rem;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .day-pick span {
+            display: block;
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+
+        .quick-rules {
+            padding: 20px 0 28px;
+        }
+
+        .workbook-map {
+            padding: 10px 0 30px;
+        }
+
+        .workbook-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .workbook-card {
+            min-height: 132px;
+            padding: 15px;
+            border: 1px solid var(--line);
+            background: #fff;
+            text-decoration: none;
+            box-shadow: 0 8px 24px rgba(47, 41, 39, 0.05);
+        }
+
+        .workbook-card strong {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--clay);
+            font-size: 0.76rem;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .workbook-card span {
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .rule-grid,
+        .toc-grid {
+            display: grid;
+            gap: 10px;
+        }
+
+        .rule-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .rule {
+            min-height: 112px;
+            padding: 15px;
+            border: 1px solid var(--line);
+            background: #fff;
+        }
+
+        .rule strong,
+        .toc a strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .rule span,
+        .toc a span {
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .toc {
+            display: none;
+        }
+
+        .workbook-player {
+            padding: 0 0 36px;
+        }
+
+        .lesson-shell {
+            display: grid;
+            grid-template-columns: 280px minmax(0, 1fr);
+            gap: 18px;
+            align-items: start;
+        }
+
+        .lesson-nav {
+            position: sticky;
+            top: 82px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 10px 28px rgba(47, 41, 39, 0.06);
+        }
+
+        .lesson-nav-head {
+            padding: 16px;
+            background: var(--ink);
+            color: #fff8ee;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .lesson-nav-head p {
+            color: rgba(255, 248, 238, 0.76);
+            font-size: 0.88rem;
+        }
+
+        .lesson-track {
+            height: 8px;
+            margin-top: 14px;
+            background: rgba(255, 248, 238, 0.18);
+            overflow: hidden;
+        }
+
+        .lesson-fill {
+            display: block;
+            width: 8.333%;
+            height: 100%;
+            background: var(--gold);
+        }
+
+        .lesson-tabs {
+            display: grid;
+            gap: 6px;
+            padding: 8px;
+        }
+
+        .lesson-tab {
+            display: grid;
+            grid-template-columns: 38px 1fr;
+            gap: 10px;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid transparent;
+            background: transparent;
+            color: var(--ink);
+            font: inherit;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .lesson-tab:hover,
+        .lesson-tab.active {
+            border-color: var(--line);
+            background: var(--soft);
+        }
+
+        .lesson-tab span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            background: #fff;
+            color: var(--clay);
+            font-size: 0.7rem;
+            font-weight: 900;
+        }
+
+        .lesson-tab strong {
+            display: block;
+            font-size: 0.78rem;
+            line-height: 1.15;
+            text-transform: uppercase;
+        }
+
+        .lesson-tab small {
+            display: block;
+            margin-top: 3px;
+            color: var(--muted);
+            font-size: 0.72rem;
+            line-height: 1.25;
+        }
+
+        .lesson-stage {
+            min-height: 680px;
+            border: 1px solid var(--line);
+            background: #fff;
+            box-shadow: 0 12px 34px rgba(47, 41, 39, 0.06);
+        }
+
+        .lesson-stage > section {
+            display: none;
+            padding: 24px;
+            border-top: 0;
+        }
+
+        .lesson-stage > section.active-workbook-lesson {
+            display: block;
+        }
+
+        .lesson-stage .wrap {
+            width: 100%;
+        }
+
+        .lesson-stage .day {
+            grid-template-columns: minmax(210px, 0.32fr) minmax(0, 1fr);
+        }
+
+        .workbook-controls {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 16px 24px;
+            border-top: 1px solid var(--line);
+            background: var(--soft);
+        }
+
+        .workbook-controls button {
+            min-height: 42px;
+            padding: 0 14px;
+            border: 1px solid var(--line);
+            background: #fff;
+            color: var(--ink);
+            font: inherit;
+            font-size: 0.76rem;
+            font-weight: 900;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .workbook-controls button:last-child {
+            border-color: var(--ink);
+            background: var(--ink);
+            color: #fffaf6;
+        }
+
+        .workbook-controls button:disabled {
+            opacity: 0.42;
+            cursor: default;
+        }
+
+        .toc-grid {
+            grid-template-columns: repeat(7, minmax(0, 1fr));
+        }
+
+        .toc a {
+            min-height: 118px;
+            padding: 14px;
+            border: 1px solid var(--line);
+            background: var(--soft);
+            text-decoration: none;
+        }
+
+        .section {
+            padding: 34px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .day {
+            display: grid;
+            grid-template-columns: minmax(240px, 0.34fr) minmax(0, 1fr);
+            gap: 28px;
+            align-items: start;
+        }
+
+        .day-aside {
+            position: sticky;
+            top: 84px;
+        }
+
+        .day-label {
+            margin: 0 0 8px;
+            color: var(--clay);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .meta-list {
+            margin-top: 18px;
+            display: grid;
+            gap: 8px;
+        }
+
+        .meta {
+            padding: 12px;
+            border: 1px solid var(--line);
+            background: #fff;
+        }
+
+        .meta strong {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--moss);
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .content-block {
+            display: grid;
+            gap: 16px;
+        }
+
+        .panel {
+            padding: 20px;
+            border: 1px solid var(--line);
+            background: #fff;
+        }
+
+        .panel.soft {
+            background: var(--soft);
+        }
+
+        .panel.dark {
+            background: var(--ink);
+            color: #fff8ee;
+        }
+
+        .panel.dark p,
+        .panel.dark li {
+            color: rgba(255, 248, 238, 0.82);
+        }
+
+        .panel h3 {
+            margin-bottom: 10px;
+        }
+
+        details.panel {
+            padding: 0;
+        }
+
+        details.panel summary {
+            padding: 16px 20px;
+            cursor: pointer;
+            list-style: none;
+            color: var(--clay);
+            font-size: 0.78rem;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        details.panel summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details.panel summary::after {
+            content: "+";
+            float: right;
+            color: var(--moss);
+            font-size: 1rem;
+        }
+
+        details.panel[open] summary::after {
+            content: "-";
+        }
+
+        .detail-body {
+            padding: 0 20px 20px;
+        }
+
+        ol,
+        ul {
+            margin: 0;
+            padding-left: 22px;
+        }
+
+        li + li {
+            margin-top: 8px;
+        }
+
+        .caption {
+            border-left: 4px solid var(--gold);
+        }
+
+        .copy-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .copy-item {
+            padding: 14px;
+            border: 1px solid var(--line);
+            background: rgba(255, 250, 246, 0.72);
+        }
+
+        .copy-item strong {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--clay);
+            font-size: 0.73rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .copy-item p,
+        .copy-item li {
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+
+        .batch {
+            padding: 36px 0 54px;
+            border-top: 1px solid var(--line);
+            background: var(--soft);
+        }
+
+        .batch-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 16px;
+            margin-top: 18px;
+        }
+
+        .week-intro {
+            max-width: 760px;
+            margin: 10px 0 22px;
+            color: var(--muted);
+            font-size: 1.03rem;
+        }
+
+        .week-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .mini-day {
+            display: grid;
+            gap: 14px;
+            padding: 18px;
+            border: 1px solid var(--line);
+            background: #fff;
+        }
+
+        .mini-day.full {
+            grid-column: 1 / -1;
+        }
+
+        .mini-day h3 {
+            font-size: 1.35rem;
+        }
+
+        .mini-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .mini-meta span {
+            border: 1px solid var(--line);
+            background: var(--soft);
+            padding: 6px 9px;
+            color: var(--muted);
+            font-size: 0.74rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .mini-columns {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 12px;
+        }
+
+        .mini-box {
+            padding: 12px;
+            background: var(--soft);
+            border: 1px solid var(--line);
+        }
+
+        .mini-box strong {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--clay);
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .mini-box p,
+        .mini-box li {
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+
+        @media (max-width: 940px) {
+            .hero-grid,
+            .film-panel,
+            .lesson-shell,
+            .day,
+            .copy-grid,
+            .batch-grid,
+            .week-grid,
+            .mini-columns {
+                grid-template-columns: 1fr;
+            }
+
+            .day-aside {
+                position: static;
+            }
+
+            .lesson-nav {
+                position: static;
+            }
+
+            .rule-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .toc-grid,
+            .workbook-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 760px) {
+            .topbar {
+                position: static;
+            }
+
+            .topbar-inner,
+            .wrap {
+                width: min(100% - 28px, 1180px);
+            }
+
+            h1 {
+                font-size: 2.35rem;
+            }
+
+            h2 {
+                font-size: 1.95rem;
+            }
+
+            h3 {
+                font-size: 1.28rem;
+            }
+
+            .brand {
+                max-width: 100%;
+                font-size: 0.72rem;
+                letter-spacing: 0.08em;
+            }
+
+            .nav-actions {
+                width: 100%;
+                overflow-x: auto;
+                padding-bottom: 2px;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .button {
+                flex: 0 0 auto;
+                min-width: 116px;
+                min-height: 38px;
+                padding: 0 10px;
+                font-size: 0.68rem;
+            }
+
+            .hero {
+                padding: 24px 0 16px;
+            }
+
+            .hero-copy,
+            .week-intro {
+                font-size: 0.98rem;
+            }
+
+            .hero-card {
+                display: none;
+            }
+
+            .rule-grid,
+            .day-pick-grid,
+            .workbook-grid,
+            .toc-grid,
+            .copy-grid,
+            .batch-grid,
+            .week-grid,
+            .mini-columns {
+                grid-template-columns: 1fr;
+            }
+
+            .toc a,
+            .rule,
+            .day-pick {
+                min-height: auto;
+            }
+
+            .section {
+                padding: 28px 0;
+            }
+
+            .panel,
+            details.panel summary,
+            .film-card,
+            .day-pick,
+            .mini-day {
+                padding: 14px;
+            }
+
+            .detail-body {
+                padding: 0 14px 14px;
+            }
+
+            .day {
+                gap: 14px;
+            }
+
+            .meta-list {
+                margin-top: 12px;
+            }
+
+            .copy-item,
+            .mini-box,
+            .meta {
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 620px) {
+            .topbar-inner {
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 12px 0;
+            }
+
+            .nav-actions {
+                width: 100%;
+            }
+
+            .hero-card img {
+                height: 250px;
+            }
+
+            .hero {
+                padding: 28px 0 14px;
+            }
+
+            .hero-card {
+                display: none;
+            }
+
+            .rule-grid,
+            .day-pick-grid,
+            .workbook-grid,
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .film-first {
+                padding-bottom: 16px;
+            }
+
+            .film-card,
+            .day-pick {
+                padding: 14px;
+            }
+
+            .film-card h2 {
+                font-size: 1.9rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .topbar-inner,
+            .wrap {
+                width: min(100% - 22px, 1180px);
+            }
+
+            h1 {
+                font-size: 2.05rem;
+            }
+
+            h2,
+            .film-card h2 {
+                font-size: 1.75rem;
+            }
+
+            .button {
+                min-width: 108px;
+            }
+        }
+        /* Course interface pass: app-like production classroom instead of report styling. */
+        :root {
+            --ink: #263238;
+            --muted: #66727c;
+            --paper: #f5f7fb;
+            --soft: #eef3f5;
+            --line: rgba(38, 50, 56, 0.12);
+            --clay: #8f4e6f;
+            --moss: #2f746f;
+            --gold: #d6a243;
+        }
+
+        body {
+            background: #f5f7fb;
+        }
+
+        .topbar-inner,
+        .wrap {
+            width: min(1240px, calc(100% - 36px));
+        }
+
+        .topbar {
+            background: rgba(255, 255, 255, 0.96);
+            box-shadow: 0 8px 24px rgba(31, 41, 55, 0.06);
+        }
+
+        .topbar-inner {
+            min-height: 68px;
+        }
+
+        .brand {
+            letter-spacing: 0.07em;
+        }
+
+        .button,
+        .workbook-controls button {
+            border-radius: 8px;
+            min-height: 38px;
+            background: #fff;
+        }
+
+        .button.primary,
+        .workbook-controls button:last-child {
+            background: var(--moss);
+            border-color: var(--moss);
+        }
+
+        .hero {
+            padding: 28px 0 14px;
+            border-top: 0;
+        }
+
+        .hero-grid {
+            grid-template-columns: minmax(0, 1fr) 340px;
+            align-items: center;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #fff;
+            padding: 24px;
+            box-shadow: 0 16px 36px rgba(31, 41, 55, 0.10);
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Montserrat", sans-serif;
+            letter-spacing: 0;
+        }
+
+        h1 {
+            max-width: 720px;
+            font-size: clamp(2.05rem, 4vw, 4rem);
+            line-height: 1.05;
+        }
+
+        h2 {
+            font-size: clamp(1.55rem, 3vw, 2.45rem);
+            line-height: 1.12;
+        }
+
+        h3 {
+            font-size: 1.12rem;
+            line-height: 1.2;
+        }
+
+        .hero-copy {
+            max-width: 760px;
+            font-size: 1.03rem;
+        }
+
+        .eyebrow,
+        .day-pick strong,
+        .workbook-card strong,
+        .lesson-tab span,
+        .day-label,
+        .copy-item strong,
+        .mini-box strong {
+            color: var(--clay);
+        }
+
+        .hero-card,
+        .lesson-nav-head,
+        .panel.dark {
+            border-radius: 8px;
+            background: #1f2933;
+            box-shadow: none;
+        }
+
+        .hero-card {
+            overflow: hidden;
+        }
+
+        .film-first,
+        .quick-rules,
+        .production-os,
+        .workbook-map,
+        .workbook-player {
+            border-top: 0;
+        }
+
+        .film-panel {
+            grid-template-columns: 0.92fr 1.08fr;
+            gap: 18px;
+        }
+
+        .production-os {
+            padding: 14px 0 26px;
+        }
+
+        .os-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr 0.9fr;
+            gap: 14px;
+        }
+
+        .os-card {
+            min-height: 150px;
+            padding: 18px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 8px 22px rgba(31, 41, 55, 0.06);
+        }
+
+        .os-card h3 {
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .os-card p {
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+
+        .os-list {
+            display: grid;
+            gap: 8px;
+            margin: 12px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .os-list li {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 9px 0;
+            border-top: 1px solid var(--line);
+            color: var(--ink);
+            font-size: 0.9rem;
+        }
+
+        .os-list span {
+            color: var(--moss);
+            font-weight: 900;
+        }
+
+        .resource-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .film-card,
+        .day-pick,
+        .rule,
+        .workbook-card,
+        .lesson-nav,
+        .lesson-stage,
+        .panel,
+        .copy-item,
+        .mini-day,
+        .mini-box,
+        .meta {
+            border-radius: 8px;
+            box-shadow: 0 8px 22px rgba(31, 41, 55, 0.06);
+        }
+
+        .film-card.primary {
+            background: linear-gradient(135deg, #2f746f, #263238);
+        }
+
+        .minimum-list li {
+            border-radius: 8px;
+        }
+
+        .day-pick-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .day-pick {
+            min-height: 132px;
+            position: relative;
+        }
+
+        .day-pick::after,
+        .workbook-card::after {
+            content: "Open";
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            padding: 5px 8px;
+            border-radius: 999px;
+            background: rgba(47, 116, 111, 0.10);
+            color: var(--moss);
+            font-size: 0.66rem;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .workbook-grid,
+        .rule-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .workbook-card {
+            position: relative;
+            border-top: 4px solid var(--moss);
+        }
+
+        .lesson-shell {
+            grid-template-columns: 320px minmax(0, 1fr);
+        }
+
+        .lesson-nav,
+        .lesson-stage {
+            overflow: hidden;
+        }
+
+        .lesson-tabs {
+            max-height: calc(100vh - 220px);
+            overflow: auto;
+        }
+
+        .lesson-tab {
+            border-radius: 8px;
+        }
+
+        .lesson-tab.active {
+            background: #edf7f5;
+            border-color: rgba(47, 116, 111, 0.28);
+        }
+
+        .lesson-stage {
+            min-height: 680px;
+            background: #fff;
+        }
+
+        .lesson-stage > section {
+            padding: 30px;
+        }
+
+        .lesson-stage .day {
+            grid-template-columns: minmax(220px, 0.30fr) minmax(0, 1fr);
+        }
+
+        .panel.soft,
+        .mini-box,
+        .copy-item {
+            background: #f8fafc;
+        }
+
+        code,
+        .asset-link,
+        .mini-meta span {
+            border-radius: 999px;
+        }
+
+        .asset-link {
+            display: inline-flex;
+            align-items: center;
+            margin: 4px 4px 4px 0;
+            padding: 5px 8px;
+            border: 1px solid var(--line);
+            background: #fff;
+            color: var(--moss);
+            text-decoration: none;
+            font-size: 0.72rem;
+            font-weight: 900;
+            letter-spacing: 0.04em;
+        }
+
+        details.panel summary {
+            border-radius: 8px;
+        }
+
+        @media (max-width: 940px) {
+            .hero-grid,
+            .film-panel,
+            .lesson-shell,
+            .lesson-stage .day,
+            .os-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .day-pick-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 620px) {
+            .topbar-inner,
+            .wrap {
+                width: min(100% - 22px, 1240px);
+            }
+
+            .hero-grid {
+                padding: 18px;
+            }
+
+            .day-pick-grid,
+            .workbook-grid,
+            .rule-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lesson-stage > section {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="/">
+                <img src="beautyhive3.svg" alt="">
+                Beauty Hive Workbook
+            </a>
+            <div class="nav-actions">
+                <a class="button" href="/growth-plan">Course Home</a>
+                <a class="button" href="#day-1">Week 1</a>
+                <a class="button primary" href="#batch">Batch Shoot</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="wrap hero-grid">
+                <div>
+                    <p class="eyebrow">Beauty Hive Workbook</p>
+                    <h1>Production Classroom</h1>
+                    <p class="hero-copy">A shoot-day workbook for Brenda. Open this when she is filming and needs the next capture list, not the whole strategy.</p>
+                </div>
+                <aside class="hero-card">
+                    <img src="images/nails-pink-floral.jpg" alt="Detailed pink floral nail art by Beauty Hive Studio">
+                    <div class="hero-card-body">
+                        <p><strong>Finished look:</strong> bright vertical videos, nails first, Brenda's voice second, and simple booking intent on every post.</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="production-os" aria-labelledby="production-os-title">
+            <div class="wrap">
+                <div class="os-grid">
+                    <article class="os-card">
+                        <p class="eyebrow">Production OS</p>
+                        <h3 id="production-os-title">Open the lesson, then film the checklist.</h3>
+                        <p>The workbook is the production side of the course. Start with the capture brief when Brenda is actively shooting; use the deeper lessons only when editing or planning ahead.</p>
+                        <div class="resource-row">
+                            <a class="button primary" href="#workbook">Open Lesson Player</a>
+                            <a class="button" href="/growth-plan">Course Home</a>
+                        </div>
+                    </article>
+                    <article class="os-card">
+                        <p class="eyebrow">Posted References</p>
+                        <h3>Week 1 reel sources</h3>
+                        <div class="resource-row">
+                            <a class="asset-link" href="https://www.instagram.com/p/DYC74flpHYB/" target="_blank" rel="noopener">Day 1</a>
+                            <a class="asset-link" href="https://www.instagram.com/p/DR7kwtkj4J8/" target="_blank" rel="noopener">Day 2</a>
+                            <a class="asset-link" href="https://www.instagram.com/p/DX4yDYXPQkc/" target="_blank" rel="noopener">Day 3</a>
+                            <a class="asset-link" href="https://www.instagram.com/p/DUg5a8Qktdf/" target="_blank" rel="noopener">Day 5</a>
+                            <a class="asset-link" href="https://www.instagram.com/p/DPP5dhYCeTh/" target="_blank" rel="noopener">Day 7</a>
+                        </div>
+                    </article>
+                    <article class="os-card">
+                        <p class="eyebrow">Deliverables</p>
+                        <h3>Batch session targets</h3>
+                        <ul class="os-list">
+                            <li>Finished set reveals <span>5</span></li>
+                            <li>Prep/process clips <span>4</span></li>
+                            <li>Founder/studio clips <span>3</span></li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="film-first" id="start">
+            <div class="wrap film-panel">
+                <article class="film-card primary">
+                    <p class="eyebrow">Current Assignment</p>
+                    <h2>Next video: Send The Inspo.</h2>
+                    <p>If Brenda checks in while filming, send only this assignment: one objective, the must-have shots, one optional talking line, and the CTA.</p>
+                    <ul class="minimum-list">
+                        <li><strong>1. Finished set close-up:</strong> nails filling most of the frame.</li>
+                        <li><strong>2. Slow hand turn:</strong> shape and shine catching the light.</li>
+                        <li><strong>3. Macro art detail:</strong> the best detail held steady.</li>
+                        <li><strong>4. Process clip:</strong> top coat, detail paint, chrome, charm, or file.</li>
+                        <li><strong>5. Inspo handoff:</strong> phone shot of inspo or Brenda looking at inspo.</li>
+                        <li><strong>6. CTA:</strong> <code>DM SET</code>.</li>
+                    </ul>
+                </article>
+
+                <div class="day-pick-grid" aria-label="Week one day picker">
+                    <a class="day-pick" href="#day-1"><strong>Current</strong>Send The Inspo<span>Finished nails, inspo, process. CTA: SET.</span></a>
+                    <a class="day-pick" href="#day-2"><strong>Day 2</strong>Builder growth<span>Before, structure, after. CTA: GROW.</span></a>
+                    <a class="day-pick" href="#day-3"><strong>Day 3</strong>Brenda personality<span>Private appointment vibe. CTA: book link.</span></a>
+                    <a class="day-pick" href="#day-4"><strong>Day 4</strong>Custom cost<span>Simple vs detailed art. CTA: DESIGN.</span></a>
+                    <a class="day-pick" href="#day-5"><strong>Day 5</strong>Occasion set<span>Trip, birthday, photos. CTA: SET.</span></a>
+                    <a class="day-pick" href="#day-6"><strong>Day 6</strong>Private suite<span>5-7 story frames. Poll or reply sticker.</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-rules">
+            <div class="wrap rule-grid">
+                <div class="rule"><strong>Format</strong><span>Film vertical 9:16. Hold every clip for 4-6 seconds.</span></div>
+                <div class="rule"><strong>Light</strong><span>Use window light or the nail desk light. Avoid yellow room lighting.</span></div>
+                <div class="rule"><strong>Frame</strong><span>Get one wide shot, one tight detail, and one final reveal for every set.</span></div>
+                <div class="rule"><strong>Background</strong><span>Clean table, organized tools, no clutter, no trash in frame.</span></div>
+            </div>
+        </section>
+
+        <section class="workbook-map" aria-labelledby="workbook-title">
+            <div class="wrap">
+                <p class="eyebrow">Curriculum</p>
+                <h2 id="workbook-title">Choose the production lesson Brenda is filming.</h2>
+                <div class="workbook-grid">
+                    <a class="workbook-card" href="#day-1"><strong>Week 1</strong><span>Profile, proof, personality, and the first booking CTAs.</span></a>
+                    <a class="workbook-card" href="#week-2"><strong>Week 2</strong><span>Education and objections: lifting, service choice, pricing, and trust.</span></a>
+                    <a class="workbook-card" href="#week-3"><strong>Week 3</strong><span>Offer and DM funnel assets using SET, GROW, DESIGN, and BOOK.</span></a>
+                    <a class="workbook-card" href="#week-4"><strong>Week 4</strong><span>Paid creative test pack and the best ad-ready cuts.</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="workbook-player" id="workbook">
+            <div class="wrap lesson-shell">
+                <aside class="lesson-nav" aria-label="Workbook lessons">
+                    <div class="lesson-nav-head">
+                        <p class="eyebrow">Production Lessons</p>
+                        <h3 id="workbook-progress">Day 1 of 12</h3>
+                        <p>Pick the day or week Brenda is filming. Production details stay collapsed until needed.</p>
+                        <div class="lesson-track" aria-hidden="true"><span class="lesson-fill" id="workbook-fill"></span></div>
+                    </div>
+                    <div class="lesson-tabs">
+                        <button class="lesson-tab active" type="button" data-workbook-target="day-1"><span>D1</span><div><strong>Send The Inspo</strong><small>Finished nails first</small></div></button>
+                        <button class="lesson-tab" type="button" data-workbook-target="day-2"><span>D2</span><div><strong>Builder Growth</strong><small>Before, structure, after</small></div></button>
+                        <button class="lesson-tab" type="button" data-workbook-target="day-3"><span>D3</span><div><strong>Brenda Personality</strong><small>Private appointment vibe</small></div></button>
+                        <button class="lesson-tab" type="button" data-workbook-target="day-4"><span>D4</span><div><strong>Custom Cost</strong><small>Pricing clarity</small></div></button>
+                        <button class="lesson-tab" type="button" data-workbook-target="day-5"><span>D5</span><div><strong>Occasion Set</strong><small>Trip, birthday, photos</small></div></button>
+                        <button class="lesson-tab" type="button" data-workbook-target="day-6"><span>D6</span><div><strong>Private Suite</strong><small>Story sequence</small></div></button>
+                        <button class="lesson-tab" type="button" data-workbook-target="day-7"><span>D7</span><div><strong>Founder Story</strong><small>Why Beauty Hive exists</small></div></button>
+                        <button class="lesson-tab" type="button" data-workbook-target="week-2"><span>W2</span><div><strong>Education</strong><small>Objections and trust</small></div></button>
+                        <button class="lesson-tab" type="button" data-workbook-target="week-3"><span>W3</span><div><strong>Offer + DM</strong><small>Keyword funnel assets</small></div></button>
+                        <button class="lesson-tab" type="button" data-workbook-target="week-4"><span>W4</span><div><strong>Paid Tests</strong><small>Ad-ready cuts</small></div></button>
+                        <button class="lesson-tab" type="button" data-workbook-target="reuse"><span>R</span><div><strong>Reuse Rule</strong><small>Remix old winners</small></div></button>
+                        <button class="lesson-tab" type="button" data-workbook-target="batch"><span>B</span><div><strong>Batch Shoot</strong><small>Monthly capture list</small></div></button>
+                    </div>
+                </aside>
+                <div>
+                    <div class="lesson-stage" id="workbook-stage" aria-live="polite"></div>
+                    <div class="workbook-controls">
+                        <button type="button" id="prev-workbook">Previous</button>
+                        <button type="button" id="next-workbook">Next</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="reuse">
+            <div class="wrap day">
+                <aside class="day-aside">
+                    <p class="day-label">Reuse Rule</p>
+                    <h2>Remix old winners with a new job.</h2>
+                    <div class="meta-list">
+                        <div class="meta"><strong>Change</strong>First frame, overlay, caption angle, and CTA.</div>
+                        <div class="meta"><strong>Keep</strong>The strongest nail proof or Brenda personality moment.</div>
+                        <div class="meta"><strong>Avoid</strong>Same video, same caption, no new booking direction.</div>
+                    </div>
+                </aside>
+                <div class="content-block">
+                    <div class="panel dark">
+                        <h3>Every Reused Reel Needs One Job</h3>
+                        <p>Before editing, label the asset as proof, education, personality, or booking. Then cut the Reel around that one job so it feels intentional, not recycled.</p>
+                    </div>
+                    <div class="panel">
+                        <h3>Reuse Checklist</h3>
+                        <ol>
+                            <li>Open with the best 1-2 seconds: finished nails, Brenda's face, or the strongest process detail.</li>
+                            <li>Add one short overlay that tells the viewer why this set matters.</li>
+                            <li>Trim repeated setup. Reused Reels should usually be tighter than the original.</li>
+                            <li>Use one CTA only: SET, GROW, DESIGN, BOOK, or link in bio.</li>
+                            <li>If the asset is only a strong still, make it a carousel/static or send it to motion adaptation instead of forcing a Reel.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <nav class="toc">
+            <div class="wrap toc-grid">
+                <a href="#day-1"><strong>Day 1</strong><span>First set with art</span></a>
+                <a href="#day-2"><strong>Day 2</strong><span>Builder gel growth</span></a>
+                <a href="#day-3"><strong>Day 3</strong><span>Brenda personality</span></a>
+                <a href="#day-4"><strong>Day 4</strong><span>Custom set cost</span></a>
+                <a href="#day-5"><strong>Day 5</strong><span>Occasion set</span></a>
+                <a href="#day-6"><strong>Day 6</strong><span>Private suite stories</span></a>
+                <a href="#day-7"><strong>Day 7</strong><span>Founder story</span></a>
+            </div>
+        </nav>
+
+        <nav class="toc">
+            <div class="wrap toc-grid">
+                <a href="#week-2"><strong>Week 2</strong><span>Education + objections</span></a>
+                <a href="#week-3"><strong>Week 3</strong><span>Offer + DM funnel</span></a>
+                <a href="#week-4"><strong>Week 4</strong><span>Paid creative tests</span></a>
+                <a href="#batch"><strong>Batch</strong><span>One shoot covers all weeks</span></a>
+            </div>
+        </nav>
+
+        <section class="section" id="day-1">
+            <div class="wrap day">
+                <aside class="day-aside">
+                    <p class="day-label">Current Video</p>
+                    <h2>First Set / Send The Inspo</h2>
+                    <div class="meta-list">
+                        <div class="meta"><strong>Goal</strong>Get a potential new client to DM SET with nail inspo or click the booking link.</div>
+                        <div class="meta"><strong>Hook</strong>San Diego, send the nail inspo you have been saving.</div>
+                        <div class="meta"><strong>CTA</strong>DM SET.</div>
+                    </div>
+                </aside>
+                <div class="content-block">
+                    <div class="panel dark">
+                        <h3>Finished Video Should Look Like</h3>
+                        <p>A polished 8-14 second Reel that opens with the finished nails immediately. The first frame should be a tight, bright close-up of the full set, not Brenda talking and not a title screen. The viewer should understand one thing: send the inspo you have saved, and Brenda will help you choose the right set.</p>
+                    </div>
+                    <div class="panel">
+                        <h3>Shot List</h3>
+                        <ol>
+                            <li>Finished set close-up, nails filling most of the frame.</li>
+                            <li>Slow hand turn so the shape and shine catch the light.</li>
+                            <li>Macro shot of the best art detail, held steady.</li>
+                            <li>Brenda doing one process step: top coat, detail paint, chrome, charm, or file.</li>
+                            <li>Client hand resting on a clean surface for the final reveal.</li>
+                            <li>Quick phone shot of an inspo photo or Brenda looking at inspo.</li>
+                            <li>Optional Brenda clip: "Send me your inspo and I will help you choose what to book."</li>
+                        </ol>
+                    </div>
+                    <div class="panel soft">
+                        <h3>Editing Direction</h3>
+                        <ul>
+                            <li>Start with the prettiest finished-nail shot.</li>
+                            <li>Cut every 1-2 seconds.</li>
+                            <li>Keep text minimal: "Send the nail inspo you have been saving."</li>
+                            <li>End text: "DM SET."</li>
+                            <li>Do not explain the full strategy or offer terms in this video.</li>
+                        </ul>
+                    </div>
+                    <div class="panel caption">
+                        <h3>Production Copy</h3>
+                        <div class="copy-grid">
+                            <div class="copy-item">
+                                <strong>On-Screen Text</strong>
+                                <ul>
+                                    <li>San Diego, send the nail inspo you have been saving.</li>
+                                    <li>Bring the inspo you have been saving.</li>
+                                    <li>DM SET to book with Brenda.</li>
+                                </ul>
+                            </div>
+                            <div class="copy-item">
+                                <strong>Caption</strong>
+                                <p>San Diego, if you have been saving nail inspo, send it over. DM SET and I will help you figure out what to book.</p>
+                            </div>
+                            <div class="copy-item">
+                                <strong>Optional VO</strong>
+                                <p>Send me the inspo you have been saving and I will help you figure out the right full set.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="day-2">
+            <div class="wrap day">
+                <aside class="day-aside">
+                    <p class="day-label">Day 2</p>
+                    <h2>Builder Gel Growth Proof</h2>
+                    <div class="meta-list">
+                        <div class="meta"><strong>Hook</strong>Cute nails, but make them your real nails.</div>
+                        <div class="meta"><strong>Reuse Asset</strong>Builder/natural nail clip or <a class="asset-link" href="https://www.instagram.com/p/DR7kwtkj4J8/" target="_blank" rel="noopener">DR7kwtkj4J8</a>.</div>
+                        <div class="meta"><strong>CTA</strong>DM GROW.</div>
+                    </div>
+                </aside>
+                <div class="content-block">
+                    <div class="panel dark">
+                        <h3>Finished Video Should Look Like</h3>
+                        <p>A 12-18 second educational proof Reel. It should feel calm, clean, and credible, not salesy. The viewer should understand that builder gel is for someone who wants pretty nails while protecting or growing their natural nails. The video should show nail health, prep, structure, and the final result in that order.</p>
+                    </div>
+                    <div class="panel">
+                        <h3>Shot List</h3>
+                        <ol>
+                            <li>Before shot of natural nails or grow-out, filmed straight-on with good light.</li>
+                            <li>Close-up of cuticle prep or gentle cleaning.</li>
+                            <li>Shot of Brenda shaping the nail evenly.</li>
+                            <li>Builder gel application from the side so the viewer can see structure.</li>
+                            <li>Light reflection shot showing the apex and smoothness of the nail.</li>
+                            <li>Finished set close-up, natural-looking and clean.</li>
+                            <li>Final hand turn showing the nails from both top and side angles.</li>
+                            <li>Optional talking-head line: "Builder gel is for my clients who want cute nails and want to grow their real nails underneath."</li>
+                        </ol>
+                    </div>
+                    <div class="panel soft">
+                        <h3>Editing Direction</h3>
+                        <ul>
+                            <li>Open with a quick before/after split or before-to-after cut.</li>
+                            <li>Overlay text: "Cute nails, but make them your real nails."</li>
+                            <li>Add 2-3 short labels only: prep, structure, growth support.</li>
+                            <li>End text: "DM GROW."</li>
+                        </ul>
+                    </div>
+                    <div class="panel caption">
+                        <h3>Production Copy</h3>
+                        <div class="copy-grid">
+                            <div class="copy-item">
+                                <strong>On-Screen Text</strong>
+                                <ul>
+                                    <li>Cute nails, but make them your real nails.</li>
+                                    <li>Prep. Structure. Growth support.</li>
+                                    <li>DM GROW.</li>
+                                </ul>
+                            </div>
+                            <div class="copy-item">
+                                <strong>Caption</strong>
+                                <p>Builder gel is for the client who wants pretty nails without giving up on her natural nails. Send GROW if you want help choosing the right service.</p>
+                            </div>
+                            <div class="copy-item">
+                                <strong>Optional VO</strong>
+                                <p>Builder gel is for my clients who want their nails to look good now, but still want to grow and protect their natural nails underneath.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="day-3">
+            <div class="wrap day">
+                <aside class="day-aside">
+                    <p class="day-label">Day 3</p>
+                    <h2>Brenda Personality Reel</h2>
+                    <div class="meta-list">
+                        <div class="meta"><strong>Hook</strong>Let me hold your hand and talk to you nice.</div>
+                        <div class="meta"><strong>Reuse Asset</strong><a class="asset-link" href="https://www.instagram.com/p/DX4yDYXPQkc/" target="_blank" rel="noopener">DX4yDYXPQkc</a> or any natural Brenda/client interaction.</div>
+                        <div class="meta"><strong>CTA</strong>Book with Brenda or link in bio.</div>
+                    </div>
+                </aside>
+                <div class="content-block">
+                    <div class="panel dark">
+                        <h3>Finished Video Should Look Like</h3>
+                        <p>A warm 8-12 second personality Reel. The finished video should make Brenda feel approachable, not overly scripted. It should show her face or personality at least once, then immediately tie back to the nail service. The feeling is: private appointment, good conversation, clean set, no rushed salon energy.</p>
+                    </div>
+                    <div class="panel">
+                        <h3>Shot List</h3>
+                        <ol>
+                            <li>Brenda at the nail desk, smiling or laughing naturally.</li>
+                            <li>Close shot of Brenda holding the client's hand while working.</li>
+                            <li>Detail shot of the brush, file, or tool moving slowly.</li>
+                            <li>Short clip of Brenda looking up from the desk or talking to the client.</li>
+                            <li>Finished nails in the client's hand.</li>
+                            <li>Wide studio shot that shows the private, one-on-one setup.</li>
+                            <li>Optional direct-to-camera line: "I got you. Bring the inspo and I will tell you what to book."</li>
+                        </ol>
+                    </div>
+                    <div class="panel soft">
+                        <h3>Editing Direction</h3>
+                        <ul>
+                            <li>Open with Brenda's personality if the clip is strong; otherwise open with nails and cut to Brenda on beat two.</li>
+                            <li>Keep the edit soft and conversational.</li>
+                            <li>Overlay text: "Let me hold your hand and talk to you nice."</li>
+                            <li>End with: "Book with Brenda" or "Link in bio."</li>
+                        </ul>
+                    </div>
+                    <div class="panel caption">
+                        <h3>Production Copy</h3>
+                        <div class="copy-grid">
+                            <div class="copy-item">
+                                <strong>On-Screen Text</strong>
+                                <ul>
+                                    <li>Let me hold your hand and talk to you nice.</li>
+                                    <li>Private appointment. No rushed salon energy.</li>
+                                    <li>Book with Brenda.</li>
+                                </ul>
+                            </div>
+                            <div class="copy-item">
+                                <strong>Caption</strong>
+                                <p>Beauty Hive is private, one-on-one, and not rushed. Bring the inspo, sit down, and let me help you figure out the set.</p>
+                            </div>
+                            <div class="copy-item">
+                                <strong>Optional VO</strong>
+                                <p>I got you. Bring the inspo, sit down, and I will help you choose what to book so the set actually feels like you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="day-4">
+            <div class="wrap day">
+                <aside class="day-aside">
+                    <p class="day-label">Day 4</p>
+                    <h2>Custom Set Cost</h2>
+                    <div class="meta-list">
+                        <div class="meta"><strong>Hook</strong>What does a custom set cost?</div>
+                        <div class="meta"><strong>Format</strong>Carousel or a simple 12-15 second Reel.</div>
+                        <div class="meta"><strong>CTA</strong>Send inspo for the right appointment.</div>
+                    </div>
+                </aside>
+                <div class="content-block">
+                    <div class="panel dark">
+                        <h3>Finished Video Should Look Like</h3>
+                        <p>A clean, helpful explainer that removes confusion before someone DMs. It should not feel like a hard price list or discount post. It should show examples of simple, classic, and more detailed art so a client understands why pricing depends on length, service, and design complexity.</p>
+                    </div>
+                    <div class="panel">
+                        <h3>Shot List</h3>
+                        <ol>
+                            <li>Shot of a simple clean set, no heavy art.</li>
+                            <li>Shot of a classic-art set with one or two design details.</li>
+                            <li>Shot of a more detailed or signature art set.</li>
+                            <li>Screen recording or over-the-shoulder shot of Brenda looking at inspo on a phone.</li>
+                            <li>Brenda pointing to the parts of the inspo that affect price: length, charms, French, 3D, chrome, hand-painted detail.</li>
+                            <li>Finished set reveal from an angle that clearly shows the art complexity.</li>
+                            <li>Optional talking-head line: "Send the inspo first, and I will help you choose the right service."</li>
+                        </ol>
+                    </div>
+                    <div class="panel soft">
+                        <h3>Editing Direction</h3>
+                        <ul>
+                            <li>Use a simple progression: simple, classic art, more detailed.</li>
+                            <li>Overlay text: "Price depends on service, length, and design."</li>
+                            <li>Avoid exact bundled or new-client offer claims until pricing is approved.</li>
+                            <li>End text: "Send inspo for the right appointment."</li>
+                        </ul>
+                    </div>
+                    <div class="panel caption">
+                        <h3>Production Copy</h3>
+                        <div class="copy-grid">
+                            <div class="copy-item">
+                                <strong>On-Screen Text</strong>
+                                <ul>
+                                    <li>What does a custom set cost?</li>
+                                    <li>Service + length + design.</li>
+                                    <li>Send inspo for the right appointment.</li>
+                                </ul>
+                            </div>
+                            <div class="copy-item">
+                                <strong>Caption</strong>
+                                <p>The easiest way to know what to book is to send the inspo. I will help you match the design to the right service, length, and art tier.</p>
+                            </div>
+                            <div class="copy-item">
+                                <strong>Optional VO</strong>
+                                <p>Custom set pricing depends on the service, the length, and how detailed the design is. Send the inspo first and I will point you to the right appointment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="day-5">
+            <div class="wrap day">
+                <aside class="day-aside">
+                    <p class="day-label">Day 5</p>
+                    <h2>Occasion Set</h2>
+                    <div class="meta-list">
+                        <div class="meta"><strong>Hook</strong>The set you book before the trip, birthday, or photos.</div>
+                        <div class="meta"><strong>Reuse Asset</strong><a class="asset-link" href="https://www.instagram.com/p/DUg5a8Qktdf/" target="_blank" rel="noopener">DUg5a8Qktdf</a>, vacation nails, floral sets, cherry art, or bows.</div>
+                        <div class="meta"><strong>CTA</strong>DM SET or send your inspo.</div>
+                    </div>
+                </aside>
+                <div class="content-block">
+                    <div class="panel dark">
+                        <h3>Finished Video Should Look Like</h3>
+                        <p>A visual-first 9-13 second Reel that feels like "I have somewhere to be, and my nails need to look good in every photo." The nails should look finished, intentional, and camera-ready. This is not a separate vacation offer; it routes people back into the main custom set or first set path.</p>
+                    </div>
+                    <div class="panel">
+                        <h3>Shot List</h3>
+                        <ol>
+                            <li>Opening shot of the finished set with the hand holding a bag, cup, keys, or sunglasses if available.</li>
+                            <li>Macro shot of the most photo-worthy detail.</li>
+                            <li>Slow hand movement in natural light, like the client is checking the nails.</li>
+                            <li>Desk or process shot showing one detail being added.</li>
+                            <li>Final reveal with both hands together.</li>
+                            <li>Optional lifestyle shot: hand on steering wheel, phone, purse, or outfit detail. Keep it clean and not too busy.</li>
+                            <li>Optional Brenda voiceover line: "If you have a trip, birthday, photos, or an event coming up, send the inspo early."</li>
+                        </ol>
+                    </div>
+                    <div class="panel soft">
+                        <h3>Editing Direction</h3>
+                        <ul>
+                            <li>Make the first frame the most scroll-stopping finished set.</li>
+                            <li>Use faster cuts than the education videos.</li>
+                            <li>Overlay text: "Trip? Birthday? Photos? Book the set first."</li>
+                            <li>End text: "DM SET" or "Send your inspo."</li>
+                        </ul>
+                    </div>
+                    <div class="panel caption">
+                        <h3>Production Copy</h3>
+                        <div class="copy-grid">
+                            <div class="copy-item">
+                                <strong>On-Screen Text</strong>
+                                <ul>
+                                    <li>Trip? Birthday? Photos?</li>
+                                    <li>Book the set first.</li>
+                                    <li>DM SET or send your inspo.</li>
+                                </ul>
+                            </div>
+                            <div class="copy-item">
+                                <strong>Caption</strong>
+                                <p>Trip, birthday, concert, photos, whatever it is - send the inspo before you book so we can plan the right set.</p>
+                            </div>
+                            <div class="copy-item">
+                                <strong>Optional VO</strong>
+                                <p>If you have a trip, birthday, photos, or an event coming up, send the inspo early so we can plan the right set and appointment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="day-6">
+            <div class="wrap day">
+                <aside class="day-aside">
+                    <p class="day-label">Day 6</p>
+                    <h2>Private Suite Stories</h2>
+                    <div class="meta-list">
+                        <div class="meta"><strong>Hook</strong>Private suite, one artist, clean prep.</div>
+                        <div class="meta"><strong>Format</strong>5-7 Instagram Story frames.</div>
+                        <div class="meta"><strong>CTA</strong>Poll: Need a new set?</div>
+                    </div>
+                </aside>
+                <div class="content-block">
+                    <div class="panel dark">
+                        <h3>Finished Story Should Look Like</h3>
+                        <p>A calm walk-through of what it feels like to come to Beauty Hive. The viewer should see that this is a private appointment, not a crowded salon. It should build trust: clean space, organized tools, Brenda's desk, the booking path, and a simple poll or question box.</p>
+                    </div>
+                    <div class="panel">
+                        <h3>Story Frame List</h3>
+                        <ol>
+                            <li>Exterior or entry shot. Text: "Private nail studio near SDSU"</li>
+                            <li>Wide studio shot with chair, desk, lamp, setup. Text: "One-on-one appointments"</li>
+                            <li>Clean prep/tool shot. Text: "Clean prep. No rushed sets."</li>
+                            <li>Brenda working with a client hand. Text: "Bring your inspo"</li>
+                            <li>Finished nail close-up. Text: "Custom sets + structured nails"</li>
+                            <li>Booking screen or link-in-bio screen recording. Text: "Book through the link in bio"</li>
+                            <li>Poll sticker: "Need a new set?" Options: "Yes" and "Send inspo"</li>
+                        </ol>
+                    </div>
+                    <div class="panel soft">
+                        <h3>Filming Direction</h3>
+                        <ul>
+                            <li>Move slowly. No fast walking shots.</li>
+                            <li>Keep each Story clip under 5 seconds.</li>
+                            <li>Use the same filter or color temperature across all frames.</li>
+                            <li>Do not overfill with text. One short line per Story is enough.</li>
+                        </ul>
+                    </div>
+                    <div class="panel caption">
+                        <h3>Production Copy</h3>
+                        <div class="copy-grid">
+                            <div class="copy-item">
+                                <strong>Story Text</strong>
+                                <ul>
+                                    <li>Private nail studio near SDSU.</li>
+                                    <li>One-on-one appointments.</li>
+                                    <li>Clean prep. No rushed sets.</li>
+                                    <li>Need a new set?</li>
+                                </ul>
+                            </div>
+                            <div class="copy-item">
+                                <strong>Sticker / Caption</strong>
+                                <p>Poll: Need a new set? Options: Yes / Send inspo. Follow with a question sticker: What set are you trying to book next?</p>
+                            </div>
+                            <div class="copy-item">
+                                <strong>Optional VO</strong>
+                                <p>Welcome to Beauty Hive. It is a private one-on-one nail studio near SDSU, so your appointment feels calm, clean, and not rushed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="day-7">
+            <div class="wrap day">
+                <aside class="day-aside">
+                    <p class="day-label">Day 7</p>
+                    <h2>Founder / Studio Story</h2>
+                    <div class="meta-list">
+                        <div class="meta"><strong>Hook</strong>I opened Beauty Hive for appointments like this.</div>
+                        <div class="meta"><strong>Reuse Asset</strong><a class="asset-link" href="https://www.instagram.com/p/DPP5dhYCeTh/" target="_blank" rel="noopener">DPP5dhYCeTh</a>, <a class="asset-link" href="https://www.instagram.com/p/DP1quRiicxw/" target="_blank" rel="noopener">DP1quRiicxw</a>, studio opening clips, or founder journey content.</div>
+                        <div class="meta"><strong>CTA</strong>Book your first set.</div>
+                    </div>
+                </aside>
+                <div class="content-block">
+                    <div class="panel dark">
+                        <h3>Finished Video Should Look Like</h3>
+                        <p>A 15-25 second founder-story Reel. It should feel personal and grounded, not like a brand commercial. Brenda should explain or imply why Beauty Hive exists: private appointments, detailed work, stronger client relationships, and nails that are not rushed. The video should mix studio shots, Brenda, and finished nails so it still sells the service visually.</p>
+                    </div>
+                    <div class="panel">
+                        <h3>Shot List</h3>
+                        <ol>
+                            <li>Brenda entering, sitting at the desk, setting up, or turning on the lamp.</li>
+                            <li>Wide shot of the studio before a client sits down.</li>
+                            <li>Close shot of Brenda organizing tools or prepping the station.</li>
+                            <li>Brenda working on a client hand.</li>
+                            <li>Finished set reveal.</li>
+                            <li>Brenda face shot, calm and direct, saying one sentence about why she opened Beauty Hive.</li>
+                            <li>Optional studio detail: sign, flowers, product shelf, chair, lamp, or branded moment.</li>
+                        </ol>
+                    </div>
+                    <div class="panel soft">
+                        <h3>Suggested Voiceover</h3>
+                        <p>"I opened Beauty Hive because I wanted my clients to have a private appointment, not a rushed salon set. You can bring the inspo, ask questions, and leave with nails that feel like you."</p>
+                    </div>
+                    <div class="panel caption">
+                        <h3>Production Copy</h3>
+                        <div class="copy-grid">
+                            <div class="copy-item">
+                                <strong>On-Screen Text</strong>
+                                <ul>
+                                    <li>Why I opened Beauty Hive.</li>
+                                    <li>Private appointments. Detailed sets.</li>
+                                    <li>Book your first set.</li>
+                                </ul>
+                            </div>
+                            <div class="copy-item">
+                                <strong>Caption</strong>
+                                <p>Beauty Hive is private, appointment-only, and built for clients who want detail without feeling rushed. If you are new, book your first set through the link in bio or send your inspo.</p>
+                            </div>
+                            <div class="copy-item">
+                                <strong>Optional VO</strong>
+                                <p>I opened Beauty Hive because I wanted my clients to have a private appointment, not a rushed salon set. You can bring the inspo, ask questions, and leave with nails that feel like you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="week-2">
+            <div class="wrap">
+                <p class="eyebrow">Week 2</p>
+                <h2>Education + objections</h2>
+                <p class="week-intro">Use Week 2 to answer the reasons someone hesitates before booking: lifting, inspo uncertainty, service choice, art timing, natural nail protection, pricing, and private-suite trust.</p>
+                <div class="week-grid">
+                    <article class="mini-day">
+                        <div>
+                            <p class="day-label">Day 8</p>
+                            <h3>Why Nails Lift After A Week</h3>
+                        </div>
+                        <div class="mini-meta">
+                            <span>Reel</span><span>Hook: lifting starts before color</span><span>CTA: DM SET</span>
+                        </div>
+                        <p>Finished video: a tight 12-16 second prep explainer that makes Brenda look careful and technical without feeling like a lecture.</p>
+                        <div class="mini-columns">
+                            <div class="mini-box"><strong>Shot List</strong><ol><li>Natural nail close-up before prep.</li><li>Cuticle cleanup from the side.</li><li>Dust removal and nail plate cleanse.</li><li>Dehydrator or primer moment.</li><li>Base/structure going on cleanly.</li><li>Finished nail shine shot.</li></ol></div>
+                            <div class="mini-box"><strong>Copy</strong><p>Overlay: "If your nails lift after one week, this may be why." Caption: "A long-lasting set starts before the color ever goes on. DM SET if you want help choosing your first full set."</p></div>
+                        </div>
+                    </article>
+
+                    <article class="mini-day">
+                        <div>
+                            <p class="day-label">Day 9</p>
+                            <h3>Send The Inspo Before You Book</h3>
+                        </div>
+                        <div class="mini-meta">
+                            <span>Reel</span><span>Hook: send the screenshot</span><span>CTA: DM DESIGN</span>
+                        </div>
+                        <p>Finished video: a fast inspo-to-appointment explainer that shows why Brenda needs the design before choosing time, service, and art level.</p>
+                        <div class="mini-columns">
+                            <div class="mini-box"><strong>Shot List</strong><ol><li>Phone screen with saved inspo, avoiding private info.</li><li>Brenda pointing to length and art details.</li><li>Close-up of similar finished set.</li><li>Art brush or charm/chrome detail.</li><li>Booking screen or DM handoff shot.</li></ol></div>
+                            <div class="mini-box"><strong>Copy</strong><p>Overlay: "Send the inspo before you book." Caption: "If you have a screenshot saved, send it first. I can help you figure out the right service, length, and art level."</p></div>
+                        </div>
+                    </article>
+
+                    <article class="mini-day">
+                        <div>
+                            <p class="day-label">Day 10</p>
+                            <h3>Gel-X Vs Acrylic Vs Builder Gel</h3>
+                        </div>
+                        <div class="mini-meta">
+                            <span>Carousel</span><span>Hook: not sure what to book?</span><span>CTA: Save + DM SET</span>
+                        </div>
+                        <p>Finished post: a simple service-choice carousel that reduces booking confusion and pushes people to send inspo instead of guessing.</p>
+                        <div class="mini-columns">
+                            <div class="mini-box"><strong>Slide List</strong><ol><li>Title card: "Not sure what to book?"</li><li>Gel-X: length and lightweight extension angle.</li><li>Acrylic: strong extension angle.</li><li>Builder gel: natural nail support angle.</li><li>Final card: "Send inspo and I will help."</li></ol></div>
+                            <div class="mini-box"><strong>Copy</strong><p>Use site/IG stills only. Caption: "Gel-X is for length, acrylic is for strong extensions, and builder gel is for natural nail support. Send me your inspo and I will point you in the right direction."</p></div>
+                        </div>
+                    </article>
+
+                    <article class="mini-day">
+                        <div>
+                            <p class="day-label">Day 11</p>
+                            <h3>Why Custom Art Takes Longer</h3>
+                        </div>
+                        <div class="mini-meta">
+                            <span>Reel</span><span>Hook: tiny details take time</span><span>CTA: DM DESIGN</span>
+                        </div>
+                        <p>Finished video: a macro detail Reel where the art itself proves the appointment should not be rushed.</p>
+                        <div class="mini-columns">
+                            <div class="mini-box"><strong>Shot List</strong><ol><li>Fine brush line in progress.</li><li>French edge or chrome close-up.</li><li>Charm/3D placement if available.</li><li>Top coat over the detail.</li><li>Macro final reveal.</li><li>Side angle showing shape plus art.</li></ol></div>
+                            <div class="mini-box"><strong>Copy</strong><p>Overlay: "Custom art takes time for a reason." Caption: "If your inspo has hand-painted art, 3D details, chrome, or charms, send it before booking so I can quote the right time."</p></div>
+                        </div>
+                    </article>
+
+                    <article class="mini-day">
+                        <div>
+                            <p class="day-label">Day 12</p>
+                            <h3>Protecting Natural Nails</h3>
+                        </div>
+                        <div class="mini-meta">
+                            <span>Reel</span><span>Hook: pretty should not mean wrecked</span><span>CTA: DM GROW</span>
+                        </div>
+                        <p>Finished video: a calm proof Reel that ties careful prep, removal, and structure to healthier-looking nails.</p>
+                        <div class="mini-columns">
+                            <div class="mini-box"><strong>Shot List</strong><ol><li>Before/grow-out shot.</li><li>Gentle removal or prep moment.</li><li>Shaping and surface prep.</li><li>Builder/base structure from the side.</li><li>Light reflection on finished nail.</li><li>Final natural-looking reveal.</li></ol></div>
+                            <div class="mini-box"><strong>Copy</strong><p>Overlay: "Protecting your natural nails is part of the service." Caption: "Pretty nails should not mean wrecked nails. DM GROW if your goal is strength and growth."</p></div>
+                        </div>
+                    </article>
+
+                    <article class="mini-day">
+                        <div>
+                            <p class="day-label">Day 13</p>
+                            <h3>Price Q&amp;A Story</h3>
+                        </div>
+                        <div class="mini-meta">
+                            <span>Stories</span><span>Hook: ask me what to book</span><span>CTA: Reply with inspo</span>
+                        </div>
+                        <p>Finished story: a clear Q&amp;A sequence that invites DMs without locking Brenda into unapproved offer claims.</p>
+                        <div class="mini-columns">
+                            <div class="mini-box"><strong>Frame List</strong><ol><li>"What are you trying to book?" question sticker.</li><li>Simple set example.</li><li>Design set example.</li><li>Builder gel example.</li><li>Booking/link sticker.</li></ol></div>
+                            <div class="mini-box"><strong>Copy</strong><p>Story text: "Send inspo and I will tell you what service/art level fits." Use real menu screenshots only if current.</p></div>
+                        </div>
+                    </article>
+
+                    <article class="mini-day full">
+                        <div>
+                            <p class="day-label">Day 14</p>
+                            <h3>Not A Crowded Salon</h3>
+                        </div>
+                        <div class="mini-meta">
+                            <span>Reel</span><span>Hook: private suite energy</span><span>CTA: Book link in bio</span>
+                        </div>
+                        <p>Finished video: a 12-18 second studio trust Reel that sells the private, one-on-one appointment before asking for the booking.</p>
+                        <div class="mini-columns">
+                            <div class="mini-box"><strong>Shot List</strong><ol><li>Door/sign or arrival shot.</li><li>Wide studio with chair, plants, and desk.</li><li>Clean tools and organized station.</li><li>Brenda working one-on-one.</li><li>Finished nail close-up.</li><li>Booking screen or link-in-bio shot.</li></ol></div>
+                            <div class="mini-box"><strong>Copy</strong><p>Overlay: "Not a crowded salon." Caption: "Beauty Hive is a private appointment with one artist, not rushed salon energy. Bring your inspo and let me help you get the set right."</p></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="week-3">
+            <div class="wrap">
+                <p class="eyebrow">Week 3</p>
+                <h2>Offer + DM funnel</h2>
+                <p class="week-intro">Use Week 3 to train people to send one keyword. Keep exact new-client offer terms internal until Brenda/OU approve the public copy and Acuity booking mechanic.</p>
+                <div class="week-grid">
+                    <article class="mini-day">
+                        <div><p class="day-label">Day 15</p><h3>New-Client Structured Set</h3></div>
+                        <div class="mini-meta"><span>Reel</span><span>Hook: new here?</span><span>CTA: DM SET</span></div>
+                        <p>Finished video: a polished full-set Reel that says "start here" for a new Beauty Hive client.</p>
+                        <div class="mini-columns"><div class="mini-box"><strong>Shot List</strong><ol><li>Finished set opening close-up.</li><li>Prep/detail flashback.</li><li>Shape side angle.</li><li>Macro art detail.</li><li>Final hand turn.</li><li>Optional booking screen.</li></ol></div><div class="mini-box"><strong>Copy</strong><p>Overlay: "New here? Start with a structured full set." Caption: "If you are new to Beauty Hive, send SET and your inspo. I will help you figure out what to book."</p></div></div>
+                    </article>
+
+                    <article class="mini-day">
+                        <div><p class="day-label">Day 16</p><h3>Design Pricing From Inspo</h3></div>
+                        <div class="mini-meta"><span>Reel</span><span>Hook: I need the inspo first</span><span>CTA: DM DESIGN</span></div>
+                        <p>Finished video: a clear design-pricing explainer that qualifies DMs before they become back-and-forth.</p>
+                        <div class="mini-columns"><div class="mini-box"><strong>Shot List</strong><ol><li>Inspo screenshot with private info hidden.</li><li>Brenda pointing at length.</li><li>Brenda pointing at art complexity.</li><li>Matching nail-art examples.</li><li>Final reveal or DM screen.</li></ol></div><div class="mini-box"><strong>Copy</strong><p>Overlay: "This is why I need the inspo before I price it." Caption: "Length, French, chrome, hand-painted details, charms, and 3D work all change the time. DM DESIGN with your screenshot."</p></div></div>
+                    </article>
+
+                    <article class="mini-day">
+                        <div><p class="day-label">Day 17</p><h3>Builder Gel Growth Reset</h3></div>
+                        <div class="mini-meta"><span>Reel</span><span>Hook: make it a growth plan</span><span>CTA: DM GROW</span></div>
+                        <p>Finished video: a before/process/result Reel for weak, breaking, or grow-out-focused nails.</p>
+                        <div class="mini-columns"><div class="mini-box"><strong>Shot List</strong><ol><li>Before/grow-out close-up.</li><li>Prep and shaping.</li><li>Builder gel structure side view.</li><li>Clean finish shot.</li><li>Two-week or growth proof if available.</li></ol></div><div class="mini-box"><strong>Copy</strong><p>Overlay: "Cute nails, but make it a growth plan." Caption: "If your real nails keep breaking, builder gel may be the move. DM GROW and I will help you decide if it fits."</p></div></div>
+                    </article>
+
+                    <article class="mini-day">
+                        <div><p class="day-label">Day 18</p><h3>Your First Appointment</h3></div>
+                        <div class="mini-meta"><span>Carousel</span><span>Hook: what happens first?</span><span>CTA: Book link</span></div>
+                        <p>Finished post: a trust-building carousel that makes the first appointment feel easy and private.</p>
+                        <div class="mini-columns"><div class="mini-box"><strong>Slide List</strong><ol><li>Arrive at Beauty Hive.</li><li>Show or send inspo.</li><li>Choose service/art level.</li><li>Prep and structure.</li><li>Art/detail work.</li><li>Final reveal.</li><li>Book through link.</li></ol></div><div class="mini-box"><strong>Copy</strong><p>Caption: "First appointment flow: send inspo, choose the right service, arrive for a private appointment, leave with a set that feels like you."</p></div></div>
+                    </article>
+
+                    <article class="mini-day">
+                        <div><p class="day-label">Day 19</p><h3>The Reveal Is The Best Part</h3></div>
+                        <div class="mini-meta"><span>Reel</span><span>Hook: reveal first</span><span>CTA: DM BOOK</span></div>
+                        <p>Finished video: a satisfying reveal Reel built for warm viewers who already want the work.</p>
+                        <div class="mini-columns"><div class="mini-box"><strong>Shot List</strong><ol><li>Immediate final reveal.</li><li>Client hand pose.</li><li>Macro detail.</li><li>Side angle showing shape.</li><li>Both hands together.</li><li>Brenda closing shot or booking screen.</li></ol></div><div class="mini-box"><strong>Copy</strong><p>Overlay: "The reveal is the best part." Caption: "If this is the kind of set you want, DM BOOK and I will send you where to start."</p></div></div>
+                    </article>
+
+                    <article class="mini-day">
+                        <div><p class="day-label">Day 20</p><h3>Openings This Week</h3></div>
+                        <div class="mini-meta"><span>Stories</span><span>Hook: real openings only</span><span>CTA: Reply SET</span></div>
+                        <p>Finished story: availability-driven content that only uses real openings and avoids fake scarcity.</p>
+                        <div class="mini-columns"><div class="mini-box"><strong>Frame List</strong><ol><li>Opening reminder with real dates/times.</li><li>Finished set proof.</li><li>Studio/private appointment proof.</li><li>Question box: "Need help choosing?"</li><li>Reply SET instruction.</li></ol></div><div class="mini-box"><strong>Copy</strong><p>Story text: "I have openings this week. Send SET if you need help choosing what to book."</p></div></div>
+                    </article>
+
+                    <article class="mini-day full">
+                        <div><p class="day-label">Day 21</p><h3>Personal / Founder Story</h3></div>
+                        <div class="mini-meta"><span>Reel</span><span>Hook: why Beauty Hive exists</span><span>CTA: Follow + book</span></div>
+                        <p>Finished video: a personal 18-25 second Reel that makes Brenda the reason to choose the studio.</p>
+                        <div class="mini-columns"><div class="mini-box"><strong>Shot List</strong><ol><li>Brenda face or studio setup opener.</li><li>Client hand interaction.</li><li>Clean desk/tools.</li><li>Finished set detail.</li><li>Wide private-suite shot.</li><li>Brenda one-line VO: "I opened Beauty Hive for appointments like this."</li></ol></div><div class="mini-box"><strong>Copy</strong><p>Caption: "Private studio, one-on-one appointments, and nails that match the person sitting across from me. Book with Brenda in College Area."</p></div></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="week-4">
+            <div class="wrap">
+                <p class="eyebrow">Week 4</p>
+                <h2>Paid creative test pack</h2>
+                <p class="week-intro">Use Week 4 to turn the strongest proof, education, and booking assets into ad-ready cuts. Every candidate needs one funnel job, one first-frame hook, and one CTA.</p>
+                <div class="week-grid">
+                    <article class="mini-day">
+                        <div><p class="day-label">Day 22</p><h3>Nail-Art Scroll Stopper</h3></div>
+                        <div class="mini-meta"><span>TOF Reel/ad</span><span>Hook: send saved inspo</span><span>CTA: DM DESIGN</span></div>
+                        <p>Finished video: an 8-12 second visual-first art montage using the strongest owned nail proof.</p>
+                        <div class="mini-columns"><div class="mini-box"><strong>Shot List</strong><ol><li>Most detailed finished set first.</li><li>Two fast macro cuts.</li><li>Hand turn in light.</li><li>Second/third art set if available.</li><li>End card: DM DESIGN.</li></ol></div><div class="mini-box"><strong>Copy</strong><p>Overlay: "San Diego, send the nail inspo you have been saving." Caption: "Beauty Hive is a private nail studio near SDSU for custom, design-forward sets."</p></div></div>
+                    </article>
+
+                    <article class="mini-day">
+                        <div><p class="day-label">Day 23</p><h3>Lifting / Prep Education</h3></div>
+                        <div class="mini-meta"><span>MOF Reel/ad</span><span>Hook: watch the prep</span><span>CTA: DM SET</span></div>
+                        <p>Finished video: a silent-friendly prep cut that proves Brenda's process before selling the appointment.</p>
+                        <div class="mini-columns"><div class="mini-box"><strong>Shot List</strong><ol><li>Natural nail before prep.</li><li>Cuticle/prep close-up.</li><li>Primer/base moment.</li><li>Structure side angle.</li><li>Finished no-lift-looking close-up.</li></ol></div><div class="mini-box"><strong>Copy</strong><p>Overlay: "If your nails lift fast, watch the prep." Caption: "A set that lasts starts with prep and structure. DM SET if your last set lifted early."</p></div></div>
+                    </article>
+
+                    <article class="mini-day">
+                        <div><p class="day-label">Day 24</p><h3>Private Suite Trust Cut</h3></div>
+                        <div class="mini-meta"><span>MOF Reel/ad</span><span>Hook: not rushed</span><span>CTA: Book link</span></div>
+                        <p>Finished video: a studio-first trust cut for people who dislike crowded, rushed salons.</p>
+                        <div class="mini-columns"><div class="mini-box"><strong>Shot List</strong><ol><li>Studio wide shot.</li><li>Chair/desk/tools detail.</li><li>Brenda working one-on-one.</li><li>Client hand close-up.</li><li>Finished set reveal.</li><li>Booking CTA end card.</li></ol></div><div class="mini-box"><strong>Copy</strong><p>Overlay: "Your nail appointment should not feel rushed." Caption: "Private appointment, clean prep, one artist, and enough time to actually talk through the set."</p></div></div>
+                    </article>
+
+                    <article class="mini-day">
+                        <div><p class="day-label">Day 25</p><h3>New-Client Booking Cut</h3></div>
+                        <div class="mini-meta"><span>BOF Reel/ad</span><span>Hook: first full set?</span><span>CTA: DM SET</span></div>
+                        <p>Finished video: a direct-response booking cut that keeps offer terms generic until approved.</p>
+                        <div class="mini-columns"><div class="mini-box"><strong>Shot List</strong><ol><li>Finished set close-up.</li><li>Inspo/DM shot.</li><li>Brenda working detail.</li><li>Booking screen scroll.</li><li>Final reveal.</li><li>End card: DM SET.</li></ol></div><div class="mini-box"><strong>Copy</strong><p>Overlay: "First full set at Beauty Hive?" Caption: "New clients can send SET with inspo and I will help you choose what to book."</p></div></div>
+                    </article>
+
+                    <article class="mini-day">
+                        <div><p class="day-label">Day 26</p><h3>Builder Gel Paid Cut</h3></div>
+                        <div class="mini-meta"><span>MOF/BOF Reel/ad</span><span>Hook: weak nails?</span><span>CTA: DM GROW</span></div>
+                        <p>Finished video: a builder-gel proof cut for clients who want support for their real nails.</p>
+                        <div class="mini-columns"><div class="mini-box"><strong>Shot List</strong><ol><li>Weak/grow-out nail close-up if available.</li><li>Builder application side angle.</li><li>Apex/light reflection.</li><li>Clean final set.</li><li>Hand turn.</li><li>End card: DM GROW.</li></ol></div><div class="mini-box"><strong>Copy</strong><p>Overlay: "Weak nails? Builder gel might be your lane." Caption: "Builder gel is for clients who want a clean set while supporting their real nails underneath."</p></div></div>
+                    </article>
+
+                    <article class="mini-day">
+                        <div><p class="day-label">Day 27</p><h3>Design Price Qualifier</h3></div>
+                        <div class="mini-meta"><span>BOF Reel/carousel</span><span>Hook: what changes price?</span><span>CTA: DM DESIGN</span></div>
+                        <p>Finished post: a qualifying asset that reduces price confusion and sends custom-art leads to the right DM path.</p>
+                        <div class="mini-columns"><div class="mini-box"><strong>Shot List</strong><ol><li>Simple set example.</li><li>Longer/detail set example.</li><li>Charm/3D/chrome macro.</li><li>Phone inspo shot.</li><li>Text card: service + length + design.</li></ol></div><div class="mini-box"><strong>Copy</strong><p>Overlay: "What changes the price of a design set?" Caption: "Length, detail, charms, French, 3D, and chrome all affect timing. Send the inspo first."</p></div></div>
+                    </article>
+
+                    <article class="mini-day full">
+                        <div><p class="day-label">Day 28</p><h3>What To Send Before You Book</h3></div>
+                        <div class="mini-meta"><span>Warm recap</span><span>Hook: send these three things</span><span>CTA: DM BOOK</span></div>
+                        <p>Finished video/story recap: a warm conversion recap from the best Week 4 shots that tells people exactly how to start.</p>
+                        <div class="mini-columns"><div class="mini-box"><strong>Shot List</strong><ol><li>Best finished set from the week.</li><li>Phone with inspo screenshot.</li><li>Calendar/timing visual.</li><li>Studio/private appointment shot.</li><li>Booking screen.</li><li>End card: DM BOOK.</li></ol></div><div class="mini-box"><strong>Copy</strong><p>Overlay: "Send your inspo, your timing, and what service you think you want." Caption: "Send your inspo, tell me your timing, and I will help you pick the service. Beauty Hive is in College Area near SDSU."</p></div></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="batch" id="batch">
+            <div class="wrap">
+                <p class="eyebrow">One-Day Batch Shoot</p>
+                <h2>Film the next month in one session</h2>
+                <div class="batch-grid">
+                    <div class="panel">
+                        <h3>Shoot Order</h3>
+                        <ol>
+                            <li>Clean studio wide shots before a client arrives.</li>
+                            <li>Brenda setting up the station.</li>
+                            <li>Prep and natural nail close-ups.</li>
+                            <li>Builder gel structure shots.</li>
+                            <li>Art and detail shots.</li>
+                            <li>Finished reveal shots for every set.</li>
+                            <li>Brenda talking-head clips after the work is done.</li>
+                            <li>Booking screen recording and story poll assets.</li>
+                        </ol>
+                    </div>
+                    <div class="panel">
+                        <h3>Minimum Deliverables</h3>
+                        <ul>
+                            <li>5 finished set reveals.</li>
+                            <li>4 prep or process clips.</li>
+                            <li>2 builder gel proof clips.</li>
+                            <li>2 Brenda personality or founder clips.</li>
+                            <li>1 studio walk-through.</li>
+                            <li>2 booking, DM, or link screen recordings.</li>
+                            <li>10 close-up still photos that can become carousel slides or motion statics.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        (function () {
+            var workbookIds = ['day-1', 'day-2', 'day-3', 'day-4', 'day-5', 'day-6', 'day-7', 'week-2', 'week-3', 'week-4', 'reuse', 'batch'];
+            var workbookStage = document.getElementById('workbook-stage');
+            var workbookTabs = Array.prototype.slice.call(document.querySelectorAll('.lesson-tab[data-workbook-target]'));
+            var workbookProgress = document.getElementById('workbook-progress');
+            var workbookFill = document.getElementById('workbook-fill');
+            var previousWorkbook = document.getElementById('prev-workbook');
+            var nextWorkbook = document.getElementById('next-workbook');
+            var workbookIndex = 0;
+
+            if (workbookStage) {
+                workbookIds.forEach(function (id) {
+                    var section = document.getElementById(id);
+                    if (section) {
+                        workbookStage.appendChild(section);
+                    }
+                });
+            }
+
+            function setWorkbookLesson(targetId, shouldScroll) {
+                var index = workbookIds.indexOf(targetId);
+                if (index < 0) index = 0;
+                workbookIndex = index;
+
+                workbookIds.forEach(function (id, itemIndex) {
+                    var section = document.getElementById(id);
+                    if (section) {
+                        section.classList.toggle('active-workbook-lesson', itemIndex === workbookIndex);
+                    }
+                });
+
+                workbookTabs.forEach(function (tab) {
+                    tab.classList.toggle('active', tab.dataset.workbookTarget === workbookIds[workbookIndex]);
+                });
+
+                if (workbookProgress) {
+                    workbookProgress.textContent = 'Lesson ' + (workbookIndex + 1) + ' of ' + workbookIds.length;
+                }
+
+                if (workbookFill) {
+                    workbookFill.style.width = (((workbookIndex + 1) / workbookIds.length) * 100) + '%';
+                }
+
+                if (previousWorkbook) previousWorkbook.disabled = workbookIndex === 0;
+                if (nextWorkbook) nextWorkbook.disabled = workbookIndex === workbookIds.length - 1;
+
+                if (shouldScroll) {
+                    document.getElementById('workbook').scrollIntoView({ behavior: shouldScroll === 'auto' ? 'auto' : 'smooth', block: 'start' });
+                }
+            }
+
+            workbookTabs.forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                    setWorkbookLesson(tab.dataset.workbookTarget, true);
+                });
+            });
+
+            if (previousWorkbook) {
+                previousWorkbook.addEventListener('click', function () {
+                    if (workbookIndex > 0) setWorkbookLesson(workbookIds[workbookIndex - 1], true);
+                });
+            }
+
+            if (nextWorkbook) {
+                nextWorkbook.addEventListener('click', function () {
+                    if (workbookIndex < workbookIds.length - 1) setWorkbookLesson(workbookIds[workbookIndex + 1], true);
+                });
+            }
+
+            function detailLabel(panel) {
+                var heading = panel.querySelector('h3');
+                if (heading) return heading.textContent.trim();
+                if (panel.classList.contains('caption')) return 'Production Copy';
+                if (panel.classList.contains('soft')) return 'Editing Direction';
+                return 'Details';
+            }
+
+            document.querySelectorAll('.content-block .panel:not(.dark)').forEach(function (panel) {
+                var details = document.createElement('details');
+                details.className = panel.className + ' panel-detail';
+
+                var summary = document.createElement('summary');
+                summary.textContent = detailLabel(panel);
+
+                var body = document.createElement('div');
+                body.className = 'detail-body';
+
+                while (panel.firstChild) {
+                    body.appendChild(panel.firstChild);
+                }
+
+                var duplicateHeading = body.querySelector('h3:first-child');
+                if (duplicateHeading) duplicateHeading.remove();
+
+                details.appendChild(summary);
+                details.appendChild(body);
+                panel.replaceWith(details);
+            });
+
+            document.querySelectorAll('.mini-day .mini-columns').forEach(function (columns) {
+                var details = document.createElement('details');
+                details.className = 'panel mini-detail';
+                var summary = document.createElement('summary');
+                summary.textContent = 'Shot List + Copy';
+                var body = document.createElement('div');
+                body.className = 'detail-body';
+                columns.parentNode.insertBefore(details, columns);
+                body.appendChild(columns);
+                details.appendChild(summary);
+                details.appendChild(body);
+            });
+
+            function openFirstDetail(targetId) {
+                var current = document.getElementById(targetId);
+                if (current) {
+                    var firstDetail = current.querySelector('details.panel');
+                    if (firstDetail) firstDetail.open = true;
+                }
+            }
+
+            function handleWorkbookHash(shouldScroll) {
+                var hashId = window.location.hash ? window.location.hash.slice(1) : '';
+                if (!hashId) {
+                    setWorkbookLesson('day-1', false);
+                    openFirstDetail('day-1');
+                    return;
+                }
+
+                if (workbookIds.indexOf(hashId) >= 0) {
+                    setWorkbookLesson(hashId, shouldScroll);
+                    openFirstDetail(hashId);
+                }
+            }
+
+            var initialWorkbookHashId = (window.location.hash || '').slice(1);
+            var initialWorkbookHash = workbookIds.indexOf(initialWorkbookHashId) >= 0;
+            handleWorkbookHash(initialWorkbookHash ? 'auto' : false);
+            if (initialWorkbookHash) {
+                window.setTimeout(function () {
+                    handleWorkbookHash('auto');
+                }, 120);
+                window.addEventListener('load', function () {
+                    handleWorkbookHash('auto');
+                });
+            }
+
+            window.addEventListener('hashchange', function () {
+                handleWorkbookHash(true);
+            });
+        })();
+    </script>
+</body>
+</html>

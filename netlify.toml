@@ -1,0 +1,60 @@
+# Netlify configuration file
+[build]
+  publish = "public"
+
+# Remove .html extension from URLs
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy-policy.html"
+  status = 200
+
+[[redirects]]
+  from = "/data-deletion"
+  to = "/data-deletion.html"
+  status = 200
+
+[[redirects]]
+  from = "/welcome"
+  to = "/welcome.html"
+  status = 200
+
+[[redirects]]
+  from = "/growth-plan"
+  to = "/growth-plan.html"
+  status = 200
+
+[[redirects]]
+  from = "/shot-list"
+  to = "/shot-list.html"
+  status = 200
+
+# Redirect .html URLs to clean URLs (permanent redirect)
+[[redirects]]
+  from = "/privacy-policy.html"
+  to = "/privacy-policy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/data-deletion.html"
+  to = "/data-deletion"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/welcome.html"
+  to = "/welcome"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/growth-plan.html"
+  to = "/growth-plan"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/shot-list.html"
+  to = "/shot-list"
+  status = 301
+  force = true
